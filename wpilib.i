@@ -235,33 +235,6 @@ public:
 	void Printf(const char *writeFmt, ...);
 
 	INT32 Finalize(void);
-private:
-	Dashboard(SEM_ID statusDataSemaphore);
-	virtual ~Dashboard();
-	static UINT8 GetUpdateNumber(void) {return m_updateNumber;}
-	void GetStatusBuffer(char **userStatusData, INT32* userStatusDataSize);
-
-	static const INT32 kMaxDashboardDataSize = USER_STATUS_DATA_SIZE - sizeof(UINT32) * 3 - sizeof(UINT8); // 13 bytes needed for 3 size parameters and the sequence number
-
-	// Usage Guidelines...
-	DISALLOW_COPY_AND_ASSIGN(Dashboard);
-
-	bool ValidateAdd(INT32 size);
-	void AddedElement(Type type);
-	bool IsArrayRoot(void);
-
-	char *m_userStatusData;
-	INT32 m_userStatusDataSize;
-	char *m_localBuffer;
-	char *m_localPrintBuffer;
-	char *m_packPtr;
-	std::vector<Type> m_expectedArrayElementType;
-	std::vector<INT32> m_arrayElementCount;
-	std::vector<INT32*> m_arraySizePtr;
-	std::stack<ComplexType> m_complexTypeStack;
-	SEM_ID m_printSemaphore;
-	SEM_ID m_statusDataSemaphore;
-	static UINT8 m_updateNumber;
 };
 
 class DigitalInput : public DigitalSource {
@@ -331,6 +304,41 @@ public:
 	Dashboard& GetHighPriorityDashboardPacker(void) {return m_dashboardHigh;}
 	Dashboard& GetLowPriorityDashboardPacker(void) {return m_dashboardLow;}
 	DriverStationEnhancedIO& GetEnhancedIO(void) {return m_enhancedIO;}
+};
+
+class DriverStationEnhancedIO : public ErrorBase
+{
+public:
+	enum tDigitalConfig {kUnknown, kInputFloating, kInputPullUp, kInputPullDown, kOutput, kPWM, kAnalogComparator};
+	enum tAccelChannel {kAccelX = 0, kAccelY = 1, kAccelZ = 2};
+	enum tPWMPeriodChannels {kPWMChannels1and2, kPWMChannels3and4};
+
+	double GetAcceleration(tAccelChannel channel);
+	double GetAnalogIn(UINT32 channel);
+	double GetAnalogInRatio(UINT32 channel);
+	double GetAnalogOut(UINT32 channel);
+	void SetAnalogOut(UINT32 channel, double value);
+	bool GetButton(UINT32 channel);
+	UINT8 GetButtons();
+	void SetLED(UINT32 channel, bool value);
+	void SetLEDs(UINT8 value);
+	bool GetDigital(UINT32 channel);
+	UINT16 GetDigitals();
+	void SetDigitalOutput(UINT32 channel, bool value);
+	tDigitalConfig GetDigitalConfig(UINT32 channel);
+	void SetDigitalConfig(UINT32 channel, tDigitalConfig config);
+	double GetPWMPeriod(tPWMPeriodChannels channels);
+	void SetPWMPeriod(tPWMPeriodChannels channels, double period);
+	bool GetFixedDigitalOutput(UINT32 channel);
+	void SetFixedDigitalOutput(UINT32 channel, bool value);
+	INT16 GetEncoder(UINT32 encoderNumber);
+	void ResetEncoder(UINT32 encoderNumber);
+	bool GetEncoderIndexEnable(UINT32 encoderNumber);
+	void SetEncoderIndexEnable(UINT32 encoderNumber, bool enable);
+	double GetTouchSlider();
+	double GetPWMOutput(UINT32 channel);
+	void SetPWMOutput(UINT32 channel, double value);
+	UINT8 GetFirmwareVersion();
 };
 
 class DriverStationLCD : public SensorBase
