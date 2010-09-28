@@ -482,6 +482,40 @@ public:
 	void SetDirection(Direction direction);
 };
 
+class RobotDrive
+{
+public:
+	typedef enum
+	{
+		kFrontLeftMotor = 0,
+		kFrontRightMotor = 1,
+		kRearLeftMotor = 2,
+		kRearRightMotor = 3
+	} MotorType;
+
+	RobotDrive(UINT32 leftMotorChannel, UINT32 rightMotorChannel, float sensitivity = 0.5);
+	RobotDrive(UINT32 frontLeftMotorChannel, UINT32 rearLeftMotorChannel,
+				UINT32 frontRightMotorChannel, UINT32 rearRightMotorChannel, float sensitivity = 0.5);
+	RobotDrive(SpeedController *leftMotor, SpeedController *rightMotor, float sensitivity = 0.5);
+	RobotDrive(SpeedController *frontLeftMotor, SpeedController *rearLeftMotor,
+				SpeedController *frontRightMotor, SpeedController *rearRightMotor,
+				float sensitivity = 0.5);
+	virtual ~RobotDrive();
+
+	void Drive(float speed, float curve);
+	void TankDrive(GenericHID *leftStick, GenericHID *rightStick);
+	void TankDrive(GenericHID *leftStick, UINT32 leftAxis, GenericHID *rightStick, UINT32 rightAxis);
+	void TankDrive(float leftValue, float rightValue);
+	void ArcadeDrive(GenericHID *stick, bool squaredInputs = true);
+	void ArcadeDrive(GenericHID *moveStick, UINT32 moveChannel, GenericHID *rotateStick, UINT32 rotateChannel, bool squaredInputs = true);
+	void ArcadeDrive(float moveValue, float rotateValue, bool squaredInputs = true);
+	void MecanumDrive_Cartesian(float x, float y, float rotation, float gyroAngle = 0.0);
+	void MecanumDrive_Polar(float magnitude, float direction, float rotation);
+	void HolonomicDrive(float magnitude, float direction, float rotation);
+	void SetLeftRightMotorSpeeds(float leftSpeed, float rightSpeed);
+	void SetInvertedMotor(MotorType motor, bool isInverted);
+};
+
 class Solenoid : public SensorBase {
 public:
 	explicit Solenoid(UINT32 channel);
