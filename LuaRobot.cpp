@@ -88,3 +88,5 @@ protected:
         while (1);
     }
 }
+
+START_ROBOT_CLASS(LuaRobot);
