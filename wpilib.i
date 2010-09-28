@@ -540,6 +540,7 @@ public:
 	static double GetFPGATimestamp(void);
 	static double GetPPCTimestamp(void);
 };
+void Wait(double seconds);
 
 class Victor : public PWM, public SpeedController
 {
