@@ -534,3 +534,44 @@ public:
 	bool IsAlive();
 	bool IsSystemActive();
 };
+
+/*** ROBOT RUNTIME INFORMATION ***/
+
+%inline %{
+
+bool isEnabled()
+{
+    return RobotBase::getInstance().IsEnabled();
+}
+
+bool isDisabled()
+{
+    return RobotBase::getInstance().IsDisabled();
+}
+
+bool isAutonomous()
+{
+    return RobotBase::getInstance().IsAutonomous();
+}
+
+bool isOperatorControl()
+{
+    return RobotBase::getInstance().IsOperatorControl();
+}
+
+bool isSystemActive()
+{
+    return RobotBase::getInstance().IsSystemActive();
+}
+
+bool isNewDataAvailable()
+{
+    return RobotBase::getInstance().IsNewDataAvailable();
+}
+
+Watchdog *getWatchdog()
+{
+    return &RobotBase::getInstance().GetWatchdog();
+}
+
+%}
