@@ -12,6 +12,7 @@
 #define FIRST_LUA_BOOT_FILE "lua/boot.lua"
 
 extern int luaopen_wpilib(lua_State *L);
+extern int luaopen_bit(lua_State *L)
 
 class LuaRobot : public RobotBase
 {
@@ -22,6 +23,8 @@ public:
         
         // Load libraries
         luaL_openlibs(L);
+        lua_pushcfunction(L, luaopen_bit);
+        lua_pcall(L, 0, 0, 0);
         lua_pushcfunction(L, luaopen_wpilib);
         lua_pcall(L, 0, 0, 0);
     }
