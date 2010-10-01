@@ -24,13 +24,18 @@
  */
 
 #include <stdio.h>
-#include <WPILib/WPILib.h>
-#include "lua/lua.h"
+#include "WPILib.h"
+
+extern "C" {
+#include "lua.h"
+#include "lauxlib.h"
+#include "lualib.h"
+}
 
 #define FIRST_LUA_BOOT_FILE "lua/boot.lua"
 
-extern int luaopen_wpilib(lua_State *L);
-extern int luaopen_bit(lua_State *L)
+extern "C" int luaopen_wpilib(lua_State *L);
+extern "C" int luaopen_bit(lua_State *L);
 
 class LuaRobot : public RobotBase
 {
@@ -78,7 +83,7 @@ protected:
                     break;
                 case LUA_ERRFILE:
                     fprintf(stderr, "I/O error while reading Lua bootloader\n");
-                    break
+                    break;
             }
             // Enter an infinite loop.  We won't be doing anything useful anyway.
             while (1);
@@ -101,13 +106,13 @@ protected:
                     fprintf(stderr, "Lua runtime error: <NO MESSAGE>\n");
                 break;
             case LUA_ERRMEM:
-                fprintf(stderr, "Lua ran out of memory while running!\n")
+                fprintf(stderr, "Lua ran out of memory while running!\n");
                 break;
         }
         
         // Enter an infinite loop.  We won't be doing anything useful anyway.
         while (1);
     }
-}
+};
 
 START_ROBOT_CLASS(LuaRobot);
