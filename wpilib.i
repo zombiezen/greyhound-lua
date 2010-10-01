@@ -67,6 +67,8 @@ public:
     virtual void ClearError();
     virtual bool StatusIsFatal() const;
     static Error& GetGlobalError();
+protected:
+	ErrorBase();
 };
 
 class SensorBase: public ErrorBase {
@@ -260,6 +262,9 @@ public:
 	void Printf(const char *writeFmt, ...);
 
 	INT32 Finalize(void);
+private:
+	Dashboard(SEM_ID statusDataSemaphore);
+	virtual ~Dashboard();
 };
 
 class DigitalInput : public DigitalSource {
@@ -329,6 +334,8 @@ public:
 	Dashboard& GetHighPriorityDashboardPacker(void) {return m_dashboardHigh;}
 	Dashboard& GetLowPriorityDashboardPacker(void) {return m_dashboardLow;}
 	DriverStationEnhancedIO& GetEnhancedIO(void) {return m_enhancedIO;}
+protected:
+	DriverStation();
 };
 
 class DriverStationEnhancedIO : public ErrorBase
@@ -364,6 +371,9 @@ public:
 	double GetPWMOutput(UINT32 channel);
 	void SetPWMOutput(UINT32 channel, double value);
 	UINT8 GetFirmwareVersion();
+private:
+	DriverStationEnhancedIO();
+	virtual ~DriverStationEnhancedIO();
 };
 
 class DriverStationLCD : public SensorBase
@@ -394,6 +404,9 @@ public:
             $self->PrintfLine(line, "%s", s);
         }
     }
+
+protected:
+	DriverStationLCD();
 };
 
 class Encoder: public SensorBase, public CounterBase
