@@ -47,7 +47,8 @@ the ``boot.lua`` script, which is referred to as the bootloader.
 Major Differences from standard Lua
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-*  No dynamic loading of C code (vxWorks doesn't support shared objects)
+*  No dynamic loading of C code (vxWorks doesn't support shared objects).  The
+   ``loadlib`` family of functions remain, but they will give an error.
 *  The `bitop`_ library is bundled with this project (as ``bit.c``).
 *  Some functions from ``os`` are removed, namely:
    *  ``os.execute``
