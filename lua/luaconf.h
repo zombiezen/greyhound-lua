@@ -759,6 +759,7 @@ union luai_Cast { double l_d; long l_l; };
 
 #undef LUA_COMPAT_VARARG
 #undef LUA_COMPAT_MOD
+#undef LUA_COMPAT_LSTR
 #define LUA_COMPAT_LSTR		0
 #undef LUA_COMPAT_GFIND
 #undef LUA_COMPAT_OPENLIB
