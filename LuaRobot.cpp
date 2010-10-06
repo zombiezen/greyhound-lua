@@ -93,8 +93,6 @@ protected:
         int retcode;
         const char *errstr;
         
-        writeMessageFile("start.txt", "Hello, World!");
-        
         // Load Lua bootloader script
         // The "bootloader" is the first script we run because it allows us to
         // manage code reloads in a controlled environment.
