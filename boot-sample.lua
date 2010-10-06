@@ -15,15 +15,28 @@ function restartRobot()
 end
 
 while true do
-    require "robot" -- TODO: Handle loading failure gracefully
-    success, err = pcall(robot.run)
-    if err == restartError then
-        -- Unload all user-level packages
-        for name, _ in items(package.loaded) do
-            package.loaded[name] = nil
-            _G[name] = nil
+    local success, err
+    
+    success, err = pcall(require, "robot")
+    
+    if success then
+        success, err = pcall(robot.run)
+        if not success and err == restartError then
+            -- Unload all user-level packages
+            for name, _ in items(package.loaded) do
+                package.loaded[name] = nil
+                _G[name] = nil
+            end
+            -- Run garbage collector before restarting
+            collectgarbage("collect")
         end
-        -- Run garbage collector before restarting
-        collectgarbage("collect")
     end
+    
+    if not success and err ~= restartError then
+        local f = io.open("boot-error.txt", "w")
+        f:write(err)
+        f:close()
+    end
+    
+    wpilib.Wait(5.0)
 end
