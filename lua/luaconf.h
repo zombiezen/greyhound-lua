@@ -764,5 +764,11 @@ union luai_Cast { double l_d; long l_l; };
 #undef LUA_COMPAT_GFIND
 #undef LUA_COMPAT_OPENLIB
 
+#undef LUA_ROOT
+#undef LUA_PATH_DEFAULT
+#define LUA_ROOT	"lua/"
+#define LUA_PATH_DEFAULT  \
+		"./?.lua;"  LUA_ROOT"?.lua;"  LUA_ROOT"?/init.lua"
+
 #endif
 
