@@ -60,11 +60,40 @@ public:
 protected:
     lua_State *L;
     
+    void writeMessageFile(const char *fname, const char *fmt, va_list args)
+    {
+    	FILE *errfile;
+    	
+    	errfile = fopen(fname, "w");
+    	vfprintf(errfile, fmt, args);
+    	fputs("\n", errfile);
+    	fclose(errfile);
+    }
+    
+    void writeMessageFile(const char *fname, const char *fmt, ...)
+    {
+    	va_list args;
+    	
+    	va_start(args, fmt);
+    	writeMessageFile(fname, fmt, args);
+    	va_end(args);
+    }
+    
+    void writeError(const char *errfmt, ...)
+    {
+    	va_list args;
+    	
+    	va_start(args, errfmt);
+    	writeMessageFile("lua-error.txt", errfmt, args);
+    	va_end(args);
+    }
     
 	virtual void StartCompetition()
     {
         int retcode;
         const char *errstr;
+        
+        writeMessageFile("start.txt", "Hello, World!");
         
         // Load Lua bootloader script
         // The "bootloader" is the first script we run because it allows us to
@@ -76,13 +105,13 @@ protected:
             switch (retcode)
             {
                 case LUA_ERRSYNTAX:
-                    fprintf(stderr, "Syntax error in Lua bootloader\n");
+                    writeError("Syntax error in Lua bootloader");
                     break;
                 case LUA_ERRMEM:
-                    fprintf(stderr, "Yikes! Lua ran out of memory!\n");
+                	writeError("Yikes! Lua ran out of memory!");
                     break;
                 case LUA_ERRFILE:
-                    fprintf(stderr, "I/O error while reading Lua bootloader\n");
+                	writeError("I/O error while reading Lua bootloader");
                     break;
             }
             // Enter an infinite loop.  We won't be doing anything useful anyway.
@@ -100,13 +129,10 @@ protected:
         {
             case LUA_ERRRUN:
                 errstr = lua_tostring(L, 0);
-                if (errstr != NULL)
-                    fprintf(stderr, "Lua runtime error: %s\n", errstr);
-                else
-                    fprintf(stderr, "Lua runtime error: <NO MESSAGE>\n");
+            	writeError("Lua runtime error: %s", errstr != NULL ? errstr : "<NO MESSAGE>");
                 break;
             case LUA_ERRMEM:
-                fprintf(stderr, "Lua ran out of memory while running!\n");
+            	writeError("Lua ran out of memory while running!");
                 break;
         }
         
