@@ -4,6 +4,7 @@
 ** See Copyright Notice in lua.h
 */
 
+#include <vxWorks.h>
 
 #include <setjmp.h>
 #include <stdlib.h>
