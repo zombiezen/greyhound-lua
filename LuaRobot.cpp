@@ -54,11 +54,20 @@ public:
     
     virtual ~LuaRobot()
     {
-        lua_close(L);
+        closeLua();
     }
     
 protected:
     lua_State *L;
+    
+    void closeLua()
+    {
+        if (L != NULL)
+        {
+            lua_close(L);
+            L = NULL;
+        }
+    }
     
     void writeMessageFile(const char *fname, const char *fmt, va_list args)
     {
@@ -149,7 +158,8 @@ protected:
                 break;
         }
         
-        // Enter an infinite loop.  We won't be doing anything useful anyway.
+        // Clean up and enter an infinite loop.  We won't be doing anything useful anyway.
+        closeLua();
         while (1);
     }
 };
