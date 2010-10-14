@@ -34,7 +34,7 @@ download the code to your robot.  Now you have the Lua interpreter on the robot,
 now let's add some code.
 
 Connect to your robot's IP with an FTP client (e.g. ``ftp://10.XX.YY.2/``, where
-XXYY is your team number).  Copy the ``boot-sample.lua`` file in the FIRSTLua
+XXYY is your team number).  Copy the ``samples/boot.lua`` file in the FIRSTLua
 distribution to ``lua/boot.lua`` on the robot.  This is the bootloader which
 will run the rest of your code; you shouldn't need to edit it.
 
@@ -46,7 +46,7 @@ function called ``run`` in there.  This assumes that you are using the standard
 Lua packaging system (i.e. using the ``module`` function).  A basic
 ``robot.lua`` file may look like this::
 
-   -- robot.lua
+   -- samples/template/robot.lua
    module(..., package.seeall)
    
    function run()
@@ -79,6 +79,8 @@ Lua packaging system (i.e. using the ``module`` function).  A basic
    function disabled()
       -- Do something in disabled mode here...
    end
+
+You can find more examples of code in the ``samples`` directory.
 
 Technical Overview
 ====================
