@@ -513,7 +513,7 @@ public:
 	typedef enum {kOff, kOn, kForward, kReverse} Value;
 	typedef enum {kBothDirections, kForwardOnly, kReverseOnly} Direction;
 
-	Relay(UINT32 slot, UINT32 channel, Direction direction = kBothDirections);
+	Relay(UINT32 slot, UINT32 channel, Direction direction);
 	virtual ~Relay();
 
 	void Set(Value value);
