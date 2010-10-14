@@ -84,7 +84,7 @@ protected:
     	va_list args;
     	
     	va_start(args, errfmt);
-    	writeMessageFile("lua-error.txt", errfmt, args);
+    	writeMessageFile("boot-error.txt", errfmt, args);
     	va_end(args);
     }
     

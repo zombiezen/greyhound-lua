@@ -86,9 +86,11 @@ while true do
         else
             -- This is an unexpected error. Write the traceback to
             -- boot-error.txt at the root of the filesystem.
-            local f = io.open("boot-error.txt", "w")
-            f:write(err)
-            f:close()
+            local f = io.open("lua-error.txt", "w")
+            if f then
+                f:write(err)
+                f:close()
+            end
             wpilib.Wait(5.0)
         end
     end
