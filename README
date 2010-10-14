@@ -3,7 +3,7 @@
 *************
 
 :Author: Ross Light
-:Copyright: Copyright (C) 2010, Ross Light
+:Copyright: Copyright © 2010, Ross Light
 
 About FIRST Lua
 =================
@@ -30,7 +30,55 @@ Installation
 ==============
 
 Open the project directory as a WindRiver project.  Build the project and
-download the code to your robot.  Now you are ready to run Lua code.
+download the code to your robot.  Now you have the Lua interpreter on the robot,
+now let's add some code.
+
+Connect to your robot's IP with an FTP client (e.g. ``ftp://10.XX.YY.2/``, where
+XXYY is your team number).  Copy the ``boot-sample.lua`` file in the FIRSTLua
+distribution to ``lua/boot.lua`` on the robot.  This is the bootloader which
+will run the rest of your code; you shouldn't need to edit it.
+
+Writing Code
+==============
+
+The default Lua bootloader will load ``lua/robot.lua`` and try to call a
+function called ``run`` in there.  This assumes that you are using the standard
+Lua packaging system (i.e. using the ``module`` function).  A basic
+``robot.lua`` file may look like this::
+
+   -- robot.lua
+   module(..., package.seeall)
+   
+   function run()
+      -- Main loop
+      while true do
+         if wpilib.isDisabled() then
+            disabled()
+            repeat wpilib.Wait(0.01) until not wpilib.isDisabled()
+         elseif wpilib.isAutonomous() then
+            autonomous()
+            repeat wpilib.Wait(0.01) until not wpilib.isAutonomous() or not wpilib.isEnabled()
+         else
+            teleop()
+            repeat wpilib.Wait(0.01) until not wpilib.isOperatorControl() or not wpilib.isEnabled()
+         end
+      end
+   end
+
+   function teleop()
+      while wpilib.isOperatorControl() and wpilib.isEnabled() do
+         -- Run one cycle of teleoperated here...
+         wpilib.Wait(0.01)
+      end
+   end
+
+   function autonomous()
+      -- Run autonomous code here...
+   end
+   
+   function disabled()
+      -- Do something in disabled mode here...
+   end
 
 Technical Overview
 ====================
@@ -47,8 +95,10 @@ the ``boot.lua`` script, which is referred to as the bootloader.
 Major Differences from standard Lua
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-*  No dynamic loading of C code (vxWorks doesn't support shared objects).  The
-   ``loadlib`` family of functions remain, but they will give an error.
+*  No dynamic loading of C code.  vxWorks does have the capability for it, but
+   we haven't seen a need to introduce the complexity.  The ``loadlib`` family
+   of functions remain, but they will give an error.  This restriction may be
+   lifted eventually.
 *  The `bitop`_ library is bundled with this project (as ``bit.c``).
 *  Some functions from ``os`` are removed, namely:
    *  ``os.execute``
@@ -95,7 +145,7 @@ SOFTWARE.
 bitop
 ~~~~~~~
 
-Copyright (C) 2008-2009 Mike Pall. All rights reserved.
+Copyright © 2008-2009 Mike Pall. All rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
@@ -118,7 +168,7 @@ SOFTWARE.
 FIRST Lua
 ~~~~~~~~~~~
 
-Copyright (c) 2010 Ross Light
+Copyright © 2010 Ross Light
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -138,4 +188,4 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
-.. vim: tw=80 et ts=3 sw=3 ft=rst
+.. vim: tw=80 et ts=3 sw=3 ft=rst fenc=utf-8
