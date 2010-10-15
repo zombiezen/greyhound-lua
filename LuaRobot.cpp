@@ -108,8 +108,8 @@ protected:
         // Retrieve the debug.traceback function. We'll use this for the Lua
         // error function.
         lua_getglobal(L, "debug");
-        lua_getfield(L, -1, "traceback");
-        lua_remove(L, -2);
+        lua_getfield(L, 1, "traceback");
+        lua_remove(L, 1);
         
         // Load Lua bootloader script
         // The "bootloader" is the first script we run because it allows us to
@@ -136,10 +136,10 @@ protected:
         
         // Now we actually run the bootloader.  If all goes well, this function
         // will never return.
-        retcode = lua_pcall(L, 0, 0, -2);
+        retcode = lua_pcall(L, 0, 0, 1);
         
         // Remove the traceback function from the stack.
-        lua_remove(L, 0);
+        lua_remove(L, 1);
         
         // If the code makes it here, then the bootloader failed its job.  We
         // will print an error to stderr, then infinite loop so that the
@@ -147,7 +147,7 @@ protected:
         switch (retcode)
         {
             case LUA_ERRRUN:
-                errstr = lua_tostring(L, 0);
+                errstr = lua_tostring(L, 1);
             	writeError("Lua runtime error: %s", errstr != NULL ? errstr : "<NO MESSAGE>");
                 break;
             case LUA_ERRERR:
