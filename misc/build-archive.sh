@@ -52,7 +52,7 @@ pushd "$TEMPDIR" > /dev/null
 swig -lua -c++ "$DESTROOT/wpilib.i" || crash "** SWIG failed"
 # Archive everything
 case "$ARFMT" in
-    "zip" ) zip --no-wild -rmT "$DESTAR" "$DESTROOT" || crash "** zip failed";;
+    "zip" ) zip --no-wild --quiet -rmT "$DESTAR" "$DESTROOT" || crash "** zip failed";;
     "tar" ) tar -cf "$DESTAR" "$DESTROOT" || crash "** tar failed";;
     "tar.bz2" ) tar --bzip2 -cf "$DESTAR" "$DESTROOT" || crash "** tar failed";;
     "tar.gz" ) tar --gzip -cf "$DESTAR" "$DESTROOT" || crash "** tar failed";;
