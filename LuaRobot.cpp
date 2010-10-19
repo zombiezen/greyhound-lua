@@ -131,7 +131,8 @@ protected:
                     break;
             }
             // Enter an infinite loop.  We won't be doing anything useful anyway.
-            while (1);
+            while (1)
+                Wait(0.1);
         }
         
         // Now we actually run the bootloader.  If all goes well, this function
@@ -160,7 +161,8 @@ protected:
         
         // Clean up and enter an infinite loop.  We won't be doing anything useful anyway.
         closeLua();
-        while (1);
+        while (1)
+            Wait(0.1);
     }
 };
 
