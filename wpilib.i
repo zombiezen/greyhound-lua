@@ -963,37 +963,37 @@ public:
 
 %inline %{
 
-bool isEnabled()
+bool IsEnabled()
 {
     return RobotBase::getInstance().IsEnabled();
 }
 
-bool isDisabled()
+bool IsDisabled()
 {
     return RobotBase::getInstance().IsDisabled();
 }
 
-bool isAutonomous()
+bool IsAutonomous()
 {
     return RobotBase::getInstance().IsAutonomous();
 }
 
-bool isOperatorControl()
+bool IsOperatorControl()
 {
     return RobotBase::getInstance().IsOperatorControl();
 }
 
-bool isSystemActive()
+bool IsSystemActive()
 {
     return RobotBase::getInstance().IsSystemActive();
 }
 
-bool isNewDataAvailable()
+bool IsNewDataAvailable()
 {
     return RobotBase::getInstance().IsNewDataAvailable();
 }
 
-Watchdog *getWatchdog()
+Watchdog *GetWatchdog()
 {
     return &RobotBase::getInstance().GetWatchdog();
 }

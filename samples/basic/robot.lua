@@ -18,25 +18,25 @@ drive = wpilib.RobotDrive(leftMotor1, leftMotor2, rightMotor1, rightMotor2)
 function run()
     -- Main loop
     while true do
-        if wpilib.isDisabled() then
+        if wpilib.IsDisabled() then
             disabled()
-            repeat wpilib.Wait(0.01) until not wpilib.isDisabled()
-        elseif wpilib.isAutonomous() then
+            repeat wpilib.Wait(0.01) until not wpilib.IsDisabled()
+        elseif wpilib.IsAutonomous() then
             autonomous()
-            repeat wpilib.Wait(0.01) until not wpilib.isAutonomous() or not wpilib.isEnabled()
+            repeat wpilib.Wait(0.01) until not wpilib.IsAutonomous() or not wpilib.IsEnabled()
         else
             teleop()
-            repeat wpilib.Wait(0.01) until not wpilib.isOperatorControl() or not wpilib.isEnabled()
+            repeat wpilib.Wait(0.01) until not wpilib.IsOperatorControl() or not wpilib.IsEnabled()
         end
     end
 end
 
 function teleop()
-    local dog = wpilib.getWatchdog()
+    local dog = wpilib.GetWatchdog()
     dog:SetEnabled(true)
     dog:SetExpiration(0.25)
     
-    while wpilib.isOperatorControl() and wpilib.isEnabled() do
+    while wpilib.IsOperatorControl() and wpilib.IsEnabled() do
         dog:Feed()
         drive:ArcadeDrive(-stick1:GetY(), -stick2:GetX())
         wpilib.Wait(0.01)
@@ -44,7 +44,7 @@ function teleop()
 end
 
 function autonomous()
-    wpilib.getWatchdog():SetEnabled(false)
+    wpilib.GetWatchdog():SetEnabled(false)
     -- Drive forward at half-speed for two seconds, then stop.
     drive:Drive(0.5, 0.0)
     wpilib.Wait(2.0)
