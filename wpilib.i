@@ -71,7 +71,8 @@ protected:
 	ErrorBase();
 };
 
-class SensorBase: public ErrorBase {
+class SensorBase: public ErrorBase
+{
 public:
 	static const UINT32 kSystemClockTicksPerMicrosecond = 40;
 
@@ -118,6 +119,22 @@ public:
 	virtual void EnableInterrupts();			///< Enable interrupts - after finishing setup.
 	virtual void DisableInterrupts();		///< Disable, but don't deallocate.
 	virtual double ReadInterruptTimestamp();		///< Return the timestamp for the interrupt that occurred.
+};
+
+class I2C : private SensorBase
+{
+	friend class DigitalModule;
+public:
+	virtual ~I2C();
+	bool Transaction(UINT8 *dataToSend, UINT8 sendSize, UINT8 *dataReceived, UINT8 receiveSize);
+	bool AddressOnly();
+	bool Write(UINT8 registerAddress, UINT8 data);
+	bool Read(UINT8 registerAddress, UINT8 count, UINT8 *data);
+	void Broadcast(UINT8 registerAddress, UINT8 data);
+
+	bool VerifySensor(UINT8 registerAddress, UINT8 count, const UINT8 *expected);
+private:
+	I2C(DigitalModule *module, UINT8 deviceAddress);
 };
 
 class DigitalSource: public InterruptableSensorBase
@@ -193,9 +210,61 @@ public:
 	virtual bool GetRawButton(UINT32 button) = 0;
 };
 
+class PIDOutput
+{
+public:
+	virtual void PIDWrite(float output) = 0;
+};
+
+class PIDSource
+{
+public:
+	virtual double PIDGet() = 0;
+};
+
+class Module: public SensorBase
+{
+public:
+	UINT32 GetSlot() {return m_slot;}
+
+protected:
+	explicit Module(UINT32 slot);
+	virtual ~Module();
+
+	UINT32 m_slot; ///< Slot number where the module is plugged into the chassis.
+
+	// Slots are 1 based, so ignore element 0.
+	static Module* m_modules[kChassisSlots + 1];
+};
+
 /*** CONCRETE CLASSES ***/
 
-class AnalogChannel : public SensorBase
+class ADXL345_I2C : public SensorBase
+{
+public:
+	enum DataFormat_Range {kRange_2G=0x00, kRange_4G=0x01, kRange_8G=0x02, kRange_16G=0x03};
+	enum Axes {kAxis_X=0x00, kAxis_Y=0x02, kAxis_Z=0x04};
+
+	explicit ADXL345_I2C(UINT32 slot, DataFormat_Range range=kRange_2G);
+	virtual ~ADXL345_I2C();
+	double GetAcceleration(Axes axis);
+};
+
+class Accelerometer : public SensorBase, public PIDSource
+{
+public:
+	explicit Accelerometer(UINT32 channel);
+	Accelerometer(UINT32 slot, UINT32 channel);
+	explicit Accelerometer(AnalogChannel *channel);
+	virtual ~Accelerometer();
+
+	float GetAcceleration();
+	void SetSensitivity(float sensitivity);
+	void SetZero(float zero);
+	double PIDGet();
+};
+
+class AnalogChannel : public SensorBase, public PIDSource
 {
 public:
 	static const UINT32 kAccumulatorSlot = 1;
@@ -234,6 +303,137 @@ public:
 	INT64 GetAccumulatorValue();
 	UINT32 GetAccumulatorCount();
 	void GetAccumulatorOutput(INT64 *value, UINT32 *count);
+    
+    double PIDGet();
+};
+
+class AnalogModule: public Module
+{ 
+public:
+	static const long kTimebase = 40000000; ///< 40 MHz clock
+	static const long kDefaultOversampleBits = 0;
+	static const long kDefaultAverageBits = 7;
+	static const float kDefaultSampleRate = 50000.0;
+
+	void SetSampleRate(float samplesPerSecond);
+	float GetSampleRate();
+	void SetAverageBits(UINT32 channel, UINT32 bits);
+	UINT32 GetAverageBits(UINT32 channel);
+	void SetOversampleBits(UINT32 channel, UINT32 bits);
+	UINT32 GetOversampleBits(UINT32 channel);
+	INT16 GetValue(UINT32 channel);
+	INT32 GetAverageValue(UINT32 channel);
+	float GetAverageVoltage(UINT32 channel);
+	float GetVoltage(UINT32 channel);
+	UINT32 GetLSBWeight(UINT32 channel);
+	INT32 GetOffset(UINT32 channel);
+	INT32 VoltsToValue(INT32 channel, float voltage);
+
+	static UINT32 SlotToIndex(UINT32 slot);
+	static AnalogModule* GetInstance(UINT32 slot);
+
+protected:
+	explicit AnalogModule(UINT32 slot);
+	virtual ~AnalogModule();
+};
+
+class AnalogTrigger: public SensorBase
+{
+	friend class AnalogTriggerOutput;
+public:
+	AnalogTrigger(UINT32 slot, UINT32 channel);
+	explicit AnalogTrigger(UINT32 channel);
+	explicit AnalogTrigger(AnalogChannel *channel);
+	virtual ~AnalogTrigger();
+
+	void SetLimitsVoltage(float lower, float upper);
+	void SetLimitsRaw(INT32 lower, INT32 upper);
+	void SetAveraged(bool useAveragedValue);
+	void SetFiltered(bool useFilteredValue);
+	UINT32 GetIndex();
+	bool GetInWindow();
+	bool GetTriggerState();
+	AnalogTriggerOutput *CreateOutput(AnalogTriggerOutput::Type type);
+};
+
+class AnalogTriggerOutput: public DigitalSource
+{
+	friend class AnalogTrigger;
+public:
+	typedef enum {kInWindow=0, kState=1, kRisingPulse=2, kFallingPulse=3} Type;
+	
+	virtual ~AnalogTriggerOutput();
+	bool Get();
+
+	// DigitalSource interface
+	virtual UINT32 GetChannelForRouting();
+	virtual UINT32 GetModuleForRouting();
+	virtual bool GetAnalogTriggerForRouting();
+	virtual void RequestInterrupts(tInterruptHandler handler, void *param=NULL); ///< Asynchronus handler version.
+	virtual void RequestInterrupts();		///< Synchronus Wait version.
+protected:
+	AnalogTriggerOutput(AnalogTrigger *trigger, Type outputType);
+};
+
+class Compressor: public SensorBase
+{
+public:
+	Compressor(UINT32 pressureSwitchChannel, UINT32 compressorRelayChannel);
+	Compressor(UINT32 pressureSwitchSlot, UINT32 pressureSwitchChannel,
+				UINT32 compresssorRelaySlot, UINT32 compressorRelayChannel);
+	~Compressor();
+
+	void Start();
+	void Stop();
+	bool Enabled();
+	UINT32 GetPressureSwitchValue();
+	void SetRelayValue(Relay::Value relayValue);
+};
+
+class Counter : public SensorBase, public CounterBase
+{
+public:
+	typedef enum {kTwoPulse=0, kSemiperiod=1, kPulseLength=2, kExternalDirection=3} Mode;
+
+	Counter();
+	explicit Counter(UINT32 channel);
+	Counter(UINT32 slot, UINT32 channel);
+	explicit Counter(DigitalSource *source);
+	explicit Counter(AnalogTrigger *trigger);
+	Counter(EncodingType encodingType, DigitalSource *upSource, DigitalSource *downSource, bool inverted);
+	virtual ~Counter();
+
+	void SetUpSource(UINT32 channel);
+	void SetUpSource(UINT32 slot, UINT32 channel);
+	void SetUpSource(AnalogTrigger *analogTrigger, AnalogTriggerOutput::Type triggerType);
+	void SetUpSource(DigitalSource *source);
+	void SetUpSourceEdge(bool risingEdge, bool fallingEdge);
+	void ClearUpSource();
+
+	void SetDownSource(UINT32 channel);
+	void SetDownSource(UINT32 slot, UINT32 channel);
+	void SetDownSource(AnalogTrigger *analogTrigger, AnalogTriggerOutput::Type triggerType);
+	void SetDownSource(DigitalSource *source);
+	void SetDownSourceEdge(bool risingEdge, bool fallingEdge);
+	void ClearDownSource();
+
+	void SetUpDownCounterMode();
+	void SetExternalDirectionMode();
+	void SetSemiPeriodMode(bool highSemiPeriod);
+	void SetPulseLengthMode(float threshold);
+
+	void SetReverseDirection(bool reverseDirection);
+
+	// CounterBase interface
+	void Start();
+	INT32 Get();
+	void Reset();
+	void Stop();
+	double GetPeriod();
+	void SetMaxPeriod(double maxPeriod);
+	void SetUpdateWhenEmpty(bool enabled);
+	bool GetStopped();
+	bool GetDirection();
 };
 
 class Dashboard : public ErrorBase
@@ -267,7 +467,8 @@ private:
 	virtual ~Dashboard();
 };
 
-class DigitalInput : public DigitalSource {
+class DigitalInput : public DigitalSource
+{
 public:
 	explicit DigitalInput(UINT32 channel);
 	DigitalInput(UINT32 slot, UINT32 channel);
@@ -284,6 +485,43 @@ public:
 	virtual void RequestInterrupts(tInterruptHandler handler, void *param=NULL); ///< Asynchronus handler version.
 	virtual void RequestInterrupts();		///< Synchronus Wait version.
 	void SetUpSourceEdge(bool risingEdge, bool fallingEdge);
+};
+
+class DigitalModule: public Module
+{
+	friend class I2C;
+
+protected:
+	explicit DigitalModule(UINT32 slot);
+	virtual ~DigitalModule();
+
+public:
+	void SetPWM(UINT32 channel, UINT8 value);
+	UINT8 GetPWM(UINT32 channel);
+	void SetPWMPeriodScale(UINT32 channel, UINT32 squelchMask);
+	void SetRelayForward(UINT32 channel, bool on);
+	void SetRelayReverse(UINT32 channel, bool on);
+	bool GetRelayForward(UINT32 channel);
+	UINT8 GetRelayForward(void);
+	bool GetRelayReverse(UINT32 channel);
+	UINT8 GetRelayReverse(void);
+	bool AllocateDIO(UINT32 channel, bool input);
+	void FreeDIO(UINT32 channel);
+	void SetDIO(UINT32 channel, short value);
+	bool GetDIO(UINT32 channel);
+	UINT16 GetDIO(void);
+	bool GetDIODirection(UINT32 channel);
+	UINT16 GetDIODirection(void);
+	void Pulse(UINT32 channel, float pulseLength);
+	bool IsPulsing(UINT32 channel);
+	bool IsPulsing();
+
+	I2C* GetI2C(UINT32 address);
+
+	static UINT32 SlotToIndex(UINT32 slot);
+	static DigitalModule* GetInstance(UINT32 slot);
+	static UINT8 RemapDigitalChannel(UINT32 channel) { return 15 - channel; }; // TODO: Need channel validation
+	static UINT8 UnmapDigitalChannel(UINT32 channel) { return 15 - channel; }; // TODO: Need channel validation
 };
 
 class DigitalOutput : public SensorBase
@@ -434,7 +672,19 @@ public:
 	void SetReverseDirection(bool reverseDirection);
 };
 
-class Gyro : public SensorBase
+class GearTooth : public Counter
+{
+public:
+	/// 55 uSec for threshold
+	static const double kGearToothThreshold = 55e-6;
+	GearTooth(UINT32 channel, bool directionSensitive = false);
+	GearTooth(UINT32 slot, UINT32 channel, bool directionSensitive = false);
+	GearTooth(DigitalSource *source, bool directionSensitive = false);
+	virtual ~GearTooth();
+	void EnableDirectionSensing(bool directionSensitive);
+};
+
+class Gyro : public SensorBase, public PIDSource
 {
 public:
 	static const UINT32 kOversampleBits = 10;
@@ -450,9 +700,19 @@ public:
 	float GetAngle();
 	void SetSensitivity(float voltsPerDegreePerSecond);
 	void Reset();
+	
+	double PIDGet();
 };
 
-class Jaguar : public PWM, public SpeedController
+class HiTechnicCompass : public SensorBase
+{
+public:
+	explicit HiTechnicCompass(UINT32 slot);
+	virtual ~HiTechnicCompass();
+	float GetAngle();
+};
+
+class Jaguar : public PWM, public SpeedController, public PIDOutput
 {
 public:
 	explicit Jaguar(UINT32 channel);
@@ -460,6 +720,8 @@ public:
 	virtual ~Jaguar();
 	float Get();
 	void Set(float value);
+    
+	void PIDWrite(float output);
 };
 
 class Joystick : public GenericHID
@@ -508,7 +770,38 @@ public:
 	virtual float GetDirectionDegrees();
 };
 
-class Relay : public SensorBase {
+class PIDController
+{
+public:
+	PIDController(float p, float i, float d,
+					PIDSource *source, PIDOutput *output,
+					float period = 0.05);
+	~PIDController();
+	float Get();
+	void SetContinuous(bool continuous = true);
+	void SetInputRange(float minimumInput, float maximumInput);
+	void SetOutputRange(float mimimumOutput, float maximumOutput);
+	void SetPID(float p, float i, float d);
+	float GetP();
+	float GetI();
+	float GetD();
+	
+	void SetSetpoint(float setpoint);
+	float GetSetpoint();
+
+	float GetError();
+	
+	void SetTolerance(float percent);
+	bool OnTarget();
+	
+	void Enable();
+	void Disable();
+	
+	void Reset();
+};
+
+class Relay : public SensorBase
+{
 public:
 	typedef enum {kOff, kOn, kForward, kReverse} Value;
 	typedef enum {kBothDirections, kForwardOnly, kReverseOnly} Direction;
@@ -554,7 +847,46 @@ public:
 	void SetInvertedMotor(MotorType motor, bool isInverted);
 };
 
-class Solenoid : public SensorBase {
+class SerialPort
+{
+public:
+	typedef enum {kParity_None=0, kParity_Odd=1, kParity_Even=2, kParity_Mark=3, kParity_Space=4} Parity;
+	typedef enum {kStopBits_One=10, kStopBits_OnePointFive=15, kStopBits_Two=20} StopBits;
+	typedef enum {kFlowControl_None=0, kFlowControl_XonXoff=1, kFlowControl_RtsCts=2, kFlowControl_DtrDsr=4} FlowControl;
+	typedef enum {kFlushOnAccess=1, kFlushWhenFull=2} WriteBufferMode;
+
+	SerialPort(UINT32 baudRate, UINT8 dataBits = 8, Parity parity = kParity_None, StopBits stopBits = kStopBits_One);
+	~SerialPort();
+	void SetFlowControl(FlowControl flowControl);
+	void EnableTermination(char terminator = '\n');
+	void DisableTermination();
+	INT32 GetBytesReceived();
+	UINT32 Read(char *buffer, INT32 count);
+	UINT32 Write(const char *buffer, INT32 count);
+	void SetTimeout(float timeout);
+	void SetReadBufferSize(UINT32 size);
+	void SetWriteBufferSize(UINT32 size);
+	void SetWriteBufferMode(WriteBufferMode mode);
+	void Flush();
+	void Reset();
+};
+
+class Servo : public PWM, public SpeedController
+{
+public:
+	explicit Servo(UINT32 channel);
+	Servo(UINT32 slot, UINT32 channel);
+	virtual ~Servo();
+	void Set(float value);
+	float Get();
+	void SetAngle(float angle);
+	float GetAngle();
+	static float GetMaxAngle() { return kMaxServoAngle; };
+	static float GetMinAngle() { return kMinServoAngle; };
+};
+
+class Solenoid : public SensorBase
+{
 public:
 	explicit Solenoid(UINT32 channel);
 	Solenoid(UINT32 slot, UINT32 channel);
@@ -580,7 +912,33 @@ public:
 };
 void Wait(double seconds);
 
-class Victor : public PWM, public SpeedController
+class Ultrasonic: public SensorBase, public PIDSource
+{
+public:
+	typedef enum {
+		kInches = 0,
+		kMilliMeters = 1
+	} DistanceUnit;
+	
+	Ultrasonic(DigitalOutput *pingChannel, DigitalInput *echoChannel, DistanceUnit units = kInches);
+	Ultrasonic(UINT32 pingChannel, UINT32 echoChannel, DistanceUnit units = kInches);
+	Ultrasonic(UINT32 pingSlot, UINT32 pingChannel, UINT32 echoSlot, UINT32 echoChannel, DistanceUnit units = kInches);
+	virtual ~Ultrasonic();
+
+	void Ping();
+	bool IsRangeValid();
+	static void SetAutomaticMode(bool enabling);
+	double GetRangeInches();
+	double GetRangeMM();
+	bool IsEnabled() { return m_enabled; }
+	void SetEnabled(bool enable) { m_enabled = enable; }
+	
+	double PIDGet();
+	void SetDistanceUnits(DistanceUnit units);
+	DistanceUnit GetDistanceUnits();
+};
+
+class Victor : public PWM, public SpeedController, public PIDOutput
 {
 public:
 	explicit Victor(UINT32 channel);
@@ -588,6 +946,8 @@ public:
 	virtual ~Victor();
 	void Set(float value);
 	float Get();
+    
+	void PIDWrite(float output);
 };
 
 class Watchdog : public SensorBase
