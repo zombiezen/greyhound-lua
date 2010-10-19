@@ -112,7 +112,6 @@ class InterruptableSensorBase : public SensorBase
 public:
 	InterruptableSensorBase();
 	virtual ~InterruptableSensorBase();
-	virtual void RequestInterrupts(tInterruptHandler handler, void *param) = 0; ///< Asynchronus handler version.
 	virtual void RequestInterrupts() = 0;		///< Synchronus Wait version.
 	virtual void CancelInterrupts();			///< Free up the underlying chipobject functions.
 	virtual void WaitForInterrupt(float timeout); ///< Synchronus version.
@@ -144,7 +143,6 @@ public:
 	virtual UINT32 GetChannelForRouting() = 0;
 	virtual UINT32 GetModuleForRouting() = 0;
 	virtual bool GetAnalogTriggerForRouting() = 0;
-	virtual void RequestInterrupts(tInterruptHandler handler, void *param) = 0;
 	virtual void RequestInterrupts() = 0;
 };
 
@@ -230,11 +228,6 @@ public:
 protected:
 	explicit Module(UINT32 slot);
 	virtual ~Module();
-
-	UINT32 m_slot; ///< Slot number where the module is plugged into the chassis.
-
-	// Slots are 1 based, so ignore element 0.
-	static Module* m_modules[kChassisSlots + 1];
 };
 
 /*** CONCRETE CLASSES ***/
@@ -369,7 +362,6 @@ public:
 	virtual UINT32 GetChannelForRouting();
 	virtual UINT32 GetModuleForRouting();
 	virtual bool GetAnalogTriggerForRouting();
-	virtual void RequestInterrupts(tInterruptHandler handler, void *param=NULL); ///< Asynchronus handler version.
 	virtual void RequestInterrupts();		///< Synchronus Wait version.
 protected:
 	AnalogTriggerOutput(AnalogTrigger *trigger, Type outputType);
@@ -482,7 +474,6 @@ public:
 	virtual bool GetAnalogTriggerForRouting();
 	
 	// Interruptable Interface
-	virtual void RequestInterrupts(tInterruptHandler handler, void *param=NULL); ///< Asynchronus handler version.
 	virtual void RequestInterrupts();		///< Synchronus Wait version.
 	void SetUpSourceEdge(bool risingEdge, bool fallingEdge);
 };
