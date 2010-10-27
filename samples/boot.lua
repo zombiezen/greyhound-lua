@@ -9,11 +9,11 @@ This file is public domain.
 
     Overview:
 
-    When FIRSTLua starts, it will try to run a Lua file called lua/boot.lua.
-    From there, this Lua file is expected to load the rest of the Lua code.
-    You could put all of your core logic into the boot.lua file, but we
-    recommend writing a bootloader: very reliable code that runs the rest of
-    your robot.
+    When Greyhound Lua starts, it will try to run a Lua file called
+    lua/boot.lua.  From there, this Lua file is expected to load the rest of
+    the Lua code.  You could put all of your core logic into the boot.lua file,
+    but we recommend writing a bootloader: very reliable code that runs the
+    rest of your robot.
     
     This file is one such example.
     

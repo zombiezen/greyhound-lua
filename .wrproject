@@ -242,14 +242,14 @@
         </mapAttribute>
     </attributes>
     <buildtargets>
-        <buildtarget buildtool="Linker" name="FIRSTLua" passed="false" targetname="FIRSTLua">
+        <buildtarget buildtool="Linker" name="GreyhoundLua" passed="false" targetname="GreyhoundLua">
             <contents>
-                <buildtargetreference name="/FIRSTLua/FIRSTLua_partialImage"/>
+                <buildtargetreference name="/GreyhoundLua/GreyhoundLua_partialImage"/>
             </contents>
         </buildtarget>
-        <buildtarget buildtool="Partial Image Linker" name="FIRSTLua_partialImage" passed="true" targetname="FIRSTLua_partialImage">
+        <buildtarget buildtool="Partial Image Linker" name="GreyhoundLua_partialImage" passed="true" targetname="GreyhoundLua_partialImage">
             <contents>
-                <folder name="/FIRSTLua" recursive="true"/>
+                <folder name="/$(PRJ_ROOT_DIR)" recursive="true"/>
             </contents>
         </buildtarget>
     </buildtargets>

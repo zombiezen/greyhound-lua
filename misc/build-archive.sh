@@ -40,10 +40,10 @@ then
 fi
 
 REVNO="$(bzr revno)"
-DESTROOT="FIRSTLua"
-DESTAR="FIRSTLua-r${REVNO}.${ARFMT}"
+DESTROOT="GreyhoundLua"
+DESTAR="GreyhoundLua-r${REVNO}.${ARFMT}"
 
-TEMPDIR="`mktemp -d -t FIRSTLua-build.XXXX`" || crash "** Couldn't create temporary directory"
+TEMPDIR="`mktemp -d -t GreyhoundLua-build.XXXX`" || crash "** Couldn't create temporary directory"
 bzr export --format=dir "$TEMPDIR/$DESTROOT" || crash "** bzr could not export"
 
 

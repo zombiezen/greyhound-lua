@@ -1,6 +1,6 @@
 /*
  *  LuaRobot.cpp - C++ code to start Lua
- *  FIRSTLua
+ *  Greyhound Lua
  *
  *  Copyright (c) 2010 Ross Light
  *  

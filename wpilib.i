@@ -1,6 +1,6 @@
 /*
  *  wpilib.i - SWIG bindings for wpilib
- *  FIRSTLua
+ *  Greyhound Lua
  *
  *  Copyright (c) 2010 Ross Light
  *  
