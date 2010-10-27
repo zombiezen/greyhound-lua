@@ -34,22 +34,68 @@ extern "C" {
 
 #define FIRST_LUA_BOOT_FILE "lua/boot.lua"
 
+////////////////// LIBRARIES ////////////////// 
+
 extern "C" int luaopen_wpilib(lua_State *L);
 extern "C" int luaopen_bit(lua_State *L);
+
+struct libentry
+{
+    char *name;
+    lua_CFunction func;
+    bool registerPackage;
+};
+
+struct libentry libList[] =
+{
+    {"bit", luaopen_bit, false},
+    {"wpilib", luaopen_wpilib, true},
+    {NULL, NULL, false}
+};
+
+////////////////// LIBRARIES ////////////////// 
 
 class LuaRobot : public RobotBase
 {
 public:
     LuaRobot()
     {
+        int i;
+        
         L = luaL_newstate();
         
-        // Load libraries
+        // Load builtin libraries
         luaL_openlibs(L);
-        lua_pushcfunction(L, luaopen_bit);
-        lua_pcall(L, 0, 0, 0);
-        lua_pushcfunction(L, luaopen_wpilib);
-        lua_pcall(L, 0, 0, 0);
+        
+        // Get package.loaded table
+        lua_getglobal(L, "package");
+        lua_getfield(L, -1, "loaded");
+        lua_remove(L, -2);
+        
+        // Load user libraries
+        for (i = 0; libList[i].name != NULL; i++)
+        {
+            // Initialize the library
+            lua_pushcfunction(L, libList[i].func);
+            lua_pushstring(L, libList[i].name);
+            lua_pcall(L, 1, 0, 0);
+            // If necessary, put the module onto the package.loaded list.
+            if (libList[i].registerPackage)
+            {
+                // Get module table
+                lua_getglobal(L, libList[i].name);
+                // Add module table to package.loaded.
+                // For efficiency, we only retrieve package.loaded once, so it
+                // should be the penultimate item on the stack right now.
+                if (!lua_isnil(L, -1))
+                    lua_setfield(L, -2, libList[i].name);
+                else
+                    lua_pop(L, 1);
+            }
+        }
+        
+        // Clean up state
+        lua_settop(L, 0);
     }
     
     virtual ~LuaRobot()
