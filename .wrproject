@@ -249,7 +249,7 @@
         </buildtarget>
         <buildtarget buildtool="Partial Image Linker" name="GreyhoundLua_partialImage" passed="true" targetname="GreyhoundLua_partialImage">
             <contents>
-                <folder name="/$(PRJ_ROOT_DIR)" recursive="true"/>
+                <folder name="/GreyhoundLua" recursive="true"/>
             </contents>
         </buildtarget>
     </buildtargets>
