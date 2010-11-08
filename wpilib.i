@@ -459,6 +459,9 @@ private:
 	virtual ~Dashboard();
 };
 
+%rename(Get) DigitalInput::GetBool;
+%rename(GetInt) DigitalInput::Get;
+
 class DigitalInput : public DigitalSource
 {
 public:
@@ -476,6 +479,14 @@ public:
 	// Interruptable Interface
 	virtual void RequestInterrupts();		///< Synchronus Wait version.
 	void SetUpSourceEdge(bool risingEdge, bool fallingEdge);
+    
+    %extend
+    {
+        bool GetBool()
+        {
+            return $self->Get() != 0;
+        }
+    }
 };
 
 class DigitalModule: public Module
