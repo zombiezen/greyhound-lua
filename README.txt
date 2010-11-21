@@ -4,6 +4,7 @@
 
 :Author: Ross Light
 :Copyright: Copyright © 2010, Ross Light
+:Version: 0.5
 
 About Greyhound Lua
 =====================
