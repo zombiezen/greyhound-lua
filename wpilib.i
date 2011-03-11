@@ -230,6 +230,32 @@ protected:
 	virtual ~Module();
 };
 
+class MotorSafety
+{
+public:
+	virtual void SetExpiration(float timeout) = 0;
+	virtual float GetExpiration() = 0;
+	virtual bool IsAlive() = 0;
+	virtual void StopMotor() = 0;
+	virtual void SetSafetyEnabled(bool enabled) = 0;
+	virtual bool IsSafetyEnabled() = 0;
+};
+
+class SafePWM: public PWM, public MotorSafety {
+public:
+	explicit SafePWM(UINT32 channel);
+	SafePWM(UINT32 slot, UINT32 channel);
+	
+	void SetExpiration(float timeout);
+	float GetExpiration();
+	bool IsAlive();
+	void StopMotor();
+	bool IsSafetyEnabled();
+	void SetSafetyEnabled(bool enabled);
+
+	virtual void SetSpeed(float speed);
+};
+
 /*** CONCRETE CLASSES ***/
 
 class ADXL345_I2C : public SensorBase
@@ -714,7 +740,7 @@ public:
 	float GetAngle();
 };
 
-class Jaguar : public PWM, public SpeedController, public PIDOutput
+class Jaguar : public SafePWM, public SpeedController, public PIDOutput
 {
 public:
 	explicit Jaguar(UINT32 channel);
@@ -815,7 +841,7 @@ public:
 	void SetDirection(Direction direction);
 };
 
-class RobotDrive
+class RobotDrive : public MotorSafety
 {
 public:
 	typedef enum
@@ -826,16 +852,15 @@ public:
 		kRearRightMotor = 3
 	} MotorType;
 
-	RobotDrive(UINT32 leftMotorChannel, UINT32 rightMotorChannel, float sensitivity = 0.5);
+	RobotDrive(UINT32 leftMotorChannel, UINT32 rightMotorChannel);
 	RobotDrive(UINT32 frontLeftMotorChannel, UINT32 rearLeftMotorChannel,
-				UINT32 frontRightMotorChannel, UINT32 rearRightMotorChannel, float sensitivity = 0.5);
-	RobotDrive(SpeedController *leftMotor, SpeedController *rightMotor, float sensitivity = 0.5);
+				UINT32 frontRightMotorChannel, UINT32 rearRightMotorChannel);
+	RobotDrive(SpeedController *leftMotor, SpeedController *rightMotor);
 	RobotDrive(SpeedController *frontLeftMotor, SpeedController *rearLeftMotor,
-				SpeedController *frontRightMotor, SpeedController *rearRightMotor,
-				float sensitivity = 0.5);
+				SpeedController *frontRightMotor, SpeedController *rearRightMotor);
 	virtual ~RobotDrive();
 
-	void Drive(float speed, float curve);
+	void Drive(float outputMagnitude, float curve);
 	void TankDrive(GenericHID *leftStick, GenericHID *rightStick);
 	void TankDrive(GenericHID *leftStick, UINT32 leftAxis, GenericHID *rightStick, UINT32 rightAxis);
 	void TankDrive(float leftValue, float rightValue);
@@ -845,8 +870,17 @@ public:
 	void MecanumDrive_Cartesian(float x, float y, float rotation, float gyroAngle = 0.0);
 	void MecanumDrive_Polar(float magnitude, float direction, float rotation);
 	void HolonomicDrive(float magnitude, float direction, float rotation);
-	void SetLeftRightMotorSpeeds(float leftSpeed, float rightSpeed);
+	virtual void SetLeftRightMotorOutputs(float leftOutput, float rightOutput);
 	void SetInvertedMotor(MotorType motor, bool isInverted);
+	void SetSensitivity(float sensitivity);
+	void SetMaxOutput(double maxOutput);
+
+	void SetExpiration(float timeout);
+	float GetExpiration();
+	bool IsAlive();
+	void StopMotor();
+	bool IsSafetyEnabled();
+	void SetSafetyEnabled(bool enabled);
 };
 
 class SerialPort
@@ -873,13 +907,14 @@ public:
 	void Reset();
 };
 
-class Servo : public PWM, public SpeedController
+class Servo : public SafePWM
 {
 public:
 	explicit Servo(UINT32 channel);
 	Servo(UINT32 slot, UINT32 channel);
 	virtual ~Servo();
 	void Set(float value);
+	void SetOffline();
 	float Get();
 	void SetAngle(float angle);
 	float GetAngle();
@@ -940,7 +975,7 @@ public:
 	DistanceUnit GetDistanceUnits();
 };
 
-class Victor : public PWM, public SpeedController, public PIDOutput
+class Victor : public SafePWM, public SpeedController, public PIDOutput
 {
 public:
 	explicit Victor(UINT32 channel);
