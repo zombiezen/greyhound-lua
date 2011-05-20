@@ -5,7 +5,7 @@
 :Author: Ross Light
 :Copyright: Copyright © 2010, Ross Light
 :Version: 2011-01-08
-:Homepage: http://hg.zombiezen.org/greyhoundlua
+:Homepage: http://hg.zombiezen.org/greyhound-lua
 
 About Greyhound Lua
 =====================
@@ -37,7 +37,7 @@ The `Greyhound Lua Wiki`_ is the best place for up-to-date documentation and
 resources for Greyhound Lua.  You can also find examples of code in the
 ``samples`` directory.
 
-.. _Greyhound Lua Wiki: http://hg.zombiezen.com/greyhoundlua/wiki/Home
+.. _Greyhound Lua Wiki: http://hg.zombiezen.com/greyhound-lua/wiki/Home
 
 Technical Overview
 ====================
