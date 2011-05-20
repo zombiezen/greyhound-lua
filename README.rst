@@ -106,6 +106,7 @@ Major Differences from standard Lua
    lifted eventually.
 *  The `bitop`_ library is bundled with this project (as ``bit.c``).
 *  Some functions from ``os`` are removed, namely:
+
    *  ``os.execute``
    *  ``os.exit``
    *  ``os.setlocale``
