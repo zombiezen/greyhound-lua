@@ -5,6 +5,7 @@
 :Author: Ross Light
 :Copyright: Copyright © 2010, Ross Light
 :Version: 2011-01-08
+:Homepage: http://hg.zombiezen.org/greyhoundlua
 
 About Greyhound Lua
 =====================
@@ -29,61 +30,14 @@ Features
 
 .. _bitop: http://bitop.luajit.org/
 
-Installation
-==============
+Getting Started
+=================
 
-Open the project directory as a WindRiver project.  Build the project and
-download the code to your robot.  Now you have the Lua interpreter on the robot,
-now let's add some code.
+The `Greyhound Lua Wiki`_ is the best place for up-to-date documentation and
+resources for Greyhound Lua.  You can also find examples of code in the
+``samples`` directory.
 
-Connect to your robot's IP with an FTP client (e.g. ``ftp://10.XX.YY.2/``, where
-XXYY is your team number).  Copy the ``samples/boot.lua`` file in the Greyhound
-Lua distribution to ``lua/boot.lua`` on the robot.  This is the bootloader
-which will run the rest of your code; you shouldn't need to edit it.
-
-Writing Code
-==============
-
-The default Lua bootloader will load ``lua/robot.lua`` and try to call a
-function called ``run`` in there.  This assumes that you are using the standard
-Lua packaging system (i.e. using the ``module`` function).  A basic
-``robot.lua`` file may look like this::
-
-   -- samples/template/robot.lua
-   module(..., package.seeall)
-   
-   function run()
-      -- Main loop
-      while true do
-         if wpilib.IsDisabled() then
-            disabled()
-            repeat wpilib.Wait(0.01) until not wpilib.IsDisabled()
-         elseif wpilib.IsAutonomous() then
-            autonomous()
-            repeat wpilib.Wait(0.01) until not wpilib.IsAutonomous() or not wpilib.IsEnabled()
-         else
-            teleop()
-            repeat wpilib.Wait(0.01) until not wpilib.IsOperatorControl() or not wpilib.IsEnabled()
-         end
-      end
-   end
-
-   function teleop()
-      while wpilib.IsOperatorControl() and wpilib.IsEnabled() do
-         -- Run one cycle of teleoperated here...
-         wpilib.Wait(0.01)
-      end
-   end
-
-   function autonomous()
-      -- Run autonomous code here...
-   end
-   
-   function disabled()
-      -- Do something in disabled mode here...
-   end
-
-You can find more examples of code in the ``samples`` directory.
+.. _Greyhound Lua Wiki: http://hg.zombiezen.com/greyhoundlua/wiki/Home
 
 Technical Overview
 ====================
