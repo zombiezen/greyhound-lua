@@ -24,6 +24,7 @@
  */
 
 %module wpilib
+%include "std_string.i"
 %{
 #include <WPILib/WPILib.h>
 %}
@@ -48,13 +49,17 @@ public:
 
 	Error();
 	~Error();
+	void Clone(Error &error);
 	Code GetCode() const;
 	const char *GetMessage() const;
 	const char *GetFilename() const;
+	const char *GetFunction() const;
 	UINT32 GetLineNumber() const;
     const ErrorBase* GetOriginatingObject() const;
+	double GetTime() const;
 	void Clear();
-	void Set(Code code, const char* filename, UINT32 lineNumber, const ErrorBase* originatingObject);
+	static void EnableStackTrace(bool enable) { m_stackTraceEnabled=enable; }
+	static void EnableSuspendOnError(bool enable) { m_suspendOnErrorEnabled=enable; }
 };
 
 class ErrorBase
@@ -62,8 +67,6 @@ class ErrorBase
 public:
 	virtual ~ErrorBase();
 	virtual Error& GetError();
-	virtual const Error& GetError() const;
-	virtual void SetError(Error::Code code, const char* filename, UINT32 lineNumber) const;
     virtual void ClearError();
     virtual bool StatusIsFatal() const;
     static Error& GetGlobalError();
@@ -74,34 +77,30 @@ protected:
 class SensorBase: public ErrorBase
 {
 public:
-	static const UINT32 kSystemClockTicksPerMicrosecond = 40;
-
 	SensorBase();
 	virtual ~SensorBase();
-	static void SetDefaultAnalogModule(UINT32 slot);
-	static void SetDefaultDigitalModule(UINT32 slot);
-	static void SetDefaultSolenoidModule(UINT32 slot);
 	static void DeleteSingletons();
-	static UINT32 GetDefaultAnalogModule() { return m_defaultAnalogModule; }
-	static UINT32 GetDefaultDigitalModule() { return m_defaultDigitalModule; }
-	static UINT32 GetDefaultSolenoidModule() { return m_defaultSolenoidModule; }
-	static bool CheckDigitalModule(UINT32 slot);
-	static bool CheckRelayModule(UINT32 slot);
-	static bool CheckPWMModule(UINT32 slot);
-	static bool CheckSolenoidModule(UINT32 slot);
-	static bool CheckAnalogModule(UINT32 slot);
+	static UINT32 GetDefaultAnalogModule() { return 1; }
+	static UINT32 GetDefaultDigitalModule() { return 1; }
+	static UINT32 GetDefaultSolenoidModule() { return 1; }
+	static bool CheckAnalogModule(UINT8 moduleNumber);
+	static bool CheckDigitalModule(UINT8 moduleNumber);
+	static bool CheckPWMModule(UINT8 moduleNumber);
+	static bool CheckRelayModule(UINT8 moduleNumber);
+	static bool CheckSolenoidModule(UINT8 moduleNumber);
 	static bool CheckDigitalChannel(UINT32 channel);
 	static bool CheckRelayChannel(UINT32 channel);
 	static bool CheckPWMChannel(UINT32 channel);
 	static bool CheckAnalogChannel(UINT32 channel);
 	static bool CheckSolenoidChannel(UINT32 channel);
 
+	static const UINT32 kSystemClockTicksPerMicrosecond = 40;
 	static const UINT32 kDigitalChannels = 14;
 	static const UINT32 kAnalogChannels = 8;
 	static const UINT32 kAnalogModules = 2;
 	static const UINT32 kDigitalModules = 2;
 	static const UINT32 kSolenoidChannels = 8;
-    static const UINT32 kSolenoidModules = 2;
+	static const UINT32 kSolenoidModules = 2;
 	static const UINT32 kPwmChannels = 10;
 	static const UINT32 kRelayChannels = 8;
 	static const UINT32 kChassisSlots = 8;
@@ -130,6 +129,7 @@ public:
 	bool Write(UINT8 registerAddress, UINT8 data);
 	bool Read(UINT8 registerAddress, UINT8 count, UINT8 *data);
 	void Broadcast(UINT8 registerAddress, UINT8 data);
+	void SetCompatibilityMode(bool enable);
 
 	bool VerifySensor(UINT8 registerAddress, UINT8 count, const UINT8 *expected);
 private:
@@ -144,6 +144,15 @@ public:
 	virtual UINT32 GetModuleForRouting() = 0;
 	virtual bool GetAnalogTriggerForRouting() = 0;
 	virtual void RequestInterrupts() = 0;
+};
+
+class SolenoidBase : public SensorBase {
+public:
+	virtual ~SolenoidBase();
+	UINT8 GetAll();
+
+protected:
+	explicit SolenoidBase(UINT32 slot);
 };
 
 class CounterBase
@@ -162,6 +171,15 @@ public:
 	virtual bool GetDirection() = 0;
 };
 
+class DashboardBase : public ErrorBase {
+public:
+	virtual void GetStatusBuffer(char** userStatusData, INT32* userStatusDataSize) = 0;
+	virtual void Flush() = 0;
+	virtual ~DashboardBase() {}
+protected:
+	DashboardBase() {}
+};
+
 class SpeedController
 {
 public:
@@ -178,8 +196,8 @@ public:
 	explicit PWM(UINT32 channel);
 	PWM(UINT32 slot, UINT32 channel);
 	virtual ~PWM();
-	void SetRaw(UINT8 value);
-	UINT8 GetRaw();
+	virtual void SetRaw(UINT8 value);
+	virtual UINT8 GetRaw();
 	void SetPeriodMultiplier(PeriodMultiplier mult);
 	void EnableDeadbandElimination(bool eliminateDeadband);
 	void SetBounds(INT32 max, INT32 deadbandMax, INT32 center, INT32 deadbandMin, INT32 min);
@@ -223,7 +241,9 @@ public:
 class Module: public SensorBase
 {
 public:
-	UINT32 GetSlot() {return m_slot;}
+	//nLoadOut::tModuleType GetType() {return m_moduleType;}
+	UINT8 GetNumber() {return m_moduleNumber;}
+	static Module *GetModule(nLoadOut::tModuleType type, UINT8 number);
 
 protected:
 	explicit Module(UINT32 slot);
@@ -239,6 +259,19 @@ public:
 	virtual void StopMotor() = 0;
 	virtual void SetSafetyEnabled(bool enabled) = 0;
 	virtual bool IsSafetyEnabled() = 0;
+};
+
+class MotorSafetyHelper {
+public:
+	MotorSafetyHelper(MotorSafety *safeObject);
+	void Feed();
+	void SetExpiration(float expirationTime);
+	float GetExpiration();
+	bool IsAlive();
+	void Check();
+	void SetSafetyEnabled(bool enabled);
+	bool IsSafetyEnabled();
+	static void CheckMotors();
 };
 
 class SafePWM: public PWM, public MotorSafety {
@@ -286,7 +319,7 @@ public:
 class AnalogChannel : public SensorBase, public PIDSource
 {
 public:
-	static const UINT32 kAccumulatorSlot = 1;
+	static const UINT8 kAccumulatorModuleNumber = 1;
 	static const UINT32 kAccumulatorNumChannels = 2;
 	static const UINT32 kAccumulatorChannels[kAccumulatorNumChannels];
 
@@ -302,7 +335,7 @@ public:
 	float GetVoltage();
 	float GetAverageVoltage();
 
-	UINT32 GetSlot();
+	UINT8 GetModuleNumber();
 	UINT32 GetChannel();
 
 	void SetAverageBits(UINT32 bits);
@@ -348,8 +381,7 @@ public:
 	INT32 GetOffset(UINT32 channel);
 	INT32 VoltsToValue(INT32 channel, float voltage);
 
-	static UINT32 SlotToIndex(UINT32 slot);
-	static AnalogModule* GetInstance(UINT32 slot);
+	static AnalogModule* GetInstance(UINT8 moduleNumber);
 
 protected:
 	explicit AnalogModule(UINT32 slot);
@@ -454,9 +486,12 @@ public:
 	bool GetDirection();
 };
 
-class Dashboard : public ErrorBase
+class Dashboard : public DashboardBase
 {
 public:
+	explicit Dashboard(SEM_ID statusDataSemaphore);
+	virtual ~Dashboard();
+
 	enum Type {kI8, kI16, kI32, kU8, kU16, kU32, kFloat, kDouble, kBoolean, kString, kOther};
 	enum ComplexType {kArray, kCluster};
 
@@ -480,9 +515,8 @@ public:
 	void Printf(const char *writeFmt, ...);
 
 	INT32 Finalize(void);
-private:
-	Dashboard(SEM_ID statusDataSemaphore);
-	virtual ~Dashboard();
+	void GetStatusBuffer(char** userStatusData, INT32* userStatusDataSize);
+	void Flush() {}
 };
 
 %rename(Get) DigitalInput::GetBool;
@@ -518,6 +552,7 @@ public:
 class DigitalModule: public Module
 {
 	friend class I2C;
+	friend class Module;
 
 protected:
 	explicit DigitalModule(UINT32 slot);
@@ -530,24 +565,28 @@ public:
 	void SetRelayForward(UINT32 channel, bool on);
 	void SetRelayReverse(UINT32 channel, bool on);
 	bool GetRelayForward(UINT32 channel);
-	UINT8 GetRelayForward(void);
+	UINT8 GetRelayForward();
 	bool GetRelayReverse(UINT32 channel);
-	UINT8 GetRelayReverse(void);
+	UINT8 GetRelayReverse();
 	bool AllocateDIO(UINT32 channel, bool input);
 	void FreeDIO(UINT32 channel);
 	void SetDIO(UINT32 channel, short value);
 	bool GetDIO(UINT32 channel);
-	UINT16 GetDIO(void);
+	UINT16 GetDIO();
 	bool GetDIODirection(UINT32 channel);
-	UINT16 GetDIODirection(void);
+	UINT16 GetDIODirection();
 	void Pulse(UINT32 channel, float pulseLength);
 	bool IsPulsing(UINT32 channel);
 	bool IsPulsing();
+	UINT32 AllocateDO_PWM();
+	void FreeDO_PWM(UINT32 pwmGenerator);
+	void SetDO_PWMRate(float rate);
+	void SetDO_PWMDutyCycle(UINT32 pwmGenerator, float dutyCycle);
+	void SetDO_PWMOutputChannel(UINT32 pwmGenerator, UINT32 channel);
 
 	I2C* GetI2C(UINT32 address);
 
-	static UINT32 SlotToIndex(UINT32 slot);
-	static DigitalModule* GetInstance(UINT32 slot);
+	static DigitalModule* GetInstance(UINT8 moduleNumber);
 	static UINT8 RemapDigitalChannel(UINT32 channel) { return 15 - channel; }; // TODO: Need channel validation
 	static UINT8 UnmapDigitalChannel(UINT32 channel) { return 15 - channel; }; // TODO: Need channel validation
 };
@@ -563,6 +602,17 @@ public:
 	bool IsPulsing();
 };
 
+class DoubleSolenoid : public SolenoidBase {
+public:
+	typedef enum {kOff, kForward, kReverse} Value;
+
+	explicit DoubleSolenoid(UINT32 forwardChannel, UINT32 reverseChannel);
+	DoubleSolenoid(UINT32 slot, UINT32 forwardChannel, UINT32 reverseChannel);
+	virtual ~DoubleSolenoid();
+	virtual void Set(Value value);
+	virtual Value Get();
+};
+
 class DriverStation : public SensorBase
 {
 public:
@@ -571,7 +621,7 @@ public:
 	virtual ~DriverStation();
 	static DriverStation *GetInstance();
 
-	static const UINT32 kBatterySlot = 1;
+	static const UINT32 kBatteryModuleNumber = 1;
 	static const UINT32 kBatteryChannel = 8;
 	static const UINT32 kJoystickPorts = 4;
 	static const UINT32 kJoystickAxes = 6;
@@ -594,12 +644,24 @@ public:
 	UINT32 GetPacketNumber();
 	Alliance GetAlliance();
 	UINT32 GetLocation();
-
+	void WaitForData();
+	double GetMatchTime();
 	float GetBatteryVoltage();
+	UINT16 GetTeamNumber();
 
 	Dashboard& GetHighPriorityDashboardPacker(void) {return m_dashboardHigh;}
 	Dashboard& GetLowPriorityDashboardPacker(void) {return m_dashboardLow;}
+	DashboardBase* GetHighPriorityDashboardPackerInUse() { return m_dashboardInUseHigh; }
+	DashboardBase* GetLowPriorityDashboardPackerInUse() { return m_dashboardInUseLow; }
+	void SetHighPriorityDashboardPackerToUse(DashboardBase* db) { m_dashboardInUseHigh = db; }
+	void SetLowPriorityDashboardPackerToUse(DashboardBase* db) { m_dashboardInUseLow = db; }
 	DriverStationEnhancedIO& GetEnhancedIO(void) {return m_enhancedIO;}
+	void IncrementUpdateNumber() { m_updateNumber++; }
+	SEM_ID GetUserStatusDataSem() { return m_statusDataSemaphore; }
+
+	void InDisabled(bool entering) {m_userInDisabled=entering;}
+	void InAutonomous(bool entering) {m_userInAutonomous=entering;}
+	void InOperatorControl(bool entering) {m_userInTeleop=entering;}
 protected:
 	DriverStation();
 };
@@ -705,9 +767,8 @@ class GearTooth : public Counter
 public:
 	/// 55 uSec for threshold
 	static const double kGearToothThreshold = 55e-6;
-	GearTooth(UINT32 channel, bool directionSensitive = false);
-	GearTooth(UINT32 slot, UINT32 channel, bool directionSensitive = false);
-	GearTooth(DigitalSource *source, bool directionSensitive = false);
+	GearTooth(UINT32 slot, UINT32 channel, bool directionSensitive);
+	GearTooth(DigitalSource *source, bool directionSensitive);
 	virtual ~GearTooth();
 	void EnableDirectionSensing(bool directionSensitive);
 };
@@ -838,7 +899,6 @@ public:
 	virtual ~Relay();
 
 	void Set(Value value);
-	void SetDirection(Direction direction);
 };
 
 class RobotDrive : public MotorSafety
@@ -922,15 +982,77 @@ public:
 	static float GetMinAngle() { return kMinServoAngle; };
 };
 
-class Solenoid : public SensorBase
+class SmartDashboard : public SensorBase {
+public:
+	static SmartDashboard *GetInstance();
+
+	//void PutData(const char *keyName, SmartDashboardData *value);
+	//void PutData(SmartDashboardNamedData *value);
+	//SmartDashboardData* GetData(const char *keyName);
+	void PutBoolean(const char *keyName, bool value);
+	bool GetBoolean(const char *keyName);
+	void PutInt(const char *keyName, int value);
+	int GetInt(const char *keyName);
+	void PutDouble(const char *keyName, double value);
+	double GetDouble(const char *keyName);
+	std::string GetString(std::string keyName);
+	void PutString(std::string keyName, std::string value);
+
+	void init();
+	static int LogChar(char value, const char *name);
+	static int LogChar(wchar_t value, const char *name);
+	//static int Log(INT32 value, const char *name);
+	//static int Log(INT64 value, const char *name);
+	//static int Log(bool value, const char *name);
+	//static int Log(float value, const char *name);
+	//static int Log(double value, const char *name);
+	//static int Log(const char *value, const char *name);
+
+        %extend
+        {
+            static int LogInt32(INT32 value, const char *name)
+            {
+                return SmartDashboard::Log(value, name);
+            }
+
+            static int LogInt64(INT64 value, const char *name)
+            {
+                return SmartDashboard::Log(value, name);
+            }
+
+            static int LogBool(bool value, const char *name)
+            {
+                return SmartDashboard::Log(value, name);
+            }
+
+            static int LogFloat(double value, const char *name)
+            {
+                return SmartDashboard::Log(value, name);
+            }
+
+            static int LogDouble(double value, const char *name)
+            {
+                return SmartDashboard::Log(value, name);
+            }
+
+            static int LogString(const char *value, const char *name)
+            {
+                return SmartDashboard::Log(value, name);
+            }
+        }
+private:
+	SmartDashboard();
+	virtual ~SmartDashboard();
+};
+
+class Solenoid : public SolenoidBase
 {
 public:
 	explicit Solenoid(UINT32 channel);
 	Solenoid(UINT32 slot, UINT32 channel);
-	~Solenoid();
-	void Set(bool on);
-	bool Get();
-	char GetAll();
+	virtual ~Solenoid();
+	virtual void Set(bool on);
+	virtual bool Get();
 };
 
 class Timer
