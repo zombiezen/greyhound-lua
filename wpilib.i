@@ -25,9 +25,14 @@
 
 %module wpilib
 %include "std_string.i"
+%include "std_vector.i"
 %{
 #include <WPILib/WPILib.h>
 %}
+
+namespace std {
+	%template(vector_charp) vector<const char *>;
+}
 
 typedef signed char INT8;
 typedef signed short INT16;
@@ -857,6 +862,40 @@ public:
 	virtual float GetMagnitude();
 	virtual float GetDirectionRadians();
 	virtual float GetDirectionDegrees();
+};
+
+class NetworkTable : public ErrorBase {
+public:
+	NetworkTable();
+	~NetworkTable();
+	static void Initialize();
+	static NetworkTable *GetTable(const char *tableName);
+	static NetworkTable *GetTable(int id);
+	std::vector<const char *> GetKeys();
+	void BeginTransaction();
+	void EndTransaction();
+//	void AddChangeListener(const char *keyName, NetworkTableChangeListener *listener);
+//	void AddChangeListenerAny(NetworkTableChangeListener *listener);
+//	void RemoveChangeListener(const char *keyName, NetworkTableChangeListener *listener);
+//	void RemoveChangeListenerAny(NetworkTableChangeListener *listener);
+//	void AddAdditionListener(NetworkTableAdditionListener *listener);
+//	void RemoveAdditionListener(NetworkTableAdditionListener *listener);
+//	void AddConnectionListener(NetworkTableConnectionListener *listener, bool immediateNotify);
+//	void RemoveConnectionListener(NetworkTableConnectionListener *listener);
+	bool IsConnected();
+	bool ContainsKey(const char *keyName);
+//	NetworkTables::Entry *GetEntry(const char *keyName);
+	
+	int GetInt(const char *keyName);
+	bool GetBoolean(const char *keyName);
+	double GetDouble(const char *keyName);
+	std::string GetString(std::string keyName);
+	NetworkTable *GetSubTable(const char *keyName);
+	void PutInt(const char *keyName, int value);
+	void PutBoolean(const char *keyName, bool value);
+	void PutDouble(const char *keyName, double value);
+	void PutString(std::string keyName, std::string value);
+	void PutSubTable(const char *keyName, NetworkTable *value);
 };
 
 class PIDController
