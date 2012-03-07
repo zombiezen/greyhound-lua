@@ -24,6 +24,7 @@
  */
 
 %module wpilib
+%include "cpointer.i"
 %include "std_string.i"
 %include "std_vector.i"
 %{
@@ -43,6 +44,8 @@ typedef unsigned char UINT8;
 typedef unsigned short UINT16;
 typedef unsigned int UINT32;
 typedef unsigned long long UINT64;
+
+%pointer_functions(UINT8, UINT8ptr);
 
 /*** ABSTRACT BASES ***/
 class ErrorBase;
