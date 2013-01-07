@@ -869,36 +869,43 @@ public:
 
 class NetworkTable : public ErrorBase {
 public:
-	NetworkTable();
-	~NetworkTable();
-	static void Initialize();
-	static NetworkTable *GetTable(const char *tableName);
-	static NetworkTable *GetTable(int id);
-	std::vector<const char *> GetKeys();
-	void BeginTransaction();
-	void EndTransaction();
-//	void AddChangeListener(const char *keyName, NetworkTableChangeListener *listener);
-//	void AddChangeListenerAny(NetworkTableChangeListener *listener);
-//	void RemoveChangeListener(const char *keyName, NetworkTableChangeListener *listener);
-//	void RemoveChangeListenerAny(NetworkTableChangeListener *listener);
-//	void AddAdditionListener(NetworkTableAdditionListener *listener);
-//	void RemoveAdditionListener(NetworkTableAdditionListener *listener);
-//	void AddConnectionListener(NetworkTableConnectionListener *listener, bool immediateNotify);
-//	void RemoveConnectionListener(NetworkTableConnectionListener *listener);
-	bool IsConnected();
-	bool ContainsKey(const char *keyName);
-//	NetworkTables::Entry *GetEntry(const char *keyName);
+	static const char PATH_SEPARATOR_CHAR;
+	static const std::string PATH_SEPARATOR;
+	static const int DEFAULT_PORT;
 	
-	int GetInt(const char *keyName);
-	bool GetBoolean(const char *keyName);
-	double GetDouble(const char *keyName);
-	std::string GetString(std::string keyName);
-	NetworkTable *GetSubTable(const char *keyName);
-	void PutInt(const char *keyName, int value);
-	void PutBoolean(const char *keyName, bool value);
-	void PutDouble(const char *keyName, double value);
-	void PutString(std::string keyName, std::string value);
-	void PutSubTable(const char *keyName, NetworkTable *value);
+	static void Initialize();
+	static void SetServerMode();
+	static void SetTeam(int team);
+	static void SetIPAddress(const char* address);
+	static NetworkTable* GetTable(std::string key);
+	NetworkTable(std::string path, NetworkTableProvider& provider);
+	virtual ~NetworkTable();
+	bool IsConnected();
+	bool IsServer();
+	void AddConnectionListener(IRemoteConnectionListener* listener, bool immediateNotify);
+	void RemoveConnectionListener(IRemoteConnectionListener* listener);
+	void AddTableListener(ITableListener* listener);
+	void AddTableListener(ITableListener* listener, bool immediateNotify);
+	void AddTableListener(std::string key, ITableListener* listener, bool immediateNotify);
+	void AddSubTableListener(ITableListener* listener);
+	void RemoveTableListener(ITableListener* listener);
+	NetworkTable* GetSubTable(std::string key);
+	bool ContainsKey(std::string key);
+	bool ContainsSubTable(std::string key);
+	void PutNumber(std::string key, double value);
+	double GetNumber(std::string key);
+	double GetNumber(std::string key, double defaultValue);
+	void PutString(std::string key, std::string value);
+	std::string GetString(std::string key);
+	std::string GetString(std::string key, std::string defaultValue);
+	void PutBoolean(std::string key, bool value);
+	bool GetBoolean(std::string key);
+	bool GetBoolean(std::string key, bool defaultValue);
+	void PutValue(std::string key, NetworkTableEntryType* type, EntryValue value);
+    void RetrieveValue(std::string key, ComplexData& externalValue);
+	void PutValue(std::string key, ComplexData& value);
+	EntryValue GetValue(std::string key);
+	EntryValue GetValue(std::string key, EntryValue defaultValue);
 };
 
 class PIDController
@@ -1026,62 +1033,24 @@ public:
 
 class SmartDashboard : public SensorBase {
 public:
-	static SmartDashboard *GetInstance();
-
-	//void PutData(const char *keyName, SmartDashboardData *value);
-	//void PutData(SmartDashboardNamedData *value);
-	//SmartDashboardData* GetData(const char *keyName);
-	void PutBoolean(const char *keyName, bool value);
-	bool GetBoolean(const char *keyName);
-	void PutInt(const char *keyName, int value);
-	int GetInt(const char *keyName);
-	void PutDouble(const char *keyName, double value);
-	double GetDouble(const char *keyName);
-	std::string GetString(std::string keyName);
-	void PutString(std::string keyName, std::string value);
-
-	void init();
-	static int LogChar(char value, const char *name);
-	static int LogChar(wchar_t value, const char *name);
-	//static int Log(INT32 value, const char *name);
-	//static int Log(INT64 value, const char *name);
-	//static int Log(bool value, const char *name);
-	//static int Log(float value, const char *name);
-	//static int Log(double value, const char *name);
-	//static int Log(const char *value, const char *name);
-
-        %extend
-        {
-            static int LogInt32(INT32 value, const char *name)
-            {
-                return SmartDashboard::Log(value, name);
-            }
-
-            static int LogInt64(INT64 value, const char *name)
-            {
-                return SmartDashboard::Log(value, name);
-            }
-
-            static int LogBool(bool value, const char *name)
-            {
-                return SmartDashboard::Log(value, name);
-            }
-
-            static int LogFloat(double value, const char *name)
-            {
-                return SmartDashboard::Log(value, name);
-            }
-
-            static int LogDouble(double value, const char *name)
-            {
-                return SmartDashboard::Log(value, name);
-            }
-
-            static int LogString(const char *value, const char *name)
-            {
-                return SmartDashboard::Log(value, name);
-            }
-        }
+	static void init();
+	
+	//static void PutData(std::string key, Sendable *data);
+	//static void PutData(NamedSendable *value);
+	//static Sendable* GetData(std::string keyName);
+	
+	static void PutBoolean(std::string keyName, bool value);
+	static bool GetBoolean(std::string keyName);
+	
+	static void PutNumber(std::string keyName, double value);
+	static double GetNumber(std::string keyName);
+	
+	static void PutString(std::string keyName, std::string value);
+	static int GetString(std::string keyName, char *value, unsigned int valueLen);
+	static std::string GetString(std::string keyName);
+	
+	static void PutValue(std::string keyName, ComplexData& value);
+	static void RetrieveValue(std::string keyName, ComplexData& value);
 private:
 	SmartDashboard();
 	virtual ~SmartDashboard();
@@ -1095,6 +1064,19 @@ public:
 	virtual ~Solenoid();
 	virtual void Set(bool on);
 	virtual bool Get();
+};
+
+class Talon : public SafePWM, public SpeedController
+{
+public:
+	explicit Talon(UINT32 channel);
+	Talon(UINT8 moduleNumber, UINT32 channel);
+	virtual ~Talon();
+	virtual void Set(float value, UINT8 syncGroup=0);
+	virtual float Get();
+	virtual void Disable();
+
+	virtual void PIDWrite(float output);
 };
 
 class Timer
@@ -1191,6 +1173,11 @@ bool IsAutonomous()
 bool IsOperatorControl()
 {
     return RobotBase::getInstance().IsOperatorControl();
+}
+
+bool IsTest()
+{
+    return RobotBase::getInstance().IsTest();
 }
 
 bool IsSystemActive()
