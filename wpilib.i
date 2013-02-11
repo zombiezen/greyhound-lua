@@ -867,6 +867,23 @@ public:
 	virtual float GetDirectionDegrees();
 };
 
+class LiveWindow {
+public:
+	static LiveWindow * GetInstance();
+	void Run();
+	//void AddSensor(char *subsystem, char *name, LiveWindowSendable *component);
+	//void AddActuator(char *subsystem, char *name, LiveWindowSendable *component);
+	//void AddSensor(std::string type, int module, int channel, LiveWindowSendable *component);
+	//void AddActuator(std::string type, int module, int channel, LiveWindowSendable *component);
+	
+	bool IsEnabled() { return m_enabled; }
+	void SetEnabled(bool enabled);
+
+protected:
+	LiveWindow();
+	virtual ~LiveWindow();
+};
+
 class NetworkTable : public ErrorBase {
 public:
 	static const char PATH_SEPARATOR_CHAR;
