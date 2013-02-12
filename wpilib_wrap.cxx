@@ -1672,87 +1672,95 @@ SWIG_Lua_dostring(lua_State *L, const char* str) {
 #define SWIGTYPE_p_Code swig_types[8]
 #define SWIGTYPE_p_ComplexData swig_types[9]
 #define SWIGTYPE_p_Compressor swig_types[10]
-#define SWIGTYPE_p_Counter swig_types[11]
-#define SWIGTYPE_p_CounterBase swig_types[12]
-#define SWIGTYPE_p_Dashboard swig_types[13]
-#define SWIGTYPE_p_DashboardBase swig_types[14]
-#define SWIGTYPE_p_DigitalInput swig_types[15]
-#define SWIGTYPE_p_DigitalModule swig_types[16]
-#define SWIGTYPE_p_DigitalOutput swig_types[17]
-#define SWIGTYPE_p_DigitalSource swig_types[18]
-#define SWIGTYPE_p_Direction swig_types[19]
-#define SWIGTYPE_p_DistanceUnit swig_types[20]
-#define SWIGTYPE_p_DoubleSolenoid swig_types[21]
-#define SWIGTYPE_p_DriverStation swig_types[22]
-#define SWIGTYPE_p_DriverStationEnhancedIO swig_types[23]
-#define SWIGTYPE_p_DriverStationLCD swig_types[24]
-#define SWIGTYPE_p_Encoder swig_types[25]
-#define SWIGTYPE_p_EncodingType swig_types[26]
-#define SWIGTYPE_p_EntryValue swig_types[27]
-#define SWIGTYPE_p_Error swig_types[28]
-#define SWIGTYPE_p_ErrorBase swig_types[29]
-#define SWIGTYPE_p_FlowControl swig_types[30]
-#define SWIGTYPE_p_GearTooth swig_types[31]
-#define SWIGTYPE_p_GenericHID swig_types[32]
-#define SWIGTYPE_p_Gyro swig_types[33]
-#define SWIGTYPE_p_HiTechnicCompass swig_types[34]
-#define SWIGTYPE_p_I2C swig_types[35]
-#define SWIGTYPE_p_IRemoteConnectionListener swig_types[36]
-#define SWIGTYPE_p_ITableListener swig_types[37]
-#define SWIGTYPE_p_InterruptableSensorBase swig_types[38]
-#define SWIGTYPE_p_Jaguar swig_types[39]
-#define SWIGTYPE_p_Joystick swig_types[40]
-#define SWIGTYPE_p_JoystickHand swig_types[41]
-#define SWIGTYPE_p_LiveWindow swig_types[42]
-#define SWIGTYPE_p_Mode swig_types[43]
-#define SWIGTYPE_p_Module swig_types[44]
-#define SWIGTYPE_p_MotorSafety swig_types[45]
-#define SWIGTYPE_p_MotorSafetyHelper swig_types[46]
-#define SWIGTYPE_p_MotorType swig_types[47]
-#define SWIGTYPE_p_NetworkTable swig_types[48]
-#define SWIGTYPE_p_NetworkTableEntryType swig_types[49]
-#define SWIGTYPE_p_NetworkTableProvider swig_types[50]
-#define SWIGTYPE_p_PIDController swig_types[51]
-#define SWIGTYPE_p_PIDOutput swig_types[52]
-#define SWIGTYPE_p_PIDSource swig_types[53]
-#define SWIGTYPE_p_PWM swig_types[54]
-#define SWIGTYPE_p_Parity swig_types[55]
-#define SWIGTYPE_p_PeriodMultiplier swig_types[56]
-#define SWIGTYPE_p_Relay swig_types[57]
-#define SWIGTYPE_p_RobotDrive swig_types[58]
-#define SWIGTYPE_p_SEM_ID swig_types[59]
-#define SWIGTYPE_p_SafePWM swig_types[60]
-#define SWIGTYPE_p_SensorBase swig_types[61]
-#define SWIGTYPE_p_SerialPort swig_types[62]
-#define SWIGTYPE_p_Servo swig_types[63]
-#define SWIGTYPE_p_SmartDashboard swig_types[64]
-#define SWIGTYPE_p_Solenoid swig_types[65]
-#define SWIGTYPE_p_SolenoidBase swig_types[66]
-#define SWIGTYPE_p_SpeedController swig_types[67]
-#define SWIGTYPE_p_StopBits swig_types[68]
-#define SWIGTYPE_p_Talon swig_types[69]
-#define SWIGTYPE_p_Timer swig_types[70]
-#define SWIGTYPE_p_Type swig_types[71]
-#define SWIGTYPE_p_Ultrasonic swig_types[72]
-#define SWIGTYPE_p_Value swig_types[73]
-#define SWIGTYPE_p_Victor swig_types[74]
-#define SWIGTYPE_p_Watchdog swig_types[75]
-#define SWIGTYPE_p_WriteBufferMode swig_types[76]
-#define SWIGTYPE_p_int swig_types[77]
-#define SWIGTYPE_p_long_long swig_types[78]
-#define SWIGTYPE_p_nLoadOut__tModuleType swig_types[79]
-#define SWIGTYPE_p_p_char swig_types[80]
-#define SWIGTYPE_p_short swig_types[81]
-#define SWIGTYPE_p_signed_char swig_types[82]
-#define SWIGTYPE_p_std__string swig_types[83]
-#define SWIGTYPE_p_std__vectorT_char_const_p_t swig_types[84]
-#define SWIGTYPE_p_tRioStatusCode swig_types[85]
-#define SWIGTYPE_p_unsigned_char swig_types[86]
-#define SWIGTYPE_p_unsigned_int swig_types[87]
-#define SWIGTYPE_p_unsigned_long_long swig_types[88]
-#define SWIGTYPE_p_unsigned_short swig_types[89]
-static swig_type_info *swig_types[91];
-static swig_module_info swig_module = {swig_types, 90, 0, 0, 0, 0};
+#define SWIGTYPE_p_Controller swig_types[11]
+#define SWIGTYPE_p_Counter swig_types[12]
+#define SWIGTYPE_p_CounterBase swig_types[13]
+#define SWIGTYPE_p_Dashboard swig_types[14]
+#define SWIGTYPE_p_DashboardBase swig_types[15]
+#define SWIGTYPE_p_DigitalInput swig_types[16]
+#define SWIGTYPE_p_DigitalModule swig_types[17]
+#define SWIGTYPE_p_DigitalOutput swig_types[18]
+#define SWIGTYPE_p_DigitalSource swig_types[19]
+#define SWIGTYPE_p_Direction swig_types[20]
+#define SWIGTYPE_p_DistanceUnit swig_types[21]
+#define SWIGTYPE_p_DoubleSolenoid swig_types[22]
+#define SWIGTYPE_p_DriverStation swig_types[23]
+#define SWIGTYPE_p_DriverStationEnhancedIO swig_types[24]
+#define SWIGTYPE_p_DriverStationLCD swig_types[25]
+#define SWIGTYPE_p_Encoder swig_types[26]
+#define SWIGTYPE_p_EncodingType swig_types[27]
+#define SWIGTYPE_p_EntryValue swig_types[28]
+#define SWIGTYPE_p_Error swig_types[29]
+#define SWIGTYPE_p_ErrorBase swig_types[30]
+#define SWIGTYPE_p_FlowControl swig_types[31]
+#define SWIGTYPE_p_GearTooth swig_types[32]
+#define SWIGTYPE_p_GenericHID swig_types[33]
+#define SWIGTYPE_p_Gyro swig_types[34]
+#define SWIGTYPE_p_HiTechnicColorSensor swig_types[35]
+#define SWIGTYPE_p_HiTechnicCompass swig_types[36]
+#define SWIGTYPE_p_I2C swig_types[37]
+#define SWIGTYPE_p_IRemoteConnectionListener swig_types[38]
+#define SWIGTYPE_p_ITableListener swig_types[39]
+#define SWIGTYPE_p_InterruptableSensorBase swig_types[40]
+#define SWIGTYPE_p_Jaguar swig_types[41]
+#define SWIGTYPE_p_Joystick swig_types[42]
+#define SWIGTYPE_p_JoystickHand swig_types[43]
+#define SWIGTYPE_p_LiveWindow swig_types[44]
+#define SWIGTYPE_p_LiveWindowSendable swig_types[45]
+#define SWIGTYPE_p_Mode swig_types[46]
+#define SWIGTYPE_p_Module swig_types[47]
+#define SWIGTYPE_p_MotorSafety swig_types[48]
+#define SWIGTYPE_p_MotorSafetyHelper swig_types[49]
+#define SWIGTYPE_p_MotorType swig_types[50]
+#define SWIGTYPE_p_NetworkTable swig_types[51]
+#define SWIGTYPE_p_NetworkTableEntryType swig_types[52]
+#define SWIGTYPE_p_NetworkTableProvider swig_types[53]
+#define SWIGTYPE_p_PIDController swig_types[54]
+#define SWIGTYPE_p_PIDOutput swig_types[55]
+#define SWIGTYPE_p_PIDSource swig_types[56]
+#define SWIGTYPE_p_PIDSourceParameter swig_types[57]
+#define SWIGTYPE_p_PWM swig_types[58]
+#define SWIGTYPE_p_Parity swig_types[59]
+#define SWIGTYPE_p_PeriodMultiplier swig_types[60]
+#define SWIGTYPE_p_Preferences swig_types[61]
+#define SWIGTYPE_p_RGB swig_types[62]
+#define SWIGTYPE_p_Relay swig_types[63]
+#define SWIGTYPE_p_RobotDrive swig_types[64]
+#define SWIGTYPE_p_SEM_ID swig_types[65]
+#define SWIGTYPE_p_SafePWM swig_types[66]
+#define SWIGTYPE_p_Sendable swig_types[67]
+#define SWIGTYPE_p_SensorBase swig_types[68]
+#define SWIGTYPE_p_SerialPort swig_types[69]
+#define SWIGTYPE_p_Servo swig_types[70]
+#define SWIGTYPE_p_SmartDashboard swig_types[71]
+#define SWIGTYPE_p_Solenoid swig_types[72]
+#define SWIGTYPE_p_SolenoidBase swig_types[73]
+#define SWIGTYPE_p_SpeedController swig_types[74]
+#define SWIGTYPE_p_StopBits swig_types[75]
+#define SWIGTYPE_p_Talon swig_types[76]
+#define SWIGTYPE_p_Timer swig_types[77]
+#define SWIGTYPE_p_Type swig_types[78]
+#define SWIGTYPE_p_Ultrasonic swig_types[79]
+#define SWIGTYPE_p_Value swig_types[80]
+#define SWIGTYPE_p_Victor swig_types[81]
+#define SWIGTYPE_p_Watchdog swig_types[82]
+#define SWIGTYPE_p_WriteBufferMode swig_types[83]
+#define SWIGTYPE_p_int swig_types[84]
+#define SWIGTYPE_p_long_long swig_types[85]
+#define SWIGTYPE_p_nLoadOut__tModuleType swig_types[86]
+#define SWIGTYPE_p_p_char swig_types[87]
+#define SWIGTYPE_p_short swig_types[88]
+#define SWIGTYPE_p_signed_char swig_types[89]
+#define SWIGTYPE_p_std__string swig_types[90]
+#define SWIGTYPE_p_std__vectorT_char_const_p_t swig_types[91]
+#define SWIGTYPE_p_std__vectorT_std__string_t swig_types[92]
+#define SWIGTYPE_p_tRioStatusCode swig_types[93]
+#define SWIGTYPE_p_unsigned_char swig_types[94]
+#define SWIGTYPE_p_unsigned_int swig_types[95]
+#define SWIGTYPE_p_unsigned_long_long swig_types[96]
+#define SWIGTYPE_p_unsigned_short swig_types[97]
+static swig_type_info *swig_types[99];
+static swig_module_info swig_module = {swig_types, 98, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -1801,6 +1809,16 @@ SWIGINTERN char const *std_vector_Sl_char_SS_const_Sm__Sg____getitem__(std::vect
 				return (*self)[idx];
 			}
 SWIGINTERN void std_vector_Sl_char_SS_const_Sm__Sg____setitem__(std::vector< char const * > *self,unsigned int idx,char const *val){
+				if (idx>=self->size())
+					throw std::out_of_range("in vector::__setitem__()");
+				(*self)[idx]=val;
+			}
+SWIGINTERN std::string std_vector_Sl_std_string_Sg____getitem__(std::vector< std::string > *self,unsigned int idx){
+				if (idx>=self->size())
+					throw std::out_of_range("in vector::__getitem__()");
+				return (*self)[idx];
+			}
+SWIGINTERN void std_vector_Sl_std_string_Sg____setitem__(std::vector< std::string > *self,unsigned int idx,std::string val){
 				if (idx>=self->size())
 					throw std::out_of_range("in vector::__setitem__()");
 				(*self)[idx]=val;
@@ -2536,6 +2554,436 @@ static swig_lua_attribute swig_std_vector_Sl_char_SS_const_Sm__Sg__attributes[] 
 static swig_lua_class *swig_std_vector_Sl_char_SS_const_Sm__Sg__bases[] = {0};
 static const char *swig_std_vector_Sl_char_SS_const_Sm__Sg__base_names[] = {0};
 static swig_lua_class _wrap_class_std_vector_Sl_char_SS_const_Sm__Sg_ = { "vector_charp", &SWIGTYPE_p_std__vectorT_char_const_p_t,_wrap_new_vector_charp, swig_delete_vector_charp, swig_std_vector_Sl_char_SS_const_Sm__Sg__methods, swig_std_vector_Sl_char_SS_const_Sm__Sg__attributes, swig_std_vector_Sl_char_SS_const_Sm__Sg__bases, swig_std_vector_Sl_char_SS_const_Sm__Sg__base_names };
+
+static int _wrap_new_vector_string__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  std::vector< std::string > *result = 0 ;
+  
+  SWIG_check_num_args("std::vector< std::string >::vector",0,0)
+  result = (std::vector< std::string > *)new std::vector< std::string >();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_std__string_t,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_vector_string__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  unsigned int arg1 ;
+  std::vector< std::string > *result = 0 ;
+  
+  SWIG_check_num_args("std::vector< std::string >::vector",1,1)
+  if(!lua_isnumber(L,1)) SWIG_fail_arg("std::vector< std::string >::vector",1,"unsigned int");
+  SWIG_contract_assert((lua_tonumber(L,1)>=0),"number must not be negative")
+  arg1 = (unsigned int)lua_tonumber(L, 1);
+  result = (std::vector< std::string > *)new std::vector< std::string >(arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_std__string_t,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_vector_string__SWIG_2(lua_State* L) {
+  int SWIG_arg = 0;
+  std::vector< std::string > *arg1 = 0 ;
+  std::vector< std::string > *result = 0 ;
+  
+  SWIG_check_num_args("std::vector< std::string >::vector",1,1)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("std::vector< std::string >::vector",1,"std::vector< std::string > const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_std__string_t,0))){
+    SWIG_fail_ptr("new_vector_string",1,SWIGTYPE_p_std__vectorT_std__string_t);
+  }
+  
+  result = (std::vector< std::string > *)new std::vector< std::string >((std::vector< std::string > const &)*arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_std__string_t,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_vector_string__SWIG_3(lua_State* L) {
+  int SWIG_arg = 0;
+  unsigned int arg1 ;
+  std::string arg2 ;
+  std::vector< std::string > *result = 0 ;
+  
+  SWIG_check_num_args("std::vector< std::string >::vector",2,2)
+  if(!lua_isnumber(L,1)) SWIG_fail_arg("std::vector< std::string >::vector",1,"unsigned int");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("std::vector< std::string >::vector",2,"std::string");
+  SWIG_contract_assert((lua_tonumber(L,1)>=0),"number must not be negative")
+  arg1 = (unsigned int)lua_tonumber(L, 1);
+  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
+  result = (std::vector< std::string > *)new std::vector< std::string >(arg1,arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_std__string_t,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_vector_string(lua_State* L) {
+  int argc;
+  int argv[3]={
+    1,2,3
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 0) {
+    return _wrap_new_vector_string__SWIG_0(L);
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_std__vectorT_std__string_t, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_new_vector_string__SWIG_2(L);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      _v = lua_isnumber(L,argv[0]);
+    }
+    if (_v) {
+      return _wrap_new_vector_string__SWIG_1(L);
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      _v = lua_isnumber(L,argv[0]);
+    }
+    if (_v) {
+      {
+        _v = lua_isstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_new_vector_string__SWIG_3(L);
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'new_vector_string'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    std::vector< std::string >::vector()\n"
+    "    std::vector< std::string >::vector(unsigned int)\n"
+    "    std::vector< std::string >::vector(std::vector< std::string > const &)\n"
+    "    std::vector< std::string >::vector(unsigned int,std::string)\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_vector_string_size(lua_State* L) {
+  int SWIG_arg = 0;
+  std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
+  unsigned int result;
+  
+  SWIG_check_num_args("std::vector< std::string >::size",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< std::string >::size",1,"std::vector< std::string > const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_std__string_t,0))){
+    SWIG_fail_ptr("vector_string_size",1,SWIGTYPE_p_std__vectorT_std__string_t);
+  }
+  
+  result = (unsigned int)((std::vector< std::string > const *)arg1)->size();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_vector_string_max_size(lua_State* L) {
+  int SWIG_arg = 0;
+  std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
+  unsigned int result;
+  
+  SWIG_check_num_args("std::vector< std::string >::max_size",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< std::string >::max_size",1,"std::vector< std::string > const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_std__string_t,0))){
+    SWIG_fail_ptr("vector_string_max_size",1,SWIGTYPE_p_std__vectorT_std__string_t);
+  }
+  
+  result = (unsigned int)((std::vector< std::string > const *)arg1)->max_size();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_vector_string_empty(lua_State* L) {
+  int SWIG_arg = 0;
+  std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
+  bool result;
+  
+  SWIG_check_num_args("std::vector< std::string >::empty",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< std::string >::empty",1,"std::vector< std::string > const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_std__string_t,0))){
+    SWIG_fail_ptr("vector_string_empty",1,SWIGTYPE_p_std__vectorT_std__string_t);
+  }
+  
+  result = (bool)((std::vector< std::string > const *)arg1)->empty();
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_vector_string_clear(lua_State* L) {
+  int SWIG_arg = 0;
+  std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
+  
+  SWIG_check_num_args("std::vector< std::string >::clear",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< std::string >::clear",1,"std::vector< std::string > *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_std__string_t,0))){
+    SWIG_fail_ptr("vector_string_clear",1,SWIGTYPE_p_std__vectorT_std__string_t);
+  }
+  
+  (arg1)->clear();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_vector_string_push_back(lua_State* L) {
+  int SWIG_arg = 0;
+  std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
+  std::string arg2 ;
+  
+  SWIG_check_num_args("std::vector< std::string >::push_back",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< std::string >::push_back",1,"std::vector< std::string > *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("std::vector< std::string >::push_back",2,"std::string");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_std__string_t,0))){
+    SWIG_fail_ptr("vector_string_push_back",1,SWIGTYPE_p_std__vectorT_std__string_t);
+  }
+  
+  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
+  (arg1)->push_back(arg2);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_vector_string_pop_back(lua_State* L) {
+  int SWIG_arg = 0;
+  std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
+  
+  SWIG_check_num_args("std::vector< std::string >::pop_back",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< std::string >::pop_back",1,"std::vector< std::string > *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_std__string_t,0))){
+    SWIG_fail_ptr("vector_string_pop_back",1,SWIGTYPE_p_std__vectorT_std__string_t);
+  }
+  
+  (arg1)->pop_back();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_vector_string_front(lua_State* L) {
+  int SWIG_arg = 0;
+  std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
+  std::string result;
+  
+  SWIG_check_num_args("std::vector< std::string >::front",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< std::string >::front",1,"std::vector< std::string > const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_std__string_t,0))){
+    SWIG_fail_ptr("vector_string_front",1,SWIGTYPE_p_std__vectorT_std__string_t);
+  }
+  
+  result = ((std::vector< std::string > const *)arg1)->front();
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_vector_string_back(lua_State* L) {
+  int SWIG_arg = 0;
+  std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
+  std::string result;
+  
+  SWIG_check_num_args("std::vector< std::string >::back",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< std::string >::back",1,"std::vector< std::string > const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_std__string_t,0))){
+    SWIG_fail_ptr("vector_string_back",1,SWIGTYPE_p_std__vectorT_std__string_t);
+  }
+  
+  result = ((std::vector< std::string > const *)arg1)->back();
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_vector_string___getitem(lua_State* L) {
+  int SWIG_arg = 0;
+  std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
+  unsigned int arg2 ;
+  std::string result;
+  
+  SWIG_check_num_args("std::vector< std::string >::__getitem__",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< std::string >::__getitem__",1,"std::vector< std::string > *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("std::vector< std::string >::__getitem__",2,"unsigned int");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_std__string_t,0))){
+    SWIG_fail_ptr("vector_string___getitem",1,SWIGTYPE_p_std__vectorT_std__string_t);
+  }
+  
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative")
+  arg2 = (unsigned int)lua_tonumber(L, 2);
+  try {
+    result = std_vector_Sl_std_string_Sg____getitem__(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_exception(SWIG_IndexError, (&_e)->what());
+  }
+  
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_vector_string___setitem(lua_State* L) {
+  int SWIG_arg = 0;
+  std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
+  unsigned int arg2 ;
+  std::string arg3 ;
+  
+  SWIG_check_num_args("std::vector< std::string >::__setitem__",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< std::string >::__setitem__",1,"std::vector< std::string > *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("std::vector< std::string >::__setitem__",2,"unsigned int");
+  if(!lua_isstring(L,3)) SWIG_fail_arg("std::vector< std::string >::__setitem__",3,"std::string");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_std__string_t,0))){
+    SWIG_fail_ptr("vector_string___setitem",1,SWIGTYPE_p_std__vectorT_std__string_t);
+  }
+  
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative")
+  arg2 = (unsigned int)lua_tonumber(L, 2);
+  (&arg3)->assign(lua_tostring(L,3),lua_rawlen(L,3));
+  try {
+    std_vector_Sl_std_string_Sg____setitem__(arg1,arg2,arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_exception(SWIG_IndexError, (&_e)->what());
+  }
+  
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static void swig_delete_vector_string(void *obj) {
+std::vector< std::string > *arg1 = (std::vector< std::string > *) obj;
+delete arg1;
+}
+static swig_lua_method swig_std_vector_Sl_std_string_Sg__methods[] = {
+    {"size", _wrap_vector_string_size}, 
+    {"max_size", _wrap_vector_string_max_size}, 
+    {"empty", _wrap_vector_string_empty}, 
+    {"clear", _wrap_vector_string_clear}, 
+    {"push_back", _wrap_vector_string_push_back}, 
+    {"pop_back", _wrap_vector_string_pop_back}, 
+    {"front", _wrap_vector_string_front}, 
+    {"back", _wrap_vector_string_back}, 
+    {"__getitem", _wrap_vector_string___getitem}, 
+    {"__setitem", _wrap_vector_string___setitem}, 
+    {0,0}
+};
+static swig_lua_attribute swig_std_vector_Sl_std_string_Sg__attributes[] = {
+    {0,0,0}
+};
+static swig_lua_class *swig_std_vector_Sl_std_string_Sg__bases[] = {0};
+static const char *swig_std_vector_Sl_std_string_Sg__base_names[] = {0};
+static swig_lua_class _wrap_class_std_vector_Sl_std_string_Sg_ = { "vector_string", &SWIGTYPE_p_std__vectorT_std__string_t,_wrap_new_vector_string, swig_delete_vector_string, swig_std_vector_Sl_std_string_Sg__methods, swig_std_vector_Sl_std_string_Sg__attributes, swig_std_vector_Sl_std_string_Sg__bases, swig_std_vector_Sl_std_string_Sg__base_names };
 
 static int _wrap_new_UINT8array(lua_State* L) {
   int SWIG_arg = 0;
@@ -3514,6 +3962,131 @@ static swig_lua_class *swig_InterruptableSensorBase_bases[] = {0,0};
 static const char *swig_InterruptableSensorBase_base_names[] = {"SensorBase *",0};
 static swig_lua_class _wrap_class_InterruptableSensorBase = { "InterruptableSensorBase", &SWIGTYPE_p_InterruptableSensorBase,0, swig_delete_InterruptableSensorBase, swig_InterruptableSensorBase_methods, swig_InterruptableSensorBase_attributes, swig_InterruptableSensorBase_bases, swig_InterruptableSensorBase_base_names };
 
+static int _wrap_Sendable_GetSmartDashboardType(lua_State* L) {
+  int SWIG_arg = 0;
+  Sendable *arg1 = (Sendable *) 0 ;
+  std::string result;
+  
+  SWIG_check_num_args("Sendable::GetSmartDashboardType",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Sendable::GetSmartDashboardType",1,"Sendable *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Sendable,0))){
+    SWIG_fail_ptr("Sendable_GetSmartDashboardType",1,SWIGTYPE_p_Sendable);
+  }
+  
+  result = (arg1)->GetSmartDashboardType();
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static void swig_delete_Sendable(void *obj) {
+Sendable *arg1 = (Sendable *) obj;
+delete arg1;
+}
+static swig_lua_method swig_Sendable_methods[] = {
+    {"GetSmartDashboardType", _wrap_Sendable_GetSmartDashboardType}, 
+    {0,0}
+};
+static swig_lua_attribute swig_Sendable_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_class *swig_Sendable_bases[] = {0};
+static const char *swig_Sendable_base_names[] = {0};
+static swig_lua_class _wrap_class_Sendable = { "Sendable", &SWIGTYPE_p_Sendable,0, swig_delete_Sendable, swig_Sendable_methods, swig_Sendable_attributes, swig_Sendable_bases, swig_Sendable_base_names };
+
+static int _wrap_LiveWindowSendable_UpdateTable(lua_State* L) {
+  int SWIG_arg = 0;
+  LiveWindowSendable *arg1 = (LiveWindowSendable *) 0 ;
+  
+  SWIG_check_num_args("LiveWindowSendable::UpdateTable",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("LiveWindowSendable::UpdateTable",1,"LiveWindowSendable *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_LiveWindowSendable,0))){
+    SWIG_fail_ptr("LiveWindowSendable_UpdateTable",1,SWIGTYPE_p_LiveWindowSendable);
+  }
+  
+  (arg1)->UpdateTable();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_LiveWindowSendable_StartLiveWindowMode(lua_State* L) {
+  int SWIG_arg = 0;
+  LiveWindowSendable *arg1 = (LiveWindowSendable *) 0 ;
+  
+  SWIG_check_num_args("LiveWindowSendable::StartLiveWindowMode",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("LiveWindowSendable::StartLiveWindowMode",1,"LiveWindowSendable *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_LiveWindowSendable,0))){
+    SWIG_fail_ptr("LiveWindowSendable_StartLiveWindowMode",1,SWIGTYPE_p_LiveWindowSendable);
+  }
+  
+  (arg1)->StartLiveWindowMode();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_LiveWindowSendable_StopLiveWindowMode(lua_State* L) {
+  int SWIG_arg = 0;
+  LiveWindowSendable *arg1 = (LiveWindowSendable *) 0 ;
+  
+  SWIG_check_num_args("LiveWindowSendable::StopLiveWindowMode",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("LiveWindowSendable::StopLiveWindowMode",1,"LiveWindowSendable *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_LiveWindowSendable,0))){
+    SWIG_fail_ptr("LiveWindowSendable_StopLiveWindowMode",1,SWIGTYPE_p_LiveWindowSendable);
+  }
+  
+  (arg1)->StopLiveWindowMode();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static void swig_delete_LiveWindowSendable(void *obj) {
+LiveWindowSendable *arg1 = (LiveWindowSendable *) obj;
+delete arg1;
+}
+static swig_lua_method swig_LiveWindowSendable_methods[] = {
+    {"UpdateTable", _wrap_LiveWindowSendable_UpdateTable}, 
+    {"StartLiveWindowMode", _wrap_LiveWindowSendable_StartLiveWindowMode}, 
+    {"StopLiveWindowMode", _wrap_LiveWindowSendable_StopLiveWindowMode}, 
+    {0,0}
+};
+static swig_lua_attribute swig_LiveWindowSendable_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_class *swig_LiveWindowSendable_bases[] = {0,0};
+static const char *swig_LiveWindowSendable_base_names[] = {"Sendable *",0};
+static swig_lua_class _wrap_class_LiveWindowSendable = { "LiveWindowSendable", &SWIGTYPE_p_LiveWindowSendable,0, swig_delete_LiveWindowSendable, swig_LiveWindowSendable_methods, swig_LiveWindowSendable_attributes, swig_LiveWindowSendable_bases, swig_LiveWindowSendable_base_names };
+
 static int _wrap_I2C_Transaction(lua_State* L) {
   int SWIG_arg = 0;
   I2C *arg1 = (I2C *) 0 ;
@@ -4213,157 +4786,6 @@ static swig_lua_class *swig_DashboardBase_bases[] = {0,0};
 static const char *swig_DashboardBase_base_names[] = {"ErrorBase *",0};
 static swig_lua_class _wrap_class_DashboardBase = { "DashboardBase", &SWIGTYPE_p_DashboardBase,0, swig_delete_DashboardBase, swig_DashboardBase_methods, swig_DashboardBase_attributes, swig_DashboardBase_bases, swig_DashboardBase_base_names };
 
-static int _wrap_SpeedController_Set(lua_State* L) {
-  int SWIG_arg = 0;
-  SpeedController *arg1 = (SpeedController *) 0 ;
-  float arg2 ;
-  
-  SWIG_check_num_args("SpeedController::Set",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("SpeedController::Set",1,"SpeedController *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("SpeedController::Set",2,"float");
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_SpeedController,0))){
-    SWIG_fail_ptr("SpeedController_Set",1,SWIGTYPE_p_SpeedController);
-  }
-  
-  arg2 = (float)lua_tonumber(L, 2);
-  (arg1)->Set(arg2);
-  
-  return SWIG_arg;
-  
-  if(0) SWIG_fail;
-  
-fail:
-  lua_error(L);
-  return SWIG_arg;
-}
-
-
-static int _wrap_SpeedController_Get(lua_State* L) {
-  int SWIG_arg = 0;
-  SpeedController *arg1 = (SpeedController *) 0 ;
-  float result;
-  
-  SWIG_check_num_args("SpeedController::Get",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("SpeedController::Get",1,"SpeedController *");
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_SpeedController,0))){
-    SWIG_fail_ptr("SpeedController_Get",1,SWIGTYPE_p_SpeedController);
-  }
-  
-  result = (float)(arg1)->Get();
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
-  return SWIG_arg;
-  
-  if(0) SWIG_fail;
-  
-fail:
-  lua_error(L);
-  return SWIG_arg;
-}
-
-
-static void swig_delete_SpeedController(void *obj) {
-SpeedController *arg1 = (SpeedController *) obj;
-delete arg1;
-}
-static swig_lua_method swig_SpeedController_methods[] = {
-    {"Set", _wrap_SpeedController_Set}, 
-    {"Get", _wrap_SpeedController_Get}, 
-    {0,0}
-};
-static swig_lua_attribute swig_SpeedController_attributes[] = {
-    {0,0,0}
-};
-static swig_lua_class *swig_SpeedController_bases[] = {0};
-static const char *swig_SpeedController_base_names[] = {0};
-static swig_lua_class _wrap_class_SpeedController = { "SpeedController", &SWIGTYPE_p_SpeedController,0, swig_delete_SpeedController, swig_SpeedController_methods, swig_SpeedController_attributes, swig_SpeedController_bases, swig_SpeedController_base_names };
-
-static int _wrap_new_PWM__SWIG_0(lua_State* L) {
-  int SWIG_arg = 0;
-  UINT32 arg1 ;
-  PWM *result = 0 ;
-  
-  SWIG_check_num_args("PWM::PWM",1,1)
-  if(!lua_isnumber(L,1)) SWIG_fail_arg("PWM::PWM",1,"UINT32");
-  SWIG_contract_assert((lua_tonumber(L,1)>=0),"number must not be negative")
-  arg1 = (UINT32)lua_tonumber(L, 1);
-  result = (PWM *)new PWM(arg1);
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_PWM,1); SWIG_arg++; 
-  return SWIG_arg;
-  
-  if(0) SWIG_fail;
-  
-fail:
-  lua_error(L);
-  return SWIG_arg;
-}
-
-
-static int _wrap_new_PWM__SWIG_1(lua_State* L) {
-  int SWIG_arg = 0;
-  UINT32 arg1 ;
-  UINT32 arg2 ;
-  PWM *result = 0 ;
-  
-  SWIG_check_num_args("PWM::PWM",2,2)
-  if(!lua_isnumber(L,1)) SWIG_fail_arg("PWM::PWM",1,"UINT32");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("PWM::PWM",2,"UINT32");
-  SWIG_contract_assert((lua_tonumber(L,1)>=0),"number must not be negative")
-  arg1 = (UINT32)lua_tonumber(L, 1);
-  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative")
-  arg2 = (UINT32)lua_tonumber(L, 2);
-  result = (PWM *)new PWM(arg1,arg2);
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_PWM,1); SWIG_arg++; 
-  return SWIG_arg;
-  
-  if(0) SWIG_fail;
-  
-fail:
-  lua_error(L);
-  return SWIG_arg;
-}
-
-
-static int _wrap_new_PWM(lua_State* L) {
-  int argc;
-  int argv[3]={
-    1,2,3
-  };
-  
-  argc = lua_gettop(L);
-  if (argc == 1) {
-    int _v;
-    {
-      _v = lua_isnumber(L,argv[0]);
-    }
-    if (_v) {
-      return _wrap_new_PWM__SWIG_0(L);
-    }
-  }
-  if (argc == 2) {
-    int _v;
-    {
-      _v = lua_isnumber(L,argv[0]);
-    }
-    if (_v) {
-      {
-        _v = lua_isnumber(L,argv[1]);
-      }
-      if (_v) {
-        return _wrap_new_PWM__SWIG_1(L);
-      }
-    }
-  }
-  
-  lua_pushstring(L,"Wrong arguments for overloaded function 'new_PWM'\n"
-    "  Possible C/C++ prototypes are:\n"
-    "    PWM::PWM(UINT32)\n"
-    "    PWM::PWM(UINT32,UINT32)\n");
-  lua_error(L);return 0;
-}
-
-
 static int _wrap_PWM_SetRaw(lua_State* L) {
   int SWIG_arg = 0;
   PWM *arg1 = (PWM *) 0 ;
@@ -4505,6 +4927,54 @@ fail:
 }
 
 
+static int _wrap_PWM_GetChannel(lua_State* L) {
+  int SWIG_arg = 0;
+  PWM *arg1 = (PWM *) 0 ;
+  UINT32 result;
+  
+  SWIG_check_num_args("PWM::GetChannel",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("PWM::GetChannel",1,"PWM *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_PWM,0))){
+    SWIG_fail_ptr("PWM_GetChannel",1,SWIGTYPE_p_PWM);
+  }
+  
+  result = (UINT32)(arg1)->GetChannel();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_PWM_GetModuleNumber(lua_State* L) {
+  int SWIG_arg = 0;
+  PWM *arg1 = (PWM *) 0 ;
+  UINT32 result;
+  
+  SWIG_check_num_args("PWM::GetModuleNumber",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("PWM::GetModuleNumber",1,"PWM *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_PWM,0))){
+    SWIG_fail_ptr("PWM_GetModuleNumber",1,SWIGTYPE_p_PWM);
+  }
+  
+  result = (UINT32)(arg1)->GetModuleNumber();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
 static void swig_delete_PWM(void *obj) {
 PWM *arg1 = (PWM *) obj;
 delete arg1;
@@ -4515,14 +4985,16 @@ static swig_lua_method swig_PWM_methods[] = {
     {"SetPeriodMultiplier", _wrap_PWM_SetPeriodMultiplier}, 
     {"EnableDeadbandElimination", _wrap_PWM_EnableDeadbandElimination}, 
     {"SetBounds", _wrap_PWM_SetBounds}, 
+    {"GetChannel", _wrap_PWM_GetChannel}, 
+    {"GetModuleNumber", _wrap_PWM_GetModuleNumber}, 
     {0,0}
 };
 static swig_lua_attribute swig_PWM_attributes[] = {
     {0,0,0}
 };
-static swig_lua_class *swig_PWM_bases[] = {0,0};
-static const char *swig_PWM_base_names[] = {"SensorBase *",0};
-static swig_lua_class _wrap_class_PWM = { "PWM", &SWIGTYPE_p_PWM,_wrap_new_PWM, swig_delete_PWM, swig_PWM_methods, swig_PWM_attributes, swig_PWM_bases, swig_PWM_base_names };
+static swig_lua_class *swig_PWM_bases[] = {0,0,0};
+static const char *swig_PWM_base_names[] = {"SensorBase *","LiveWindowSendable *",0};
+static swig_lua_class _wrap_class_PWM = { "PWM", &SWIGTYPE_p_PWM,0, swig_delete_PWM, swig_PWM_methods, swig_PWM_attributes, swig_PWM_bases, swig_PWM_base_names };
 
 static int _wrap_GenericHID_GetX__SWIG_0(lua_State* L) {
   int SWIG_arg = 0;
@@ -5256,6 +5728,96 @@ static swig_lua_class *swig_PIDSource_bases[] = {0};
 static const char *swig_PIDSource_base_names[] = {0};
 static swig_lua_class _wrap_class_PIDSource = { "PIDSource", &SWIGTYPE_p_PIDSource,0, swig_delete_PIDSource, swig_PIDSource_methods, swig_PIDSource_attributes, swig_PIDSource_bases, swig_PIDSource_base_names };
 
+static int _wrap_SpeedController_Set(lua_State* L) {
+  int SWIG_arg = 0;
+  SpeedController *arg1 = (SpeedController *) 0 ;
+  float arg2 ;
+  
+  SWIG_check_num_args("SpeedController::Set",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("SpeedController::Set",1,"SpeedController *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("SpeedController::Set",2,"float");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_SpeedController,0))){
+    SWIG_fail_ptr("SpeedController_Set",1,SWIGTYPE_p_SpeedController);
+  }
+  
+  arg2 = (float)lua_tonumber(L, 2);
+  (arg1)->Set(arg2);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_SpeedController_Get(lua_State* L) {
+  int SWIG_arg = 0;
+  SpeedController *arg1 = (SpeedController *) 0 ;
+  float result;
+  
+  SWIG_check_num_args("SpeedController::Get",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("SpeedController::Get",1,"SpeedController *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_SpeedController,0))){
+    SWIG_fail_ptr("SpeedController_Get",1,SWIGTYPE_p_SpeedController);
+  }
+  
+  result = (float)(arg1)->Get();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_SpeedController_Disable(lua_State* L) {
+  int SWIG_arg = 0;
+  SpeedController *arg1 = (SpeedController *) 0 ;
+  
+  SWIG_check_num_args("SpeedController::Disable",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("SpeedController::Disable",1,"SpeedController *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_SpeedController,0))){
+    SWIG_fail_ptr("SpeedController_Disable",1,SWIGTYPE_p_SpeedController);
+  }
+  
+  (arg1)->Disable();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static void swig_delete_SpeedController(void *obj) {
+SpeedController *arg1 = (SpeedController *) obj;
+delete arg1;
+}
+static swig_lua_method swig_SpeedController_methods[] = {
+    {"Set", _wrap_SpeedController_Set}, 
+    {"Get", _wrap_SpeedController_Get}, 
+    {"Disable", _wrap_SpeedController_Disable}, 
+    {0,0}
+};
+static swig_lua_attribute swig_SpeedController_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_class *swig_SpeedController_bases[] = {0,0};
+static const char *swig_SpeedController_base_names[] = {"PIDOutput *",0};
+static swig_lua_class _wrap_class_SpeedController = { "SpeedController", &SWIGTYPE_p_SpeedController,0, swig_delete_SpeedController, swig_SpeedController_methods, swig_SpeedController_attributes, swig_SpeedController_bases, swig_SpeedController_base_names };
+
 static int _wrap_Module_GetNumber(lua_State* L) {
   int SWIG_arg = 0;
   Module *arg1 = (Module *) 0 ;
@@ -5719,91 +6281,6 @@ static swig_lua_class *swig_MotorSafetyHelper_bases[] = {0};
 static const char *swig_MotorSafetyHelper_base_names[] = {0};
 static swig_lua_class _wrap_class_MotorSafetyHelper = { "MotorSafetyHelper", &SWIGTYPE_p_MotorSafetyHelper,_wrap_new_MotorSafetyHelper, swig_delete_MotorSafetyHelper, swig_MotorSafetyHelper_methods, swig_MotorSafetyHelper_attributes, swig_MotorSafetyHelper_bases, swig_MotorSafetyHelper_base_names };
 
-static int _wrap_new_SafePWM__SWIG_0(lua_State* L) {
-  int SWIG_arg = 0;
-  UINT32 arg1 ;
-  SafePWM *result = 0 ;
-  
-  SWIG_check_num_args("SafePWM::SafePWM",1,1)
-  if(!lua_isnumber(L,1)) SWIG_fail_arg("SafePWM::SafePWM",1,"UINT32");
-  SWIG_contract_assert((lua_tonumber(L,1)>=0),"number must not be negative")
-  arg1 = (UINT32)lua_tonumber(L, 1);
-  result = (SafePWM *)new SafePWM(arg1);
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_SafePWM,1); SWIG_arg++; 
-  return SWIG_arg;
-  
-  if(0) SWIG_fail;
-  
-fail:
-  lua_error(L);
-  return SWIG_arg;
-}
-
-
-static int _wrap_new_SafePWM__SWIG_1(lua_State* L) {
-  int SWIG_arg = 0;
-  UINT32 arg1 ;
-  UINT32 arg2 ;
-  SafePWM *result = 0 ;
-  
-  SWIG_check_num_args("SafePWM::SafePWM",2,2)
-  if(!lua_isnumber(L,1)) SWIG_fail_arg("SafePWM::SafePWM",1,"UINT32");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("SafePWM::SafePWM",2,"UINT32");
-  SWIG_contract_assert((lua_tonumber(L,1)>=0),"number must not be negative")
-  arg1 = (UINT32)lua_tonumber(L, 1);
-  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative")
-  arg2 = (UINT32)lua_tonumber(L, 2);
-  result = (SafePWM *)new SafePWM(arg1,arg2);
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_SafePWM,1); SWIG_arg++; 
-  return SWIG_arg;
-  
-  if(0) SWIG_fail;
-  
-fail:
-  lua_error(L);
-  return SWIG_arg;
-}
-
-
-static int _wrap_new_SafePWM(lua_State* L) {
-  int argc;
-  int argv[3]={
-    1,2,3
-  };
-  
-  argc = lua_gettop(L);
-  if (argc == 1) {
-    int _v;
-    {
-      _v = lua_isnumber(L,argv[0]);
-    }
-    if (_v) {
-      return _wrap_new_SafePWM__SWIG_0(L);
-    }
-  }
-  if (argc == 2) {
-    int _v;
-    {
-      _v = lua_isnumber(L,argv[0]);
-    }
-    if (_v) {
-      {
-        _v = lua_isnumber(L,argv[1]);
-      }
-      if (_v) {
-        return _wrap_new_SafePWM__SWIG_1(L);
-      }
-    }
-  }
-  
-  lua_pushstring(L,"Wrong arguments for overloaded function 'new_SafePWM'\n"
-    "  Possible C/C++ prototypes are:\n"
-    "    SafePWM::SafePWM(UINT32)\n"
-    "    SafePWM::SafePWM(UINT32,UINT32)\n");
-  lua_error(L);return 0;
-}
-
-
 static int _wrap_SafePWM_SetExpiration(lua_State* L) {
   int SWIG_arg = 0;
   SafePWM *arg1 = (SafePWM *) 0 ;
@@ -5996,7 +6473,7 @@ static swig_lua_attribute swig_SafePWM_attributes[] = {
 };
 static swig_lua_class *swig_SafePWM_bases[] = {0,0,0};
 static const char *swig_SafePWM_base_names[] = {"PWM *","MotorSafety *",0};
-static swig_lua_class _wrap_class_SafePWM = { "SafePWM", &SWIGTYPE_p_SafePWM,_wrap_new_SafePWM, swig_delete_SafePWM, swig_SafePWM_methods, swig_SafePWM_attributes, swig_SafePWM_bases, swig_SafePWM_base_names };
+static swig_lua_class _wrap_class_SafePWM = { "SafePWM", &SWIGTYPE_p_SafePWM,0, swig_delete_SafePWM, swig_SafePWM_methods, swig_SafePWM_attributes, swig_SafePWM_bases, swig_SafePWM_base_names };
 
 static int _wrap_new_ADXL345_I2C__SWIG_0(lua_State* L) {
   int SWIG_arg = 0;
@@ -6348,6 +6825,99 @@ fail:
 }
 
 
+static int _wrap_Accelerometer_UpdateTable(lua_State* L) {
+  int SWIG_arg = 0;
+  Accelerometer *arg1 = (Accelerometer *) 0 ;
+  
+  SWIG_check_num_args("Accelerometer::UpdateTable",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Accelerometer::UpdateTable",1,"Accelerometer *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Accelerometer,0))){
+    SWIG_fail_ptr("Accelerometer_UpdateTable",1,SWIGTYPE_p_Accelerometer);
+  }
+  
+  (arg1)->UpdateTable();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Accelerometer_StartLiveWindowMode(lua_State* L) {
+  int SWIG_arg = 0;
+  Accelerometer *arg1 = (Accelerometer *) 0 ;
+  
+  SWIG_check_num_args("Accelerometer::StartLiveWindowMode",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Accelerometer::StartLiveWindowMode",1,"Accelerometer *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Accelerometer,0))){
+    SWIG_fail_ptr("Accelerometer_StartLiveWindowMode",1,SWIGTYPE_p_Accelerometer);
+  }
+  
+  (arg1)->StartLiveWindowMode();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Accelerometer_StopLiveWindowMode(lua_State* L) {
+  int SWIG_arg = 0;
+  Accelerometer *arg1 = (Accelerometer *) 0 ;
+  
+  SWIG_check_num_args("Accelerometer::StopLiveWindowMode",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Accelerometer::StopLiveWindowMode",1,"Accelerometer *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Accelerometer,0))){
+    SWIG_fail_ptr("Accelerometer_StopLiveWindowMode",1,SWIGTYPE_p_Accelerometer);
+  }
+  
+  (arg1)->StopLiveWindowMode();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Accelerometer_GetSmartDashboardType(lua_State* L) {
+  int SWIG_arg = 0;
+  Accelerometer *arg1 = (Accelerometer *) 0 ;
+  std::string result;
+  
+  SWIG_check_num_args("Accelerometer::GetSmartDashboardType",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Accelerometer::GetSmartDashboardType",1,"Accelerometer *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Accelerometer,0))){
+    SWIG_fail_ptr("Accelerometer_GetSmartDashboardType",1,SWIGTYPE_p_Accelerometer);
+  }
+  
+  result = (arg1)->GetSmartDashboardType();
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
 static void swig_delete_Accelerometer(void *obj) {
 Accelerometer *arg1 = (Accelerometer *) obj;
 delete arg1;
@@ -6357,13 +6927,17 @@ static swig_lua_method swig_Accelerometer_methods[] = {
     {"SetSensitivity", _wrap_Accelerometer_SetSensitivity}, 
     {"SetZero", _wrap_Accelerometer_SetZero}, 
     {"PIDGet", _wrap_Accelerometer_PIDGet}, 
+    {"UpdateTable", _wrap_Accelerometer_UpdateTable}, 
+    {"StartLiveWindowMode", _wrap_Accelerometer_StartLiveWindowMode}, 
+    {"StopLiveWindowMode", _wrap_Accelerometer_StopLiveWindowMode}, 
+    {"GetSmartDashboardType", _wrap_Accelerometer_GetSmartDashboardType}, 
     {0,0}
 };
 static swig_lua_attribute swig_Accelerometer_attributes[] = {
     {0,0,0}
 };
-static swig_lua_class *swig_Accelerometer_bases[] = {0,0,0};
-static const char *swig_Accelerometer_base_names[] = {"SensorBase *","PIDSource *",0};
+static swig_lua_class *swig_Accelerometer_bases[] = {0,0,0,0};
+static const char *swig_Accelerometer_base_names[] = {"SensorBase *","PIDSource *","LiveWindowSendable *",0};
 static swig_lua_class _wrap_class_Accelerometer = { "Accelerometer", &SWIGTYPE_p_Accelerometer,_wrap_new_Accelerometer, swig_delete_Accelerometer, swig_Accelerometer_methods, swig_Accelerometer_attributes, swig_Accelerometer_bases, swig_Accelerometer_base_names };
 
 static int _wrap_AnalogChannel_kAccumulatorChannels_get(lua_State* L) {
@@ -7043,6 +7617,99 @@ fail:
 }
 
 
+static int _wrap_AnalogChannel_UpdateTable(lua_State* L) {
+  int SWIG_arg = 0;
+  AnalogChannel *arg1 = (AnalogChannel *) 0 ;
+  
+  SWIG_check_num_args("AnalogChannel::UpdateTable",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("AnalogChannel::UpdateTable",1,"AnalogChannel *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_AnalogChannel,0))){
+    SWIG_fail_ptr("AnalogChannel_UpdateTable",1,SWIGTYPE_p_AnalogChannel);
+  }
+  
+  (arg1)->UpdateTable();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_AnalogChannel_StartLiveWindowMode(lua_State* L) {
+  int SWIG_arg = 0;
+  AnalogChannel *arg1 = (AnalogChannel *) 0 ;
+  
+  SWIG_check_num_args("AnalogChannel::StartLiveWindowMode",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("AnalogChannel::StartLiveWindowMode",1,"AnalogChannel *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_AnalogChannel,0))){
+    SWIG_fail_ptr("AnalogChannel_StartLiveWindowMode",1,SWIGTYPE_p_AnalogChannel);
+  }
+  
+  (arg1)->StartLiveWindowMode();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_AnalogChannel_StopLiveWindowMode(lua_State* L) {
+  int SWIG_arg = 0;
+  AnalogChannel *arg1 = (AnalogChannel *) 0 ;
+  
+  SWIG_check_num_args("AnalogChannel::StopLiveWindowMode",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("AnalogChannel::StopLiveWindowMode",1,"AnalogChannel *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_AnalogChannel,0))){
+    SWIG_fail_ptr("AnalogChannel_StopLiveWindowMode",1,SWIGTYPE_p_AnalogChannel);
+  }
+  
+  (arg1)->StopLiveWindowMode();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_AnalogChannel_GetSmartDashboardType(lua_State* L) {
+  int SWIG_arg = 0;
+  AnalogChannel *arg1 = (AnalogChannel *) 0 ;
+  std::string result;
+  
+  SWIG_check_num_args("AnalogChannel::GetSmartDashboardType",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("AnalogChannel::GetSmartDashboardType",1,"AnalogChannel *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_AnalogChannel,0))){
+    SWIG_fail_ptr("AnalogChannel_GetSmartDashboardType",1,SWIGTYPE_p_AnalogChannel);
+  }
+  
+  result = (arg1)->GetSmartDashboardType();
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
 static void swig_delete_AnalogChannel(void *obj) {
 AnalogChannel *arg1 = (AnalogChannel *) obj;
 delete arg1;
@@ -7071,13 +7738,17 @@ static swig_lua_method swig_AnalogChannel_methods[] = {
     {"GetAccumulatorCount", _wrap_AnalogChannel_GetAccumulatorCount}, 
     {"GetAccumulatorOutput", _wrap_AnalogChannel_GetAccumulatorOutput}, 
     {"PIDGet", _wrap_AnalogChannel_PIDGet}, 
+    {"UpdateTable", _wrap_AnalogChannel_UpdateTable}, 
+    {"StartLiveWindowMode", _wrap_AnalogChannel_StartLiveWindowMode}, 
+    {"StopLiveWindowMode", _wrap_AnalogChannel_StopLiveWindowMode}, 
+    {"GetSmartDashboardType", _wrap_AnalogChannel_GetSmartDashboardType}, 
     {0,0}
 };
 static swig_lua_attribute swig_AnalogChannel_attributes[] = {
     {0,0,0}
 };
-static swig_lua_class *swig_AnalogChannel_bases[] = {0,0,0};
-static const char *swig_AnalogChannel_base_names[] = {"SensorBase *","PIDSource *",0};
+static swig_lua_class *swig_AnalogChannel_bases[] = {0,0,0,0};
+static const char *swig_AnalogChannel_base_names[] = {"SensorBase *","PIDSource *","LiveWindowSendable *",0};
 static swig_lua_class _wrap_class_AnalogChannel = { "AnalogChannel", &SWIGTYPE_p_AnalogChannel,_wrap_new_AnalogChannel, swig_delete_AnalogChannel, swig_AnalogChannel_methods, swig_AnalogChannel_attributes, swig_AnalogChannel_bases, swig_AnalogChannel_base_names };
 
 static int _wrap_AnalogModule_SetSampleRate(lua_State* L) {
@@ -8215,6 +8886,99 @@ fail:
 }
 
 
+static int _wrap_Compressor_UpdateTable(lua_State* L) {
+  int SWIG_arg = 0;
+  Compressor *arg1 = (Compressor *) 0 ;
+  
+  SWIG_check_num_args("Compressor::UpdateTable",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Compressor::UpdateTable",1,"Compressor *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Compressor,0))){
+    SWIG_fail_ptr("Compressor_UpdateTable",1,SWIGTYPE_p_Compressor);
+  }
+  
+  (arg1)->UpdateTable();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Compressor_StartLiveWindowMode(lua_State* L) {
+  int SWIG_arg = 0;
+  Compressor *arg1 = (Compressor *) 0 ;
+  
+  SWIG_check_num_args("Compressor::StartLiveWindowMode",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Compressor::StartLiveWindowMode",1,"Compressor *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Compressor,0))){
+    SWIG_fail_ptr("Compressor_StartLiveWindowMode",1,SWIGTYPE_p_Compressor);
+  }
+  
+  (arg1)->StartLiveWindowMode();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Compressor_StopLiveWindowMode(lua_State* L) {
+  int SWIG_arg = 0;
+  Compressor *arg1 = (Compressor *) 0 ;
+  
+  SWIG_check_num_args("Compressor::StopLiveWindowMode",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Compressor::StopLiveWindowMode",1,"Compressor *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Compressor,0))){
+    SWIG_fail_ptr("Compressor_StopLiveWindowMode",1,SWIGTYPE_p_Compressor);
+  }
+  
+  (arg1)->StopLiveWindowMode();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Compressor_GetSmartDashboardType(lua_State* L) {
+  int SWIG_arg = 0;
+  Compressor *arg1 = (Compressor *) 0 ;
+  std::string result;
+  
+  SWIG_check_num_args("Compressor::GetSmartDashboardType",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Compressor::GetSmartDashboardType",1,"Compressor *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Compressor,0))){
+    SWIG_fail_ptr("Compressor_GetSmartDashboardType",1,SWIGTYPE_p_Compressor);
+  }
+  
+  result = (arg1)->GetSmartDashboardType();
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
 static void swig_delete_Compressor(void *obj) {
 Compressor *arg1 = (Compressor *) obj;
 delete arg1;
@@ -8225,14 +8989,80 @@ static swig_lua_method swig_Compressor_methods[] = {
     {"Enabled", _wrap_Compressor_Enabled}, 
     {"GetPressureSwitchValue", _wrap_Compressor_GetPressureSwitchValue}, 
     {"SetRelayValue", _wrap_Compressor_SetRelayValue}, 
+    {"UpdateTable", _wrap_Compressor_UpdateTable}, 
+    {"StartLiveWindowMode", _wrap_Compressor_StartLiveWindowMode}, 
+    {"StopLiveWindowMode", _wrap_Compressor_StopLiveWindowMode}, 
+    {"GetSmartDashboardType", _wrap_Compressor_GetSmartDashboardType}, 
     {0,0}
 };
 static swig_lua_attribute swig_Compressor_attributes[] = {
     {0,0,0}
 };
-static swig_lua_class *swig_Compressor_bases[] = {0,0};
-static const char *swig_Compressor_base_names[] = {"SensorBase *",0};
+static swig_lua_class *swig_Compressor_bases[] = {0,0,0};
+static const char *swig_Compressor_base_names[] = {"SensorBase *","LiveWindowSendable *",0};
 static swig_lua_class _wrap_class_Compressor = { "Compressor", &SWIGTYPE_p_Compressor,_wrap_new_Compressor, swig_delete_Compressor, swig_Compressor_methods, swig_Compressor_attributes, swig_Compressor_bases, swig_Compressor_base_names };
+
+static int _wrap_Controller_Enable(lua_State* L) {
+  int SWIG_arg = 0;
+  Controller *arg1 = (Controller *) 0 ;
+  
+  SWIG_check_num_args("Controller::Enable",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Controller::Enable",1,"Controller *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Controller,0))){
+    SWIG_fail_ptr("Controller_Enable",1,SWIGTYPE_p_Controller);
+  }
+  
+  (arg1)->Enable();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Controller_Disable(lua_State* L) {
+  int SWIG_arg = 0;
+  Controller *arg1 = (Controller *) 0 ;
+  
+  SWIG_check_num_args("Controller::Disable",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Controller::Disable",1,"Controller *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Controller,0))){
+    SWIG_fail_ptr("Controller_Disable",1,SWIGTYPE_p_Controller);
+  }
+  
+  (arg1)->Disable();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static void swig_delete_Controller(void *obj) {
+Controller *arg1 = (Controller *) obj;
+delete arg1;
+}
+static swig_lua_method swig_Controller_methods[] = {
+    {"Enable", _wrap_Controller_Enable}, 
+    {"Disable", _wrap_Controller_Disable}, 
+    {0,0}
+};
+static swig_lua_attribute swig_Controller_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_class *swig_Controller_bases[] = {0};
+static const char *swig_Controller_base_names[] = {0};
+static swig_lua_class _wrap_class_Controller = { "Controller", &SWIGTYPE_p_Controller,0, swig_delete_Controller, swig_Controller_methods, swig_Controller_attributes, swig_Controller_bases, swig_Controller_base_names };
 
 static int _wrap_new_Counter__SWIG_0(lua_State* L) {
   int SWIG_arg = 0;
@@ -9405,6 +10235,123 @@ fail:
 }
 
 
+static int _wrap_Counter_GetIndex(lua_State* L) {
+  int SWIG_arg = 0;
+  Counter *arg1 = (Counter *) 0 ;
+  UINT32 result;
+  
+  SWIG_check_num_args("Counter::GetIndex",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Counter::GetIndex",1,"Counter *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Counter,0))){
+    SWIG_fail_ptr("Counter_GetIndex",1,SWIGTYPE_p_Counter);
+  }
+  
+  result = (UINT32)(arg1)->GetIndex();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Counter_UpdateTable(lua_State* L) {
+  int SWIG_arg = 0;
+  Counter *arg1 = (Counter *) 0 ;
+  
+  SWIG_check_num_args("Counter::UpdateTable",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Counter::UpdateTable",1,"Counter *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Counter,0))){
+    SWIG_fail_ptr("Counter_UpdateTable",1,SWIGTYPE_p_Counter);
+  }
+  
+  (arg1)->UpdateTable();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Counter_StartLiveWindowMode(lua_State* L) {
+  int SWIG_arg = 0;
+  Counter *arg1 = (Counter *) 0 ;
+  
+  SWIG_check_num_args("Counter::StartLiveWindowMode",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Counter::StartLiveWindowMode",1,"Counter *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Counter,0))){
+    SWIG_fail_ptr("Counter_StartLiveWindowMode",1,SWIGTYPE_p_Counter);
+  }
+  
+  (arg1)->StartLiveWindowMode();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Counter_StopLiveWindowMode(lua_State* L) {
+  int SWIG_arg = 0;
+  Counter *arg1 = (Counter *) 0 ;
+  
+  SWIG_check_num_args("Counter::StopLiveWindowMode",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Counter::StopLiveWindowMode",1,"Counter *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Counter,0))){
+    SWIG_fail_ptr("Counter_StopLiveWindowMode",1,SWIGTYPE_p_Counter);
+  }
+  
+  (arg1)->StopLiveWindowMode();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Counter_GetSmartDashboardType(lua_State* L) {
+  int SWIG_arg = 0;
+  Counter *arg1 = (Counter *) 0 ;
+  std::string result;
+  
+  SWIG_check_num_args("Counter::GetSmartDashboardType",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Counter::GetSmartDashboardType",1,"Counter *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Counter,0))){
+    SWIG_fail_ptr("Counter_GetSmartDashboardType",1,SWIGTYPE_p_Counter);
+  }
+  
+  result = (arg1)->GetSmartDashboardType();
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
 static void swig_delete_Counter(void *obj) {
 Counter *arg1 = (Counter *) obj;
 delete arg1;
@@ -9430,13 +10377,18 @@ static swig_lua_method swig_Counter_methods[] = {
     {"SetUpdateWhenEmpty", _wrap_Counter_SetUpdateWhenEmpty}, 
     {"GetStopped", _wrap_Counter_GetStopped}, 
     {"GetDirection", _wrap_Counter_GetDirection}, 
+    {"GetIndex", _wrap_Counter_GetIndex}, 
+    {"UpdateTable", _wrap_Counter_UpdateTable}, 
+    {"StartLiveWindowMode", _wrap_Counter_StartLiveWindowMode}, 
+    {"StopLiveWindowMode", _wrap_Counter_StopLiveWindowMode}, 
+    {"GetSmartDashboardType", _wrap_Counter_GetSmartDashboardType}, 
     {0,0}
 };
 static swig_lua_attribute swig_Counter_attributes[] = {
     {0,0,0}
 };
-static swig_lua_class *swig_Counter_bases[] = {0,0,0};
-static const char *swig_Counter_base_names[] = {"SensorBase *","CounterBase *",0};
+static swig_lua_class *swig_Counter_bases[] = {0,0,0,0};
+static const char *swig_Counter_base_names[] = {"SensorBase *","CounterBase *","LiveWindowSendable *",0};
 static swig_lua_class _wrap_class_Counter = { "Counter", &SWIGTYPE_p_Counter,_wrap_new_Counter, swig_delete_Counter, swig_Counter_methods, swig_Counter_attributes, swig_Counter_bases, swig_Counter_base_names };
 
 static int _wrap_new_Dashboard(lua_State* L) {
@@ -10332,6 +11284,99 @@ fail:
 }
 
 
+static int _wrap_DigitalInput_UpdateTable(lua_State* L) {
+  int SWIG_arg = 0;
+  DigitalInput *arg1 = (DigitalInput *) 0 ;
+  
+  SWIG_check_num_args("DigitalInput::UpdateTable",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("DigitalInput::UpdateTable",1,"DigitalInput *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_DigitalInput,0))){
+    SWIG_fail_ptr("DigitalInput_UpdateTable",1,SWIGTYPE_p_DigitalInput);
+  }
+  
+  (arg1)->UpdateTable();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_DigitalInput_StartLiveWindowMode(lua_State* L) {
+  int SWIG_arg = 0;
+  DigitalInput *arg1 = (DigitalInput *) 0 ;
+  
+  SWIG_check_num_args("DigitalInput::StartLiveWindowMode",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("DigitalInput::StartLiveWindowMode",1,"DigitalInput *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_DigitalInput,0))){
+    SWIG_fail_ptr("DigitalInput_StartLiveWindowMode",1,SWIGTYPE_p_DigitalInput);
+  }
+  
+  (arg1)->StartLiveWindowMode();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_DigitalInput_StopLiveWindowMode(lua_State* L) {
+  int SWIG_arg = 0;
+  DigitalInput *arg1 = (DigitalInput *) 0 ;
+  
+  SWIG_check_num_args("DigitalInput::StopLiveWindowMode",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("DigitalInput::StopLiveWindowMode",1,"DigitalInput *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_DigitalInput,0))){
+    SWIG_fail_ptr("DigitalInput_StopLiveWindowMode",1,SWIGTYPE_p_DigitalInput);
+  }
+  
+  (arg1)->StopLiveWindowMode();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_DigitalInput_GetSmartDashboardType(lua_State* L) {
+  int SWIG_arg = 0;
+  DigitalInput *arg1 = (DigitalInput *) 0 ;
+  std::string result;
+  
+  SWIG_check_num_args("DigitalInput::GetSmartDashboardType",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("DigitalInput::GetSmartDashboardType",1,"DigitalInput *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_DigitalInput,0))){
+    SWIG_fail_ptr("DigitalInput_GetSmartDashboardType",1,SWIGTYPE_p_DigitalInput);
+  }
+  
+  result = (arg1)->GetSmartDashboardType();
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
 static void swig_delete_DigitalInput(void *obj) {
 DigitalInput *arg1 = (DigitalInput *) obj;
 delete arg1;
@@ -10345,13 +11390,17 @@ static swig_lua_method swig_DigitalInput_methods[] = {
     {"RequestInterrupts", _wrap_DigitalInput_RequestInterrupts}, 
     {"SetUpSourceEdge", _wrap_DigitalInput_SetUpSourceEdge}, 
     {"Get", _wrap_DigitalInput_Get}, 
+    {"UpdateTable", _wrap_DigitalInput_UpdateTable}, 
+    {"StartLiveWindowMode", _wrap_DigitalInput_StartLiveWindowMode}, 
+    {"StopLiveWindowMode", _wrap_DigitalInput_StopLiveWindowMode}, 
+    {"GetSmartDashboardType", _wrap_DigitalInput_GetSmartDashboardType}, 
     {0,0}
 };
 static swig_lua_attribute swig_DigitalInput_attributes[] = {
     {0,0,0}
 };
-static swig_lua_class *swig_DigitalInput_bases[] = {0,0};
-static const char *swig_DigitalInput_base_names[] = {"DigitalSource *",0};
+static swig_lua_class *swig_DigitalInput_bases[] = {0,0,0};
+static const char *swig_DigitalInput_base_names[] = {"DigitalSource *","LiveWindowSendable *",0};
 static swig_lua_class _wrap_class_DigitalInput = { "DigitalInput", &SWIGTYPE_p_DigitalInput,_wrap_new_DigitalInput, swig_delete_DigitalInput, swig_DigitalInput_methods, swig_DigitalInput_attributes, swig_DigitalInput_bases, swig_DigitalInput_base_names };
 
 static int _wrap_DigitalModule_SetPWM(lua_State* L) {
@@ -11548,6 +12597,324 @@ fail:
 }
 
 
+static int _wrap_DigitalOutput_SetPWMRate(lua_State* L) {
+  int SWIG_arg = 0;
+  DigitalOutput *arg1 = (DigitalOutput *) 0 ;
+  float arg2 ;
+  
+  SWIG_check_num_args("DigitalOutput::SetPWMRate",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("DigitalOutput::SetPWMRate",1,"DigitalOutput *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("DigitalOutput::SetPWMRate",2,"float");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_DigitalOutput,0))){
+    SWIG_fail_ptr("DigitalOutput_SetPWMRate",1,SWIGTYPE_p_DigitalOutput);
+  }
+  
+  arg2 = (float)lua_tonumber(L, 2);
+  (arg1)->SetPWMRate(arg2);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_DigitalOutput_EnablePWM(lua_State* L) {
+  int SWIG_arg = 0;
+  DigitalOutput *arg1 = (DigitalOutput *) 0 ;
+  float arg2 ;
+  
+  SWIG_check_num_args("DigitalOutput::EnablePWM",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("DigitalOutput::EnablePWM",1,"DigitalOutput *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("DigitalOutput::EnablePWM",2,"float");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_DigitalOutput,0))){
+    SWIG_fail_ptr("DigitalOutput_EnablePWM",1,SWIGTYPE_p_DigitalOutput);
+  }
+  
+  arg2 = (float)lua_tonumber(L, 2);
+  (arg1)->EnablePWM(arg2);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_DigitalOutput_DisablePWM(lua_State* L) {
+  int SWIG_arg = 0;
+  DigitalOutput *arg1 = (DigitalOutput *) 0 ;
+  
+  SWIG_check_num_args("DigitalOutput::DisablePWM",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("DigitalOutput::DisablePWM",1,"DigitalOutput *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_DigitalOutput,0))){
+    SWIG_fail_ptr("DigitalOutput_DisablePWM",1,SWIGTYPE_p_DigitalOutput);
+  }
+  
+  (arg1)->DisablePWM();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_DigitalOutput_UpdateDutyCycle(lua_State* L) {
+  int SWIG_arg = 0;
+  DigitalOutput *arg1 = (DigitalOutput *) 0 ;
+  float arg2 ;
+  
+  SWIG_check_num_args("DigitalOutput::UpdateDutyCycle",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("DigitalOutput::UpdateDutyCycle",1,"DigitalOutput *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("DigitalOutput::UpdateDutyCycle",2,"float");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_DigitalOutput,0))){
+    SWIG_fail_ptr("DigitalOutput_UpdateDutyCycle",1,SWIGTYPE_p_DigitalOutput);
+  }
+  
+  arg2 = (float)lua_tonumber(L, 2);
+  (arg1)->UpdateDutyCycle(arg2);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_DigitalOutput_GetChannelForRouting(lua_State* L) {
+  int SWIG_arg = 0;
+  DigitalOutput *arg1 = (DigitalOutput *) 0 ;
+  UINT32 result;
+  
+  SWIG_check_num_args("DigitalOutput::GetChannelForRouting",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("DigitalOutput::GetChannelForRouting",1,"DigitalOutput *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_DigitalOutput,0))){
+    SWIG_fail_ptr("DigitalOutput_GetChannelForRouting",1,SWIGTYPE_p_DigitalOutput);
+  }
+  
+  result = (UINT32)(arg1)->GetChannelForRouting();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_DigitalOutput_GetModuleForRouting(lua_State* L) {
+  int SWIG_arg = 0;
+  DigitalOutput *arg1 = (DigitalOutput *) 0 ;
+  UINT32 result;
+  
+  SWIG_check_num_args("DigitalOutput::GetModuleForRouting",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("DigitalOutput::GetModuleForRouting",1,"DigitalOutput *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_DigitalOutput,0))){
+    SWIG_fail_ptr("DigitalOutput_GetModuleForRouting",1,SWIGTYPE_p_DigitalOutput);
+  }
+  
+  result = (UINT32)(arg1)->GetModuleForRouting();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_DigitalOutput_GetAnalogTriggerForRouting(lua_State* L) {
+  int SWIG_arg = 0;
+  DigitalOutput *arg1 = (DigitalOutput *) 0 ;
+  bool result;
+  
+  SWIG_check_num_args("DigitalOutput::GetAnalogTriggerForRouting",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("DigitalOutput::GetAnalogTriggerForRouting",1,"DigitalOutput *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_DigitalOutput,0))){
+    SWIG_fail_ptr("DigitalOutput_GetAnalogTriggerForRouting",1,SWIGTYPE_p_DigitalOutput);
+  }
+  
+  result = (bool)(arg1)->GetAnalogTriggerForRouting();
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_DigitalOutput_RequestInterrupts(lua_State* L) {
+  int SWIG_arg = 0;
+  DigitalOutput *arg1 = (DigitalOutput *) 0 ;
+  
+  SWIG_check_num_args("DigitalOutput::RequestInterrupts",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("DigitalOutput::RequestInterrupts",1,"DigitalOutput *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_DigitalOutput,0))){
+    SWIG_fail_ptr("DigitalOutput_RequestInterrupts",1,SWIGTYPE_p_DigitalOutput);
+  }
+  
+  (arg1)->RequestInterrupts();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_DigitalOutput_SetUpSourceEdge(lua_State* L) {
+  int SWIG_arg = 0;
+  DigitalOutput *arg1 = (DigitalOutput *) 0 ;
+  bool arg2 ;
+  bool arg3 ;
+  
+  SWIG_check_num_args("DigitalOutput::SetUpSourceEdge",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("DigitalOutput::SetUpSourceEdge",1,"DigitalOutput *");
+  if(!lua_isboolean(L,2)) SWIG_fail_arg("DigitalOutput::SetUpSourceEdge",2,"bool");
+  if(!lua_isboolean(L,3)) SWIG_fail_arg("DigitalOutput::SetUpSourceEdge",3,"bool");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_DigitalOutput,0))){
+    SWIG_fail_ptr("DigitalOutput_SetUpSourceEdge",1,SWIGTYPE_p_DigitalOutput);
+  }
+  
+  arg2 = (lua_toboolean(L, 2)!=0);
+  arg3 = (lua_toboolean(L, 3)!=0);
+  (arg1)->SetUpSourceEdge(arg2,arg3);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_DigitalOutput_UpdateTable(lua_State* L) {
+  int SWIG_arg = 0;
+  DigitalOutput *arg1 = (DigitalOutput *) 0 ;
+  
+  SWIG_check_num_args("DigitalOutput::UpdateTable",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("DigitalOutput::UpdateTable",1,"DigitalOutput *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_DigitalOutput,0))){
+    SWIG_fail_ptr("DigitalOutput_UpdateTable",1,SWIGTYPE_p_DigitalOutput);
+  }
+  
+  (arg1)->UpdateTable();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_DigitalOutput_StartLiveWindowMode(lua_State* L) {
+  int SWIG_arg = 0;
+  DigitalOutput *arg1 = (DigitalOutput *) 0 ;
+  
+  SWIG_check_num_args("DigitalOutput::StartLiveWindowMode",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("DigitalOutput::StartLiveWindowMode",1,"DigitalOutput *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_DigitalOutput,0))){
+    SWIG_fail_ptr("DigitalOutput_StartLiveWindowMode",1,SWIGTYPE_p_DigitalOutput);
+  }
+  
+  (arg1)->StartLiveWindowMode();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_DigitalOutput_StopLiveWindowMode(lua_State* L) {
+  int SWIG_arg = 0;
+  DigitalOutput *arg1 = (DigitalOutput *) 0 ;
+  
+  SWIG_check_num_args("DigitalOutput::StopLiveWindowMode",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("DigitalOutput::StopLiveWindowMode",1,"DigitalOutput *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_DigitalOutput,0))){
+    SWIG_fail_ptr("DigitalOutput_StopLiveWindowMode",1,SWIGTYPE_p_DigitalOutput);
+  }
+  
+  (arg1)->StopLiveWindowMode();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_DigitalOutput_GetSmartDashboardType(lua_State* L) {
+  int SWIG_arg = 0;
+  DigitalOutput *arg1 = (DigitalOutput *) 0 ;
+  std::string result;
+  
+  SWIG_check_num_args("DigitalOutput::GetSmartDashboardType",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("DigitalOutput::GetSmartDashboardType",1,"DigitalOutput *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_DigitalOutput,0))){
+    SWIG_fail_ptr("DigitalOutput_GetSmartDashboardType",1,SWIGTYPE_p_DigitalOutput);
+  }
+  
+  result = (arg1)->GetSmartDashboardType();
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
 static void swig_delete_DigitalOutput(void *obj) {
 DigitalOutput *arg1 = (DigitalOutput *) obj;
 delete arg1;
@@ -11556,13 +12923,26 @@ static swig_lua_method swig_DigitalOutput_methods[] = {
     {"Set", _wrap_DigitalOutput_Set}, 
     {"Pulse", _wrap_DigitalOutput_Pulse}, 
     {"IsPulsing", _wrap_DigitalOutput_IsPulsing}, 
+    {"SetPWMRate", _wrap_DigitalOutput_SetPWMRate}, 
+    {"EnablePWM", _wrap_DigitalOutput_EnablePWM}, 
+    {"DisablePWM", _wrap_DigitalOutput_DisablePWM}, 
+    {"UpdateDutyCycle", _wrap_DigitalOutput_UpdateDutyCycle}, 
+    {"GetChannelForRouting", _wrap_DigitalOutput_GetChannelForRouting}, 
+    {"GetModuleForRouting", _wrap_DigitalOutput_GetModuleForRouting}, 
+    {"GetAnalogTriggerForRouting", _wrap_DigitalOutput_GetAnalogTriggerForRouting}, 
+    {"RequestInterrupts", _wrap_DigitalOutput_RequestInterrupts}, 
+    {"SetUpSourceEdge", _wrap_DigitalOutput_SetUpSourceEdge}, 
+    {"UpdateTable", _wrap_DigitalOutput_UpdateTable}, 
+    {"StartLiveWindowMode", _wrap_DigitalOutput_StartLiveWindowMode}, 
+    {"StopLiveWindowMode", _wrap_DigitalOutput_StopLiveWindowMode}, 
+    {"GetSmartDashboardType", _wrap_DigitalOutput_GetSmartDashboardType}, 
     {0,0}
 };
 static swig_lua_attribute swig_DigitalOutput_attributes[] = {
     {0,0,0}
 };
-static swig_lua_class *swig_DigitalOutput_bases[] = {0,0};
-static const char *swig_DigitalOutput_base_names[] = {"SensorBase *",0};
+static swig_lua_class *swig_DigitalOutput_bases[] = {0,0,0};
+static const char *swig_DigitalOutput_base_names[] = {"DigitalSource *","LiveWindowSendable *",0};
 static swig_lua_class _wrap_class_DigitalOutput = { "DigitalOutput", &SWIGTYPE_p_DigitalOutput,_wrap_new_DigitalOutput, swig_delete_DigitalOutput, swig_DigitalOutput_methods, swig_DigitalOutput_attributes, swig_DigitalOutput_bases, swig_DigitalOutput_base_names };
 
 static int _wrap_new_DoubleSolenoid__SWIG_0(lua_State* L) {
@@ -11718,6 +13098,99 @@ fail:
 }
 
 
+static int _wrap_DoubleSolenoid_UpdateTable(lua_State* L) {
+  int SWIG_arg = 0;
+  DoubleSolenoid *arg1 = (DoubleSolenoid *) 0 ;
+  
+  SWIG_check_num_args("DoubleSolenoid::UpdateTable",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("DoubleSolenoid::UpdateTable",1,"DoubleSolenoid *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_DoubleSolenoid,0))){
+    SWIG_fail_ptr("DoubleSolenoid_UpdateTable",1,SWIGTYPE_p_DoubleSolenoid);
+  }
+  
+  (arg1)->UpdateTable();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_DoubleSolenoid_StartLiveWindowMode(lua_State* L) {
+  int SWIG_arg = 0;
+  DoubleSolenoid *arg1 = (DoubleSolenoid *) 0 ;
+  
+  SWIG_check_num_args("DoubleSolenoid::StartLiveWindowMode",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("DoubleSolenoid::StartLiveWindowMode",1,"DoubleSolenoid *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_DoubleSolenoid,0))){
+    SWIG_fail_ptr("DoubleSolenoid_StartLiveWindowMode",1,SWIGTYPE_p_DoubleSolenoid);
+  }
+  
+  (arg1)->StartLiveWindowMode();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_DoubleSolenoid_StopLiveWindowMode(lua_State* L) {
+  int SWIG_arg = 0;
+  DoubleSolenoid *arg1 = (DoubleSolenoid *) 0 ;
+  
+  SWIG_check_num_args("DoubleSolenoid::StopLiveWindowMode",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("DoubleSolenoid::StopLiveWindowMode",1,"DoubleSolenoid *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_DoubleSolenoid,0))){
+    SWIG_fail_ptr("DoubleSolenoid_StopLiveWindowMode",1,SWIGTYPE_p_DoubleSolenoid);
+  }
+  
+  (arg1)->StopLiveWindowMode();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_DoubleSolenoid_GetSmartDashboardType(lua_State* L) {
+  int SWIG_arg = 0;
+  DoubleSolenoid *arg1 = (DoubleSolenoid *) 0 ;
+  std::string result;
+  
+  SWIG_check_num_args("DoubleSolenoid::GetSmartDashboardType",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("DoubleSolenoid::GetSmartDashboardType",1,"DoubleSolenoid *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_DoubleSolenoid,0))){
+    SWIG_fail_ptr("DoubleSolenoid_GetSmartDashboardType",1,SWIGTYPE_p_DoubleSolenoid);
+  }
+  
+  result = (arg1)->GetSmartDashboardType();
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
 static void swig_delete_DoubleSolenoid(void *obj) {
 DoubleSolenoid *arg1 = (DoubleSolenoid *) obj;
 delete arg1;
@@ -11725,13 +13198,17 @@ delete arg1;
 static swig_lua_method swig_DoubleSolenoid_methods[] = {
     {"Set", _wrap_DoubleSolenoid_Set}, 
     {"Get", _wrap_DoubleSolenoid_Get}, 
+    {"UpdateTable", _wrap_DoubleSolenoid_UpdateTable}, 
+    {"StartLiveWindowMode", _wrap_DoubleSolenoid_StartLiveWindowMode}, 
+    {"StopLiveWindowMode", _wrap_DoubleSolenoid_StopLiveWindowMode}, 
+    {"GetSmartDashboardType", _wrap_DoubleSolenoid_GetSmartDashboardType}, 
     {0,0}
 };
 static swig_lua_attribute swig_DoubleSolenoid_attributes[] = {
     {0,0,0}
 };
-static swig_lua_class *swig_DoubleSolenoid_bases[] = {0,0};
-static const char *swig_DoubleSolenoid_base_names[] = {"SolenoidBase *",0};
+static swig_lua_class *swig_DoubleSolenoid_bases[] = {0,0,0};
+static const char *swig_DoubleSolenoid_base_names[] = {"SolenoidBase *","LiveWindowSendable *",0};
 static swig_lua_class _wrap_class_DoubleSolenoid = { "DoubleSolenoid", &SWIGTYPE_p_DoubleSolenoid,_wrap_new_DoubleSolenoid, swig_delete_DoubleSolenoid, swig_DoubleSolenoid_methods, swig_DoubleSolenoid_attributes, swig_DoubleSolenoid_bases, swig_DoubleSolenoid_base_names };
 
 static int _wrap_DriverStation_GetInstance(lua_State* L) {
@@ -12544,6 +14021,32 @@ fail:
 }
 
 
+static int _wrap_DriverStation_InTest(lua_State* L) {
+  int SWIG_arg = 0;
+  DriverStation *arg1 = (DriverStation *) 0 ;
+  bool arg2 ;
+  
+  SWIG_check_num_args("DriverStation::InTest",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("DriverStation::InTest",1,"DriverStation *");
+  if(!lua_isboolean(L,2)) SWIG_fail_arg("DriverStation::InTest",2,"bool");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_DriverStation,0))){
+    SWIG_fail_ptr("DriverStation_InTest",1,SWIGTYPE_p_DriverStation);
+  }
+  
+  arg2 = (lua_toboolean(L, 2)!=0);
+  (arg1)->InTest(arg2);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
 static void swig_delete_DriverStation(void *obj) {
 DriverStation *arg1 = (DriverStation *) obj;
 delete arg1;
@@ -12580,6 +14083,7 @@ static swig_lua_method swig_DriverStation_methods[] = {
     {"InDisabled", _wrap_DriverStation_InDisabled}, 
     {"InAutonomous", _wrap_DriverStation_InAutonomous}, 
     {"InOperatorControl", _wrap_DriverStation_InOperatorControl}, 
+    {"InTest", _wrap_DriverStation_InTest}, 
     {0,0}
 };
 static swig_lua_attribute swig_DriverStation_attributes[] = {
@@ -14379,6 +15883,149 @@ fail:
 }
 
 
+static int _wrap_Encoder_SetPIDSourceParameter(lua_State* L) {
+  int SWIG_arg = 0;
+  Encoder *arg1 = (Encoder *) 0 ;
+  Encoder::PIDSourceParameter arg2 ;
+  
+  SWIG_check_num_args("Encoder::SetPIDSourceParameter",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Encoder::SetPIDSourceParameter",1,"Encoder *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("Encoder::SetPIDSourceParameter",2,"Encoder::PIDSourceParameter");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Encoder,0))){
+    SWIG_fail_ptr("Encoder_SetPIDSourceParameter",1,SWIGTYPE_p_Encoder);
+  }
+  
+  arg2 = (Encoder::PIDSourceParameter)(int)lua_tonumber(L, 2);
+  (arg1)->SetPIDSourceParameter(arg2);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Encoder_PIDGet(lua_State* L) {
+  int SWIG_arg = 0;
+  Encoder *arg1 = (Encoder *) 0 ;
+  double result;
+  
+  SWIG_check_num_args("Encoder::PIDGet",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Encoder::PIDGet",1,"Encoder *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Encoder,0))){
+    SWIG_fail_ptr("Encoder_PIDGet",1,SWIGTYPE_p_Encoder);
+  }
+  
+  result = (double)(arg1)->PIDGet();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Encoder_UpdateTable(lua_State* L) {
+  int SWIG_arg = 0;
+  Encoder *arg1 = (Encoder *) 0 ;
+  
+  SWIG_check_num_args("Encoder::UpdateTable",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Encoder::UpdateTable",1,"Encoder *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Encoder,0))){
+    SWIG_fail_ptr("Encoder_UpdateTable",1,SWIGTYPE_p_Encoder);
+  }
+  
+  (arg1)->UpdateTable();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Encoder_StartLiveWindowMode(lua_State* L) {
+  int SWIG_arg = 0;
+  Encoder *arg1 = (Encoder *) 0 ;
+  
+  SWIG_check_num_args("Encoder::StartLiveWindowMode",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Encoder::StartLiveWindowMode",1,"Encoder *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Encoder,0))){
+    SWIG_fail_ptr("Encoder_StartLiveWindowMode",1,SWIGTYPE_p_Encoder);
+  }
+  
+  (arg1)->StartLiveWindowMode();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Encoder_StopLiveWindowMode(lua_State* L) {
+  int SWIG_arg = 0;
+  Encoder *arg1 = (Encoder *) 0 ;
+  
+  SWIG_check_num_args("Encoder::StopLiveWindowMode",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Encoder::StopLiveWindowMode",1,"Encoder *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Encoder,0))){
+    SWIG_fail_ptr("Encoder_StopLiveWindowMode",1,SWIGTYPE_p_Encoder);
+  }
+  
+  (arg1)->StopLiveWindowMode();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Encoder_GetSmartDashboardType(lua_State* L) {
+  int SWIG_arg = 0;
+  Encoder *arg1 = (Encoder *) 0 ;
+  std::string result;
+  
+  SWIG_check_num_args("Encoder::GetSmartDashboardType",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Encoder::GetSmartDashboardType",1,"Encoder *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Encoder,0))){
+    SWIG_fail_ptr("Encoder_GetSmartDashboardType",1,SWIGTYPE_p_Encoder);
+  }
+  
+  result = (arg1)->GetSmartDashboardType();
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
 static void swig_delete_Encoder(void *obj) {
 Encoder *arg1 = (Encoder *) obj;
 delete arg1;
@@ -14398,13 +16045,19 @@ static swig_lua_method swig_Encoder_methods[] = {
     {"SetMinRate", _wrap_Encoder_SetMinRate}, 
     {"SetDistancePerPulse", _wrap_Encoder_SetDistancePerPulse}, 
     {"SetReverseDirection", _wrap_Encoder_SetReverseDirection}, 
+    {"SetPIDSourceParameter", _wrap_Encoder_SetPIDSourceParameter}, 
+    {"PIDGet", _wrap_Encoder_PIDGet}, 
+    {"UpdateTable", _wrap_Encoder_UpdateTable}, 
+    {"StartLiveWindowMode", _wrap_Encoder_StartLiveWindowMode}, 
+    {"StopLiveWindowMode", _wrap_Encoder_StopLiveWindowMode}, 
+    {"GetSmartDashboardType", _wrap_Encoder_GetSmartDashboardType}, 
     {0,0}
 };
 static swig_lua_attribute swig_Encoder_attributes[] = {
     {0,0,0}
 };
-static swig_lua_class *swig_Encoder_bases[] = {0,0,0};
-static const char *swig_Encoder_base_names[] = {"SensorBase *","CounterBase *",0};
+static swig_lua_class *swig_Encoder_bases[] = {0,0,0,0,0};
+static const char *swig_Encoder_base_names[] = {"SensorBase *","CounterBase *","PIDSource *","LiveWindowSendable *",0};
 static swig_lua_class _wrap_class_Encoder = { "Encoder", &SWIGTYPE_p_Encoder,_wrap_new_Encoder, swig_delete_Encoder, swig_Encoder_methods, swig_Encoder_attributes, swig_Encoder_bases, swig_Encoder_base_names };
 
 static int _wrap_new_GearTooth__SWIG_0(lua_State* L) {
@@ -14542,12 +16195,37 @@ fail:
 }
 
 
+static int _wrap_GearTooth_GetSmartDashboardType(lua_State* L) {
+  int SWIG_arg = 0;
+  GearTooth *arg1 = (GearTooth *) 0 ;
+  std::string result;
+  
+  SWIG_check_num_args("GearTooth::GetSmartDashboardType",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("GearTooth::GetSmartDashboardType",1,"GearTooth *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_GearTooth,0))){
+    SWIG_fail_ptr("GearTooth_GetSmartDashboardType",1,SWIGTYPE_p_GearTooth);
+  }
+  
+  result = (arg1)->GetSmartDashboardType();
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
 static void swig_delete_GearTooth(void *obj) {
 GearTooth *arg1 = (GearTooth *) obj;
 delete arg1;
 }
 static swig_lua_method swig_GearTooth_methods[] = {
     {"EnableDirectionSensing", _wrap_GearTooth_EnableDirectionSensing}, 
+    {"GetSmartDashboardType", _wrap_GearTooth_GetSmartDashboardType}, 
     {0,0}
 };
 static swig_lua_attribute swig_GearTooth_attributes[] = {
@@ -14778,6 +16456,99 @@ fail:
 }
 
 
+static int _wrap_Gyro_UpdateTable(lua_State* L) {
+  int SWIG_arg = 0;
+  Gyro *arg1 = (Gyro *) 0 ;
+  
+  SWIG_check_num_args("Gyro::UpdateTable",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Gyro::UpdateTable",1,"Gyro *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Gyro,0))){
+    SWIG_fail_ptr("Gyro_UpdateTable",1,SWIGTYPE_p_Gyro);
+  }
+  
+  (arg1)->UpdateTable();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Gyro_StartLiveWindowMode(lua_State* L) {
+  int SWIG_arg = 0;
+  Gyro *arg1 = (Gyro *) 0 ;
+  
+  SWIG_check_num_args("Gyro::StartLiveWindowMode",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Gyro::StartLiveWindowMode",1,"Gyro *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Gyro,0))){
+    SWIG_fail_ptr("Gyro_StartLiveWindowMode",1,SWIGTYPE_p_Gyro);
+  }
+  
+  (arg1)->StartLiveWindowMode();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Gyro_StopLiveWindowMode(lua_State* L) {
+  int SWIG_arg = 0;
+  Gyro *arg1 = (Gyro *) 0 ;
+  
+  SWIG_check_num_args("Gyro::StopLiveWindowMode",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Gyro::StopLiveWindowMode",1,"Gyro *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Gyro,0))){
+    SWIG_fail_ptr("Gyro_StopLiveWindowMode",1,SWIGTYPE_p_Gyro);
+  }
+  
+  (arg1)->StopLiveWindowMode();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Gyro_GetSmartDashboardType(lua_State* L) {
+  int SWIG_arg = 0;
+  Gyro *arg1 = (Gyro *) 0 ;
+  std::string result;
+  
+  SWIG_check_num_args("Gyro::GetSmartDashboardType",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Gyro::GetSmartDashboardType",1,"Gyro *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Gyro,0))){
+    SWIG_fail_ptr("Gyro_GetSmartDashboardType",1,SWIGTYPE_p_Gyro);
+  }
+  
+  result = (arg1)->GetSmartDashboardType();
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
 static void swig_delete_Gyro(void *obj) {
 Gyro *arg1 = (Gyro *) obj;
 delete arg1;
@@ -14787,14 +16558,380 @@ static swig_lua_method swig_Gyro_methods[] = {
     {"SetSensitivity", _wrap_Gyro_SetSensitivity}, 
     {"Reset", _wrap_Gyro_Reset}, 
     {"PIDGet", _wrap_Gyro_PIDGet}, 
+    {"UpdateTable", _wrap_Gyro_UpdateTable}, 
+    {"StartLiveWindowMode", _wrap_Gyro_StartLiveWindowMode}, 
+    {"StopLiveWindowMode", _wrap_Gyro_StopLiveWindowMode}, 
+    {"GetSmartDashboardType", _wrap_Gyro_GetSmartDashboardType}, 
     {0,0}
 };
 static swig_lua_attribute swig_Gyro_attributes[] = {
     {0,0,0}
 };
-static swig_lua_class *swig_Gyro_bases[] = {0,0,0};
-static const char *swig_Gyro_base_names[] = {"SensorBase *","PIDSource *",0};
+static swig_lua_class *swig_Gyro_bases[] = {0,0,0,0};
+static const char *swig_Gyro_base_names[] = {"SensorBase *","PIDSource *","LiveWindowSendable *",0};
 static swig_lua_class _wrap_class_Gyro = { "Gyro", &SWIGTYPE_p_Gyro,_wrap_new_Gyro, swig_delete_Gyro, swig_Gyro_methods, swig_Gyro_attributes, swig_Gyro_bases, swig_Gyro_base_names };
+
+static int _wrap_new_HiTechnicColorSensor(lua_State* L) {
+  int SWIG_arg = 0;
+  UINT8 arg1 ;
+  HiTechnicColorSensor *result = 0 ;
+  
+  SWIG_check_num_args("HiTechnicColorSensor::HiTechnicColorSensor",1,1)
+  if(!lua_isnumber(L,1)) SWIG_fail_arg("HiTechnicColorSensor::HiTechnicColorSensor",1,"UINT8");
+  SWIG_contract_assert((lua_tonumber(L,1)>=0),"number must not be negative")
+  arg1 = (UINT8)lua_tonumber(L, 1);
+  result = (HiTechnicColorSensor *)new HiTechnicColorSensor(arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_HiTechnicColorSensor,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_HiTechnicColorSensor_GetColor(lua_State* L) {
+  int SWIG_arg = 0;
+  HiTechnicColorSensor *arg1 = (HiTechnicColorSensor *) 0 ;
+  UINT8 result;
+  
+  SWIG_check_num_args("HiTechnicColorSensor::GetColor",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("HiTechnicColorSensor::GetColor",1,"HiTechnicColorSensor *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_HiTechnicColorSensor,0))){
+    SWIG_fail_ptr("HiTechnicColorSensor_GetColor",1,SWIGTYPE_p_HiTechnicColorSensor);
+  }
+  
+  result = (UINT8)(arg1)->GetColor();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_HiTechnicColorSensor_GetRed(lua_State* L) {
+  int SWIG_arg = 0;
+  HiTechnicColorSensor *arg1 = (HiTechnicColorSensor *) 0 ;
+  UINT8 result;
+  
+  SWIG_check_num_args("HiTechnicColorSensor::GetRed",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("HiTechnicColorSensor::GetRed",1,"HiTechnicColorSensor *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_HiTechnicColorSensor,0))){
+    SWIG_fail_ptr("HiTechnicColorSensor_GetRed",1,SWIGTYPE_p_HiTechnicColorSensor);
+  }
+  
+  result = (UINT8)(arg1)->GetRed();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_HiTechnicColorSensor_GetGreen(lua_State* L) {
+  int SWIG_arg = 0;
+  HiTechnicColorSensor *arg1 = (HiTechnicColorSensor *) 0 ;
+  UINT8 result;
+  
+  SWIG_check_num_args("HiTechnicColorSensor::GetGreen",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("HiTechnicColorSensor::GetGreen",1,"HiTechnicColorSensor *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_HiTechnicColorSensor,0))){
+    SWIG_fail_ptr("HiTechnicColorSensor_GetGreen",1,SWIGTYPE_p_HiTechnicColorSensor);
+  }
+  
+  result = (UINT8)(arg1)->GetGreen();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_HiTechnicColorSensor_GetBlue(lua_State* L) {
+  int SWIG_arg = 0;
+  HiTechnicColorSensor *arg1 = (HiTechnicColorSensor *) 0 ;
+  UINT8 result;
+  
+  SWIG_check_num_args("HiTechnicColorSensor::GetBlue",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("HiTechnicColorSensor::GetBlue",1,"HiTechnicColorSensor *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_HiTechnicColorSensor,0))){
+    SWIG_fail_ptr("HiTechnicColorSensor_GetBlue",1,SWIGTYPE_p_HiTechnicColorSensor);
+  }
+  
+  result = (UINT8)(arg1)->GetBlue();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_HiTechnicColorSensor_GetRawRed(lua_State* L) {
+  int SWIG_arg = 0;
+  HiTechnicColorSensor *arg1 = (HiTechnicColorSensor *) 0 ;
+  UINT16 result;
+  
+  SWIG_check_num_args("HiTechnicColorSensor::GetRawRed",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("HiTechnicColorSensor::GetRawRed",1,"HiTechnicColorSensor *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_HiTechnicColorSensor,0))){
+    SWIG_fail_ptr("HiTechnicColorSensor_GetRawRed",1,SWIGTYPE_p_HiTechnicColorSensor);
+  }
+  
+  result = (UINT16)(arg1)->GetRawRed();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_HiTechnicColorSensor_GetRawGreen(lua_State* L) {
+  int SWIG_arg = 0;
+  HiTechnicColorSensor *arg1 = (HiTechnicColorSensor *) 0 ;
+  UINT16 result;
+  
+  SWIG_check_num_args("HiTechnicColorSensor::GetRawGreen",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("HiTechnicColorSensor::GetRawGreen",1,"HiTechnicColorSensor *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_HiTechnicColorSensor,0))){
+    SWIG_fail_ptr("HiTechnicColorSensor_GetRawGreen",1,SWIGTYPE_p_HiTechnicColorSensor);
+  }
+  
+  result = (UINT16)(arg1)->GetRawGreen();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_HiTechnicColorSensor_GetRawBlue(lua_State* L) {
+  int SWIG_arg = 0;
+  HiTechnicColorSensor *arg1 = (HiTechnicColorSensor *) 0 ;
+  UINT16 result;
+  
+  SWIG_check_num_args("HiTechnicColorSensor::GetRawBlue",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("HiTechnicColorSensor::GetRawBlue",1,"HiTechnicColorSensor *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_HiTechnicColorSensor,0))){
+    SWIG_fail_ptr("HiTechnicColorSensor_GetRawBlue",1,SWIGTYPE_p_HiTechnicColorSensor);
+  }
+  
+  result = (UINT16)(arg1)->GetRawBlue();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_HiTechnicColorSensor_GetRawRGB(lua_State* L) {
+  int SWIG_arg = 0;
+  HiTechnicColorSensor *arg1 = (HiTechnicColorSensor *) 0 ;
+  RGB result;
+  
+  SWIG_check_num_args("HiTechnicColorSensor::GetRawRGB",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("HiTechnicColorSensor::GetRawRGB",1,"HiTechnicColorSensor *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_HiTechnicColorSensor,0))){
+    SWIG_fail_ptr("HiTechnicColorSensor_GetRawRGB",1,SWIGTYPE_p_HiTechnicColorSensor);
+  }
+  
+  result = (arg1)->GetRawRGB();
+  {
+    RGB * resultptr = new RGB((const RGB &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_RGB,1); SWIG_arg++;
+  }
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_HiTechnicColorSensor_SetMode(lua_State* L) {
+  int SWIG_arg = 0;
+  HiTechnicColorSensor *arg1 = (HiTechnicColorSensor *) 0 ;
+  HiTechnicColorSensor::tColorMode arg2 ;
+  
+  SWIG_check_num_args("HiTechnicColorSensor::SetMode",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("HiTechnicColorSensor::SetMode",1,"HiTechnicColorSensor *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("HiTechnicColorSensor::SetMode",2,"HiTechnicColorSensor::tColorMode");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_HiTechnicColorSensor,0))){
+    SWIG_fail_ptr("HiTechnicColorSensor_SetMode",1,SWIGTYPE_p_HiTechnicColorSensor);
+  }
+  
+  arg2 = (HiTechnicColorSensor::tColorMode)(int)lua_tonumber(L, 2);
+  (arg1)->SetMode(arg2);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_HiTechnicColorSensor_GetType(lua_State* L) {
+  int SWIG_arg = 0;
+  HiTechnicColorSensor *arg1 = (HiTechnicColorSensor *) 0 ;
+  std::string result;
+  
+  SWIG_check_num_args("HiTechnicColorSensor::GetType",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("HiTechnicColorSensor::GetType",1,"HiTechnicColorSensor *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_HiTechnicColorSensor,0))){
+    SWIG_fail_ptr("HiTechnicColorSensor_GetType",1,SWIGTYPE_p_HiTechnicColorSensor);
+  }
+  
+  result = (arg1)->GetType();
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_HiTechnicColorSensor_UpdateTable(lua_State* L) {
+  int SWIG_arg = 0;
+  HiTechnicColorSensor *arg1 = (HiTechnicColorSensor *) 0 ;
+  
+  SWIG_check_num_args("HiTechnicColorSensor::UpdateTable",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("HiTechnicColorSensor::UpdateTable",1,"HiTechnicColorSensor *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_HiTechnicColorSensor,0))){
+    SWIG_fail_ptr("HiTechnicColorSensor_UpdateTable",1,SWIGTYPE_p_HiTechnicColorSensor);
+  }
+  
+  (arg1)->UpdateTable();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_HiTechnicColorSensor_StartLiveWindowMode(lua_State* L) {
+  int SWIG_arg = 0;
+  HiTechnicColorSensor *arg1 = (HiTechnicColorSensor *) 0 ;
+  
+  SWIG_check_num_args("HiTechnicColorSensor::StartLiveWindowMode",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("HiTechnicColorSensor::StartLiveWindowMode",1,"HiTechnicColorSensor *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_HiTechnicColorSensor,0))){
+    SWIG_fail_ptr("HiTechnicColorSensor_StartLiveWindowMode",1,SWIGTYPE_p_HiTechnicColorSensor);
+  }
+  
+  (arg1)->StartLiveWindowMode();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_HiTechnicColorSensor_StopLiveWindowMode(lua_State* L) {
+  int SWIG_arg = 0;
+  HiTechnicColorSensor *arg1 = (HiTechnicColorSensor *) 0 ;
+  
+  SWIG_check_num_args("HiTechnicColorSensor::StopLiveWindowMode",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("HiTechnicColorSensor::StopLiveWindowMode",1,"HiTechnicColorSensor *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_HiTechnicColorSensor,0))){
+    SWIG_fail_ptr("HiTechnicColorSensor_StopLiveWindowMode",1,SWIGTYPE_p_HiTechnicColorSensor);
+  }
+  
+  (arg1)->StopLiveWindowMode();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static void swig_delete_HiTechnicColorSensor(void *obj) {
+HiTechnicColorSensor *arg1 = (HiTechnicColorSensor *) obj;
+delete arg1;
+}
+static swig_lua_method swig_HiTechnicColorSensor_methods[] = {
+    {"GetColor", _wrap_HiTechnicColorSensor_GetColor}, 
+    {"GetRed", _wrap_HiTechnicColorSensor_GetRed}, 
+    {"GetGreen", _wrap_HiTechnicColorSensor_GetGreen}, 
+    {"GetBlue", _wrap_HiTechnicColorSensor_GetBlue}, 
+    {"GetRawRed", _wrap_HiTechnicColorSensor_GetRawRed}, 
+    {"GetRawGreen", _wrap_HiTechnicColorSensor_GetRawGreen}, 
+    {"GetRawBlue", _wrap_HiTechnicColorSensor_GetRawBlue}, 
+    {"GetRawRGB", _wrap_HiTechnicColorSensor_GetRawRGB}, 
+    {"SetMode", _wrap_HiTechnicColorSensor_SetMode}, 
+    {"GetType", _wrap_HiTechnicColorSensor_GetType}, 
+    {"UpdateTable", _wrap_HiTechnicColorSensor_UpdateTable}, 
+    {"StartLiveWindowMode", _wrap_HiTechnicColorSensor_StartLiveWindowMode}, 
+    {"StopLiveWindowMode", _wrap_HiTechnicColorSensor_StopLiveWindowMode}, 
+    {0,0}
+};
+static swig_lua_attribute swig_HiTechnicColorSensor_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_class *swig_HiTechnicColorSensor_bases[] = {0,0};
+static const char *swig_HiTechnicColorSensor_base_names[] = {"SensorBase *",0};
+static swig_lua_class _wrap_class_HiTechnicColorSensor = { "HiTechnicColorSensor", &SWIGTYPE_p_HiTechnicColorSensor,_wrap_new_HiTechnicColorSensor, swig_delete_HiTechnicColorSensor, swig_HiTechnicColorSensor_methods, swig_HiTechnicColorSensor_attributes, swig_HiTechnicColorSensor_bases, swig_HiTechnicColorSensor_base_names };
 
 static int _wrap_new_HiTechnicCompass(lua_State* L) {
   int SWIG_arg = 0;
@@ -14841,12 +16978,109 @@ fail:
 }
 
 
+static int _wrap_HiTechnicCompass_UpdateTable(lua_State* L) {
+  int SWIG_arg = 0;
+  HiTechnicCompass *arg1 = (HiTechnicCompass *) 0 ;
+  
+  SWIG_check_num_args("HiTechnicCompass::UpdateTable",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("HiTechnicCompass::UpdateTable",1,"HiTechnicCompass *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_HiTechnicCompass,0))){
+    SWIG_fail_ptr("HiTechnicCompass_UpdateTable",1,SWIGTYPE_p_HiTechnicCompass);
+  }
+  
+  (arg1)->UpdateTable();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_HiTechnicCompass_StartLiveWindowMode(lua_State* L) {
+  int SWIG_arg = 0;
+  HiTechnicCompass *arg1 = (HiTechnicCompass *) 0 ;
+  
+  SWIG_check_num_args("HiTechnicCompass::StartLiveWindowMode",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("HiTechnicCompass::StartLiveWindowMode",1,"HiTechnicCompass *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_HiTechnicCompass,0))){
+    SWIG_fail_ptr("HiTechnicCompass_StartLiveWindowMode",1,SWIGTYPE_p_HiTechnicCompass);
+  }
+  
+  (arg1)->StartLiveWindowMode();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_HiTechnicCompass_StopLiveWindowMode(lua_State* L) {
+  int SWIG_arg = 0;
+  HiTechnicCompass *arg1 = (HiTechnicCompass *) 0 ;
+  
+  SWIG_check_num_args("HiTechnicCompass::StopLiveWindowMode",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("HiTechnicCompass::StopLiveWindowMode",1,"HiTechnicCompass *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_HiTechnicCompass,0))){
+    SWIG_fail_ptr("HiTechnicCompass_StopLiveWindowMode",1,SWIGTYPE_p_HiTechnicCompass);
+  }
+  
+  (arg1)->StopLiveWindowMode();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_HiTechnicCompass_GetSmartDashboardType(lua_State* L) {
+  int SWIG_arg = 0;
+  HiTechnicCompass *arg1 = (HiTechnicCompass *) 0 ;
+  std::string result;
+  
+  SWIG_check_num_args("HiTechnicCompass::GetSmartDashboardType",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("HiTechnicCompass::GetSmartDashboardType",1,"HiTechnicCompass *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_HiTechnicCompass,0))){
+    SWIG_fail_ptr("HiTechnicCompass_GetSmartDashboardType",1,SWIGTYPE_p_HiTechnicCompass);
+  }
+  
+  result = (arg1)->GetSmartDashboardType();
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
 static void swig_delete_HiTechnicCompass(void *obj) {
 HiTechnicCompass *arg1 = (HiTechnicCompass *) obj;
 delete arg1;
 }
 static swig_lua_method swig_HiTechnicCompass_methods[] = {
     {"GetAngle", _wrap_HiTechnicCompass_GetAngle}, 
+    {"UpdateTable", _wrap_HiTechnicCompass_UpdateTable}, 
+    {"StartLiveWindowMode", _wrap_HiTechnicCompass_StartLiveWindowMode}, 
+    {"StopLiveWindowMode", _wrap_HiTechnicCompass_StopLiveWindowMode}, 
+    {"GetSmartDashboardType", _wrap_HiTechnicCompass_GetSmartDashboardType}, 
     {0,0}
 };
 static swig_lua_attribute swig_HiTechnicCompass_attributes[] = {
@@ -14855,91 +17089,6 @@ static swig_lua_attribute swig_HiTechnicCompass_attributes[] = {
 static swig_lua_class *swig_HiTechnicCompass_bases[] = {0,0};
 static const char *swig_HiTechnicCompass_base_names[] = {"SensorBase *",0};
 static swig_lua_class _wrap_class_HiTechnicCompass = { "HiTechnicCompass", &SWIGTYPE_p_HiTechnicCompass,_wrap_new_HiTechnicCompass, swig_delete_HiTechnicCompass, swig_HiTechnicCompass_methods, swig_HiTechnicCompass_attributes, swig_HiTechnicCompass_bases, swig_HiTechnicCompass_base_names };
-
-static int _wrap_new_Jaguar__SWIG_0(lua_State* L) {
-  int SWIG_arg = 0;
-  UINT32 arg1 ;
-  Jaguar *result = 0 ;
-  
-  SWIG_check_num_args("Jaguar::Jaguar",1,1)
-  if(!lua_isnumber(L,1)) SWIG_fail_arg("Jaguar::Jaguar",1,"UINT32");
-  SWIG_contract_assert((lua_tonumber(L,1)>=0),"number must not be negative")
-  arg1 = (UINT32)lua_tonumber(L, 1);
-  result = (Jaguar *)new Jaguar(arg1);
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_Jaguar,1); SWIG_arg++; 
-  return SWIG_arg;
-  
-  if(0) SWIG_fail;
-  
-fail:
-  lua_error(L);
-  return SWIG_arg;
-}
-
-
-static int _wrap_new_Jaguar__SWIG_1(lua_State* L) {
-  int SWIG_arg = 0;
-  UINT32 arg1 ;
-  UINT32 arg2 ;
-  Jaguar *result = 0 ;
-  
-  SWIG_check_num_args("Jaguar::Jaguar",2,2)
-  if(!lua_isnumber(L,1)) SWIG_fail_arg("Jaguar::Jaguar",1,"UINT32");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("Jaguar::Jaguar",2,"UINT32");
-  SWIG_contract_assert((lua_tonumber(L,1)>=0),"number must not be negative")
-  arg1 = (UINT32)lua_tonumber(L, 1);
-  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative")
-  arg2 = (UINT32)lua_tonumber(L, 2);
-  result = (Jaguar *)new Jaguar(arg1,arg2);
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_Jaguar,1); SWIG_arg++; 
-  return SWIG_arg;
-  
-  if(0) SWIG_fail;
-  
-fail:
-  lua_error(L);
-  return SWIG_arg;
-}
-
-
-static int _wrap_new_Jaguar(lua_State* L) {
-  int argc;
-  int argv[3]={
-    1,2,3
-  };
-  
-  argc = lua_gettop(L);
-  if (argc == 1) {
-    int _v;
-    {
-      _v = lua_isnumber(L,argv[0]);
-    }
-    if (_v) {
-      return _wrap_new_Jaguar__SWIG_0(L);
-    }
-  }
-  if (argc == 2) {
-    int _v;
-    {
-      _v = lua_isnumber(L,argv[0]);
-    }
-    if (_v) {
-      {
-        _v = lua_isnumber(L,argv[1]);
-      }
-      if (_v) {
-        return _wrap_new_Jaguar__SWIG_1(L);
-      }
-    }
-  }
-  
-  lua_pushstring(L,"Wrong arguments for overloaded function 'new_Jaguar'\n"
-    "  Possible C/C++ prototypes are:\n"
-    "    Jaguar::Jaguar(UINT32)\n"
-    "    Jaguar::Jaguar(UINT32,UINT32)\n");
-  lua_error(L);return 0;
-}
-
 
 static int _wrap_Jaguar_Get(lua_State* L) {
   int SWIG_arg = 0;
@@ -14991,6 +17140,29 @@ fail:
 }
 
 
+static int _wrap_Jaguar_Disable(lua_State* L) {
+  int SWIG_arg = 0;
+  Jaguar *arg1 = (Jaguar *) 0 ;
+  
+  SWIG_check_num_args("Jaguar::Disable",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Jaguar::Disable",1,"Jaguar *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Jaguar,0))){
+    SWIG_fail_ptr("Jaguar_Disable",1,SWIGTYPE_p_Jaguar);
+  }
+  
+  (arg1)->Disable();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
 static int _wrap_Jaguar_PIDWrite(lua_State* L) {
   int SWIG_arg = 0;
   Jaguar *arg1 = (Jaguar *) 0 ;
@@ -15024,15 +17196,16 @@ delete arg1;
 static swig_lua_method swig_Jaguar_methods[] = {
     {"Get", _wrap_Jaguar_Get}, 
     {"Set", _wrap_Jaguar_Set}, 
+    {"Disable", _wrap_Jaguar_Disable}, 
     {"PIDWrite", _wrap_Jaguar_PIDWrite}, 
     {0,0}
 };
 static swig_lua_attribute swig_Jaguar_attributes[] = {
     {0,0,0}
 };
-static swig_lua_class *swig_Jaguar_bases[] = {0,0,0,0};
-static const char *swig_Jaguar_base_names[] = {"SafePWM *","SpeedController *","PIDOutput *",0};
-static swig_lua_class _wrap_class_Jaguar = { "Jaguar", &SWIGTYPE_p_Jaguar,_wrap_new_Jaguar, swig_delete_Jaguar, swig_Jaguar_methods, swig_Jaguar_attributes, swig_Jaguar_bases, swig_Jaguar_base_names };
+static swig_lua_class *swig_Jaguar_bases[] = {0,0,0};
+static const char *swig_Jaguar_base_names[] = {"SafePWM *","SpeedController *",0};
+static swig_lua_class _wrap_class_Jaguar = { "Jaguar", &SWIGTYPE_p_Jaguar,0, swig_delete_Jaguar, swig_Jaguar_methods, swig_Jaguar_attributes, swig_Jaguar_bases, swig_Jaguar_base_names };
 
 static int _wrap_new_Joystick__SWIG_0(lua_State* L) {
   int SWIG_arg = 0;
@@ -17510,188 +19683,6 @@ static swig_lua_class *swig_NetworkTable_bases[] = {0,0};
 static const char *swig_NetworkTable_base_names[] = {"ErrorBase *",0};
 static swig_lua_class _wrap_class_NetworkTable = { "NetworkTable", &SWIGTYPE_p_NetworkTable,_wrap_new_NetworkTable, swig_delete_NetworkTable, swig_NetworkTable_methods, swig_NetworkTable_attributes, swig_NetworkTable_bases, swig_NetworkTable_base_names };
 
-static int _wrap_new_PIDController__SWIG_0(lua_State* L) {
-  int SWIG_arg = 0;
-  float arg1 ;
-  float arg2 ;
-  float arg3 ;
-  PIDSource *arg4 = (PIDSource *) 0 ;
-  PIDOutput *arg5 = (PIDOutput *) 0 ;
-  float arg6 ;
-  PIDController *result = 0 ;
-  
-  SWIG_check_num_args("PIDController::PIDController",6,6)
-  if(!lua_isnumber(L,1)) SWIG_fail_arg("PIDController::PIDController",1,"float");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("PIDController::PIDController",2,"float");
-  if(!lua_isnumber(L,3)) SWIG_fail_arg("PIDController::PIDController",3,"float");
-  if(!SWIG_isptrtype(L,4)) SWIG_fail_arg("PIDController::PIDController",4,"PIDSource *");
-  if(!SWIG_isptrtype(L,5)) SWIG_fail_arg("PIDController::PIDController",5,"PIDOutput *");
-  if(!lua_isnumber(L,6)) SWIG_fail_arg("PIDController::PIDController",6,"float");
-  arg1 = (float)lua_tonumber(L, 1);
-  arg2 = (float)lua_tonumber(L, 2);
-  arg3 = (float)lua_tonumber(L, 3);
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,4,(void**)&arg4,SWIGTYPE_p_PIDSource,0))){
-    SWIG_fail_ptr("new_PIDController",4,SWIGTYPE_p_PIDSource);
-  }
-  
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,5,(void**)&arg5,SWIGTYPE_p_PIDOutput,0))){
-    SWIG_fail_ptr("new_PIDController",5,SWIGTYPE_p_PIDOutput);
-  }
-  
-  arg6 = (float)lua_tonumber(L, 6);
-  result = (PIDController *)new PIDController(arg1,arg2,arg3,arg4,arg5,arg6);
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_PIDController,1); SWIG_arg++; 
-  return SWIG_arg;
-  
-  if(0) SWIG_fail;
-  
-fail:
-  lua_error(L);
-  return SWIG_arg;
-}
-
-
-static int _wrap_new_PIDController__SWIG_1(lua_State* L) {
-  int SWIG_arg = 0;
-  float arg1 ;
-  float arg2 ;
-  float arg3 ;
-  PIDSource *arg4 = (PIDSource *) 0 ;
-  PIDOutput *arg5 = (PIDOutput *) 0 ;
-  PIDController *result = 0 ;
-  
-  SWIG_check_num_args("PIDController::PIDController",5,5)
-  if(!lua_isnumber(L,1)) SWIG_fail_arg("PIDController::PIDController",1,"float");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("PIDController::PIDController",2,"float");
-  if(!lua_isnumber(L,3)) SWIG_fail_arg("PIDController::PIDController",3,"float");
-  if(!SWIG_isptrtype(L,4)) SWIG_fail_arg("PIDController::PIDController",4,"PIDSource *");
-  if(!SWIG_isptrtype(L,5)) SWIG_fail_arg("PIDController::PIDController",5,"PIDOutput *");
-  arg1 = (float)lua_tonumber(L, 1);
-  arg2 = (float)lua_tonumber(L, 2);
-  arg3 = (float)lua_tonumber(L, 3);
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,4,(void**)&arg4,SWIGTYPE_p_PIDSource,0))){
-    SWIG_fail_ptr("new_PIDController",4,SWIGTYPE_p_PIDSource);
-  }
-  
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,5,(void**)&arg5,SWIGTYPE_p_PIDOutput,0))){
-    SWIG_fail_ptr("new_PIDController",5,SWIGTYPE_p_PIDOutput);
-  }
-  
-  result = (PIDController *)new PIDController(arg1,arg2,arg3,arg4,arg5);
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_PIDController,1); SWIG_arg++; 
-  return SWIG_arg;
-  
-  if(0) SWIG_fail;
-  
-fail:
-  lua_error(L);
-  return SWIG_arg;
-}
-
-
-static int _wrap_new_PIDController(lua_State* L) {
-  int argc;
-  int argv[7]={
-    1,2,3,4,5,6,7
-  };
-  
-  argc = lua_gettop(L);
-  if (argc == 5) {
-    int _v;
-    {
-      _v = lua_isnumber(L,argv[0]);
-    }
-    if (_v) {
-      {
-        _v = lua_isnumber(L,argv[1]);
-      }
-      if (_v) {
-        {
-          _v = lua_isnumber(L,argv[2]);
-        }
-        if (_v) {
-          {
-            void *ptr;
-            if (SWIG_isptrtype(L,argv[3])==0 || SWIG_ConvertPtr(L,argv[3], (void **) &ptr, SWIGTYPE_p_PIDSource, 0)) {
-              _v = 0;
-            } else {
-              _v = 1;
-            }
-          }
-          if (_v) {
-            {
-              void *ptr;
-              if (SWIG_isptrtype(L,argv[4])==0 || SWIG_ConvertPtr(L,argv[4], (void **) &ptr, SWIGTYPE_p_PIDOutput, 0)) {
-                _v = 0;
-              } else {
-                _v = 1;
-              }
-            }
-            if (_v) {
-              return _wrap_new_PIDController__SWIG_1(L);
-            }
-          }
-        }
-      }
-    }
-  }
-  if (argc == 6) {
-    int _v;
-    {
-      _v = lua_isnumber(L,argv[0]);
-    }
-    if (_v) {
-      {
-        _v = lua_isnumber(L,argv[1]);
-      }
-      if (_v) {
-        {
-          _v = lua_isnumber(L,argv[2]);
-        }
-        if (_v) {
-          {
-            void *ptr;
-            if (SWIG_isptrtype(L,argv[3])==0 || SWIG_ConvertPtr(L,argv[3], (void **) &ptr, SWIGTYPE_p_PIDSource, 0)) {
-              _v = 0;
-            } else {
-              _v = 1;
-            }
-          }
-          if (_v) {
-            {
-              void *ptr;
-              if (SWIG_isptrtype(L,argv[4])==0 || SWIG_ConvertPtr(L,argv[4], (void **) &ptr, SWIGTYPE_p_PIDOutput, 0)) {
-                _v = 0;
-              } else {
-                _v = 1;
-              }
-            }
-            if (_v) {
-              {
-                _v = lua_isnumber(L,argv[5]);
-              }
-              if (_v) {
-                return _wrap_new_PIDController__SWIG_0(L);
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  
-  lua_pushstring(L,"Wrong arguments for overloaded function 'new_PIDController'\n"
-    "  Possible C/C++ prototypes are:\n"
-    "    PIDController::PIDController(float,float,float,PIDSource *,PIDOutput *,float)\n"
-    "    PIDController::PIDController(float,float,float,PIDSource *,PIDOutput *)\n");
-  lua_error(L);return 0;
-}
-
-
 static int _wrap_PIDController_Get(lua_State* L) {
   int SWIG_arg = 0;
   PIDController *arg1 = (PIDController *) 0 ;
@@ -17872,7 +19863,7 @@ fail:
 }
 
 
-static int _wrap_PIDController_SetPID(lua_State* L) {
+static int _wrap_PIDController_SetPID__SWIG_0(lua_State* L) {
   int SWIG_arg = 0;
   PIDController *arg1 = (PIDController *) 0 ;
   float arg2 ;
@@ -17901,6 +19892,120 @@ static int _wrap_PIDController_SetPID(lua_State* L) {
 fail:
   lua_error(L);
   return SWIG_arg;
+}
+
+
+static int _wrap_PIDController_SetPID__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  PIDController *arg1 = (PIDController *) 0 ;
+  float arg2 ;
+  float arg3 ;
+  float arg4 ;
+  float arg5 ;
+  
+  SWIG_check_num_args("PIDController::SetPID",5,5)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("PIDController::SetPID",1,"PIDController *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("PIDController::SetPID",2,"float");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("PIDController::SetPID",3,"float");
+  if(!lua_isnumber(L,4)) SWIG_fail_arg("PIDController::SetPID",4,"float");
+  if(!lua_isnumber(L,5)) SWIG_fail_arg("PIDController::SetPID",5,"float");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_PIDController,0))){
+    SWIG_fail_ptr("PIDController_SetPID",1,SWIGTYPE_p_PIDController);
+  }
+  
+  arg2 = (float)lua_tonumber(L, 2);
+  arg3 = (float)lua_tonumber(L, 3);
+  arg4 = (float)lua_tonumber(L, 4);
+  arg5 = (float)lua_tonumber(L, 5);
+  (arg1)->SetPID(arg2,arg3,arg4,arg5);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_PIDController_SetPID(lua_State* L) {
+  int argc;
+  int argv[6]={
+    1,2,3,4,5,6
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 4) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_PIDController, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isnumber(L,argv[1]);
+      }
+      if (_v) {
+        {
+          _v = lua_isnumber(L,argv[2]);
+        }
+        if (_v) {
+          {
+            _v = lua_isnumber(L,argv[3]);
+          }
+          if (_v) {
+            return _wrap_PIDController_SetPID__SWIG_0(L);
+          }
+        }
+      }
+    }
+  }
+  if (argc == 5) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_PIDController, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isnumber(L,argv[1]);
+      }
+      if (_v) {
+        {
+          _v = lua_isnumber(L,argv[2]);
+        }
+        if (_v) {
+          {
+            _v = lua_isnumber(L,argv[3]);
+          }
+          if (_v) {
+            {
+              _v = lua_isnumber(L,argv[4]);
+            }
+            if (_v) {
+              return _wrap_PIDController_SetPID__SWIG_1(L);
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'PIDController_SetPID'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    PIDController::SetPID(float,float,float)\n"
+    "    PIDController::SetPID(float,float,float,float)\n");
+  lua_error(L);return 0;
 }
 
 
@@ -17965,6 +20070,30 @@ static int _wrap_PIDController_GetD(lua_State* L) {
   }
   
   result = (float)(arg1)->GetD();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_PIDController_GetF(lua_State* L) {
+  int SWIG_arg = 0;
+  PIDController *arg1 = (PIDController *) 0 ;
+  float result;
+  
+  SWIG_check_num_args("PIDController::GetF",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("PIDController::GetF",1,"PIDController *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_PIDController,0))){
+    SWIG_fail_ptr("PIDController_GetF",1,SWIGTYPE_p_PIDController);
+  }
+  
+  result = (float)(arg1)->GetF();
   lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
   return SWIG_arg;
   
@@ -18076,6 +20205,58 @@ fail:
 }
 
 
+static int _wrap_PIDController_SetAbsoluteTolerance(lua_State* L) {
+  int SWIG_arg = 0;
+  PIDController *arg1 = (PIDController *) 0 ;
+  float arg2 ;
+  
+  SWIG_check_num_args("PIDController::SetAbsoluteTolerance",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("PIDController::SetAbsoluteTolerance",1,"PIDController *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("PIDController::SetAbsoluteTolerance",2,"float");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_PIDController,0))){
+    SWIG_fail_ptr("PIDController_SetAbsoluteTolerance",1,SWIGTYPE_p_PIDController);
+  }
+  
+  arg2 = (float)lua_tonumber(L, 2);
+  (arg1)->SetAbsoluteTolerance(arg2);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_PIDController_SetPercentTolerance(lua_State* L) {
+  int SWIG_arg = 0;
+  PIDController *arg1 = (PIDController *) 0 ;
+  float arg2 ;
+  
+  SWIG_check_num_args("PIDController::SetPercentTolerance",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("PIDController::SetPercentTolerance",1,"PIDController *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("PIDController::SetPercentTolerance",2,"float");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_PIDController,0))){
+    SWIG_fail_ptr("PIDController_SetPercentTolerance",1,SWIGTYPE_p_PIDController);
+  }
+  
+  arg2 = (float)lua_tonumber(L, 2);
+  (arg1)->SetPercentTolerance(arg2);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
 static int _wrap_PIDController_OnTarget(lua_State* L) {
   int SWIG_arg = 0;
   PIDController *arg1 = (PIDController *) 0 ;
@@ -18146,6 +20327,30 @@ fail:
 }
 
 
+static int _wrap_PIDController_IsEnabled(lua_State* L) {
+  int SWIG_arg = 0;
+  PIDController *arg1 = (PIDController *) 0 ;
+  bool result;
+  
+  SWIG_check_num_args("PIDController::IsEnabled",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("PIDController::IsEnabled",1,"PIDController *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_PIDController,0))){
+    SWIG_fail_ptr("PIDController_IsEnabled",1,SWIGTYPE_p_PIDController);
+  }
+  
+  result = (bool)(arg1)->IsEnabled();
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
 static int _wrap_PIDController_Reset(lua_State* L) {
   int SWIG_arg = 0;
   PIDController *arg1 = (PIDController *) 0 ;
@@ -18182,22 +20387,1197 @@ static swig_lua_method swig_PIDController_methods[] = {
     {"GetP", _wrap_PIDController_GetP}, 
     {"GetI", _wrap_PIDController_GetI}, 
     {"GetD", _wrap_PIDController_GetD}, 
+    {"GetF", _wrap_PIDController_GetF}, 
     {"SetSetpoint", _wrap_PIDController_SetSetpoint}, 
     {"GetSetpoint", _wrap_PIDController_GetSetpoint}, 
     {"GetError", _wrap_PIDController_GetError}, 
     {"SetTolerance", _wrap_PIDController_SetTolerance}, 
+    {"SetAbsoluteTolerance", _wrap_PIDController_SetAbsoluteTolerance}, 
+    {"SetPercentTolerance", _wrap_PIDController_SetPercentTolerance}, 
     {"OnTarget", _wrap_PIDController_OnTarget}, 
     {"Enable", _wrap_PIDController_Enable}, 
     {"Disable", _wrap_PIDController_Disable}, 
+    {"IsEnabled", _wrap_PIDController_IsEnabled}, 
     {"Reset", _wrap_PIDController_Reset}, 
     {0,0}
 };
 static swig_lua_attribute swig_PIDController_attributes[] = {
     {0,0,0}
 };
-static swig_lua_class *swig_PIDController_bases[] = {0};
-static const char *swig_PIDController_base_names[] = {0};
-static swig_lua_class _wrap_class_PIDController = { "PIDController", &SWIGTYPE_p_PIDController,_wrap_new_PIDController, swig_delete_PIDController, swig_PIDController_methods, swig_PIDController_attributes, swig_PIDController_bases, swig_PIDController_base_names };
+static swig_lua_class *swig_PIDController_bases[] = {0,0,0};
+static const char *swig_PIDController_base_names[] = {"LiveWindowSendable *","Controller *",0};
+static swig_lua_class _wrap_class_PIDController = { "PIDController", &SWIGTYPE_p_PIDController,0, swig_delete_PIDController, swig_PIDController_methods, swig_PIDController_attributes, swig_PIDController_bases, swig_PIDController_base_names };
+
+static int _wrap_Preferences_GetInstance(lua_State* L) {
+  int SWIG_arg = 0;
+  Preferences *result = 0 ;
+  
+  SWIG_check_num_args("Preferences::GetInstance",0,0)
+  result = (Preferences *)Preferences::GetInstance();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_Preferences,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Preferences_GetKeys(lua_State* L) {
+  int SWIG_arg = 0;
+  Preferences *arg1 = (Preferences *) 0 ;
+  std::vector< std::string > result;
+  
+  SWIG_check_num_args("Preferences::GetKeys",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Preferences::GetKeys",1,"Preferences *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Preferences,0))){
+    SWIG_fail_ptr("Preferences_GetKeys",1,SWIGTYPE_p_Preferences);
+  }
+  
+  result = (arg1)->GetKeys();
+  {
+    std::vector< std::string > * resultptr = new std::vector< std::string >((const std::vector< std::string > &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_std__vectorT_std__string_t,1); SWIG_arg++;
+  }
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Preferences_GetString__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  Preferences *arg1 = (Preferences *) 0 ;
+  char *arg2 = (char *) 0 ;
+  char *arg3 = (char *) 0 ;
+  std::string result;
+  
+  SWIG_check_num_args("Preferences::GetString",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Preferences::GetString",1,"Preferences *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("Preferences::GetString",2,"char const *");
+  if(!SWIG_lua_isnilstring(L,3)) SWIG_fail_arg("Preferences::GetString",3,"char const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Preferences,0))){
+    SWIG_fail_ptr("Preferences_GetString",1,SWIGTYPE_p_Preferences);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  arg3 = (char *)lua_tostring(L, 3);
+  result = (arg1)->GetString((char const *)arg2,(char const *)arg3);
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Preferences_GetString__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  Preferences *arg1 = (Preferences *) 0 ;
+  char *arg2 = (char *) 0 ;
+  std::string result;
+  
+  SWIG_check_num_args("Preferences::GetString",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Preferences::GetString",1,"Preferences *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("Preferences::GetString",2,"char const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Preferences,0))){
+    SWIG_fail_ptr("Preferences_GetString",1,SWIGTYPE_p_Preferences);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  result = (arg1)->GetString((char const *)arg2);
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Preferences_GetString__SWIG_2(lua_State* L) {
+  int SWIG_arg = 0;
+  Preferences *arg1 = (Preferences *) 0 ;
+  char *arg2 = (char *) 0 ;
+  char *arg3 = (char *) 0 ;
+  int arg4 ;
+  char *arg5 = (char *) 0 ;
+  int result;
+  
+  SWIG_check_num_args("Preferences::GetString",5,5)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Preferences::GetString",1,"Preferences *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("Preferences::GetString",2,"char const *");
+  if(!SWIG_lua_isnilstring(L,3)) SWIG_fail_arg("Preferences::GetString",3,"char *");
+  if(!lua_isnumber(L,4)) SWIG_fail_arg("Preferences::GetString",4,"int");
+  if(!SWIG_lua_isnilstring(L,5)) SWIG_fail_arg("Preferences::GetString",5,"char const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Preferences,0))){
+    SWIG_fail_ptr("Preferences_GetString",1,SWIGTYPE_p_Preferences);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  arg3 = (char *)lua_tostring(L, 3);
+  arg4 = (int)lua_tonumber(L, 4);
+  arg5 = (char *)lua_tostring(L, 5);
+  result = (int)(arg1)->GetString((char const *)arg2,arg3,arg4,(char const *)arg5);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Preferences_GetString__SWIG_3(lua_State* L) {
+  int SWIG_arg = 0;
+  Preferences *arg1 = (Preferences *) 0 ;
+  char *arg2 = (char *) 0 ;
+  char *arg3 = (char *) 0 ;
+  int arg4 ;
+  int result;
+  
+  SWIG_check_num_args("Preferences::GetString",4,4)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Preferences::GetString",1,"Preferences *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("Preferences::GetString",2,"char const *");
+  if(!SWIG_lua_isnilstring(L,3)) SWIG_fail_arg("Preferences::GetString",3,"char *");
+  if(!lua_isnumber(L,4)) SWIG_fail_arg("Preferences::GetString",4,"int");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Preferences,0))){
+    SWIG_fail_ptr("Preferences_GetString",1,SWIGTYPE_p_Preferences);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  arg3 = (char *)lua_tostring(L, 3);
+  arg4 = (int)lua_tonumber(L, 4);
+  result = (int)(arg1)->GetString((char const *)arg2,arg3,arg4);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Preferences_GetString(lua_State* L) {
+  int argc;
+  int argv[6]={
+    1,2,3,4,5,6
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_Preferences, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_Preferences_GetString__SWIG_1(L);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_Preferences, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        {
+          _v = SWIG_lua_isnilstring(L,argv[2]);
+        }
+        if (_v) {
+          return _wrap_Preferences_GetString__SWIG_0(L);
+        }
+      }
+    }
+  }
+  if (argc == 4) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_Preferences, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        {
+          _v = SWIG_lua_isnilstring(L,argv[2]);
+        }
+        if (_v) {
+          {
+            _v = lua_isnumber(L,argv[3]);
+          }
+          if (_v) {
+            return _wrap_Preferences_GetString__SWIG_3(L);
+          }
+        }
+      }
+    }
+  }
+  if (argc == 5) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_Preferences, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        {
+          _v = SWIG_lua_isnilstring(L,argv[2]);
+        }
+        if (_v) {
+          {
+            _v = lua_isnumber(L,argv[3]);
+          }
+          if (_v) {
+            {
+              _v = SWIG_lua_isnilstring(L,argv[4]);
+            }
+            if (_v) {
+              return _wrap_Preferences_GetString__SWIG_2(L);
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'Preferences_GetString'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    Preferences::GetString(char const *,char const *)\n"
+    "    Preferences::GetString(char const *)\n"
+    "    Preferences::GetString(char const *,char *,int,char const *)\n"
+    "    Preferences::GetString(char const *,char *,int)\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_Preferences_GetInt__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  Preferences *arg1 = (Preferences *) 0 ;
+  char *arg2 = (char *) 0 ;
+  int arg3 ;
+  int result;
+  
+  SWIG_check_num_args("Preferences::GetInt",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Preferences::GetInt",1,"Preferences *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("Preferences::GetInt",2,"char const *");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("Preferences::GetInt",3,"int");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Preferences,0))){
+    SWIG_fail_ptr("Preferences_GetInt",1,SWIGTYPE_p_Preferences);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  arg3 = (int)lua_tonumber(L, 3);
+  result = (int)(arg1)->GetInt((char const *)arg2,arg3);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Preferences_GetInt__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  Preferences *arg1 = (Preferences *) 0 ;
+  char *arg2 = (char *) 0 ;
+  int result;
+  
+  SWIG_check_num_args("Preferences::GetInt",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Preferences::GetInt",1,"Preferences *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("Preferences::GetInt",2,"char const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Preferences,0))){
+    SWIG_fail_ptr("Preferences_GetInt",1,SWIGTYPE_p_Preferences);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  result = (int)(arg1)->GetInt((char const *)arg2);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Preferences_GetInt(lua_State* L) {
+  int argc;
+  int argv[4]={
+    1,2,3,4
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_Preferences, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_Preferences_GetInt__SWIG_1(L);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_Preferences, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        {
+          _v = lua_isnumber(L,argv[2]);
+        }
+        if (_v) {
+          return _wrap_Preferences_GetInt__SWIG_0(L);
+        }
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'Preferences_GetInt'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    Preferences::GetInt(char const *,int)\n"
+    "    Preferences::GetInt(char const *)\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_Preferences_GetDouble__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  Preferences *arg1 = (Preferences *) 0 ;
+  char *arg2 = (char *) 0 ;
+  double arg3 ;
+  double result;
+  
+  SWIG_check_num_args("Preferences::GetDouble",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Preferences::GetDouble",1,"Preferences *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("Preferences::GetDouble",2,"char const *");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("Preferences::GetDouble",3,"double");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Preferences,0))){
+    SWIG_fail_ptr("Preferences_GetDouble",1,SWIGTYPE_p_Preferences);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  arg3 = (double)lua_tonumber(L, 3);
+  result = (double)(arg1)->GetDouble((char const *)arg2,arg3);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Preferences_GetDouble__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  Preferences *arg1 = (Preferences *) 0 ;
+  char *arg2 = (char *) 0 ;
+  double result;
+  
+  SWIG_check_num_args("Preferences::GetDouble",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Preferences::GetDouble",1,"Preferences *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("Preferences::GetDouble",2,"char const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Preferences,0))){
+    SWIG_fail_ptr("Preferences_GetDouble",1,SWIGTYPE_p_Preferences);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  result = (double)(arg1)->GetDouble((char const *)arg2);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Preferences_GetDouble(lua_State* L) {
+  int argc;
+  int argv[4]={
+    1,2,3,4
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_Preferences, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_Preferences_GetDouble__SWIG_1(L);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_Preferences, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        {
+          _v = lua_isnumber(L,argv[2]);
+        }
+        if (_v) {
+          return _wrap_Preferences_GetDouble__SWIG_0(L);
+        }
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'Preferences_GetDouble'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    Preferences::GetDouble(char const *,double)\n"
+    "    Preferences::GetDouble(char const *)\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_Preferences_GetFloat__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  Preferences *arg1 = (Preferences *) 0 ;
+  char *arg2 = (char *) 0 ;
+  float arg3 ;
+  float result;
+  
+  SWIG_check_num_args("Preferences::GetFloat",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Preferences::GetFloat",1,"Preferences *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("Preferences::GetFloat",2,"char const *");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("Preferences::GetFloat",3,"float");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Preferences,0))){
+    SWIG_fail_ptr("Preferences_GetFloat",1,SWIGTYPE_p_Preferences);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  arg3 = (float)lua_tonumber(L, 3);
+  result = (float)(arg1)->GetFloat((char const *)arg2,arg3);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Preferences_GetFloat__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  Preferences *arg1 = (Preferences *) 0 ;
+  char *arg2 = (char *) 0 ;
+  float result;
+  
+  SWIG_check_num_args("Preferences::GetFloat",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Preferences::GetFloat",1,"Preferences *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("Preferences::GetFloat",2,"char const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Preferences,0))){
+    SWIG_fail_ptr("Preferences_GetFloat",1,SWIGTYPE_p_Preferences);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  result = (float)(arg1)->GetFloat((char const *)arg2);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Preferences_GetFloat(lua_State* L) {
+  int argc;
+  int argv[4]={
+    1,2,3,4
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_Preferences, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_Preferences_GetFloat__SWIG_1(L);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_Preferences, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        {
+          _v = lua_isnumber(L,argv[2]);
+        }
+        if (_v) {
+          return _wrap_Preferences_GetFloat__SWIG_0(L);
+        }
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'Preferences_GetFloat'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    Preferences::GetFloat(char const *,float)\n"
+    "    Preferences::GetFloat(char const *)\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_Preferences_GetBoolean__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  Preferences *arg1 = (Preferences *) 0 ;
+  char *arg2 = (char *) 0 ;
+  bool arg3 ;
+  bool result;
+  
+  SWIG_check_num_args("Preferences::GetBoolean",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Preferences::GetBoolean",1,"Preferences *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("Preferences::GetBoolean",2,"char const *");
+  if(!lua_isboolean(L,3)) SWIG_fail_arg("Preferences::GetBoolean",3,"bool");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Preferences,0))){
+    SWIG_fail_ptr("Preferences_GetBoolean",1,SWIGTYPE_p_Preferences);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  arg3 = (lua_toboolean(L, 3)!=0);
+  result = (bool)(arg1)->GetBoolean((char const *)arg2,arg3);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Preferences_GetBoolean__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  Preferences *arg1 = (Preferences *) 0 ;
+  char *arg2 = (char *) 0 ;
+  bool result;
+  
+  SWIG_check_num_args("Preferences::GetBoolean",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Preferences::GetBoolean",1,"Preferences *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("Preferences::GetBoolean",2,"char const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Preferences,0))){
+    SWIG_fail_ptr("Preferences_GetBoolean",1,SWIGTYPE_p_Preferences);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  result = (bool)(arg1)->GetBoolean((char const *)arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Preferences_GetBoolean(lua_State* L) {
+  int argc;
+  int argv[4]={
+    1,2,3,4
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_Preferences, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_Preferences_GetBoolean__SWIG_1(L);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_Preferences, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        {
+          _v = lua_isboolean(L,argv[2]);
+        }
+        if (_v) {
+          return _wrap_Preferences_GetBoolean__SWIG_0(L);
+        }
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'Preferences_GetBoolean'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    Preferences::GetBoolean(char const *,bool)\n"
+    "    Preferences::GetBoolean(char const *)\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_Preferences_GetLong__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  Preferences *arg1 = (Preferences *) 0 ;
+  char *arg2 = (char *) 0 ;
+  INT64 arg3 ;
+  INT64 result;
+  
+  SWIG_check_num_args("Preferences::GetLong",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Preferences::GetLong",1,"Preferences *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("Preferences::GetLong",2,"char const *");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("Preferences::GetLong",3,"INT64");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Preferences,0))){
+    SWIG_fail_ptr("Preferences_GetLong",1,SWIGTYPE_p_Preferences);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  arg3 = (INT64)lua_tonumber(L, 3);
+  result = (INT64)(arg1)->GetLong((char const *)arg2,arg3);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Preferences_GetLong__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  Preferences *arg1 = (Preferences *) 0 ;
+  char *arg2 = (char *) 0 ;
+  INT64 result;
+  
+  SWIG_check_num_args("Preferences::GetLong",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Preferences::GetLong",1,"Preferences *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("Preferences::GetLong",2,"char const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Preferences,0))){
+    SWIG_fail_ptr("Preferences_GetLong",1,SWIGTYPE_p_Preferences);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  result = (INT64)(arg1)->GetLong((char const *)arg2);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Preferences_GetLong(lua_State* L) {
+  int argc;
+  int argv[4]={
+    1,2,3,4
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_Preferences, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_Preferences_GetLong__SWIG_1(L);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_Preferences, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        {
+          _v = lua_isnumber(L,argv[2]);
+        }
+        if (_v) {
+          return _wrap_Preferences_GetLong__SWIG_0(L);
+        }
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'Preferences_GetLong'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    Preferences::GetLong(char const *,INT64)\n"
+    "    Preferences::GetLong(char const *)\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_Preferences_PutString(lua_State* L) {
+  int SWIG_arg = 0;
+  Preferences *arg1 = (Preferences *) 0 ;
+  char *arg2 = (char *) 0 ;
+  char *arg3 = (char *) 0 ;
+  
+  SWIG_check_num_args("Preferences::PutString",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Preferences::PutString",1,"Preferences *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("Preferences::PutString",2,"char const *");
+  if(!SWIG_lua_isnilstring(L,3)) SWIG_fail_arg("Preferences::PutString",3,"char const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Preferences,0))){
+    SWIG_fail_ptr("Preferences_PutString",1,SWIGTYPE_p_Preferences);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  arg3 = (char *)lua_tostring(L, 3);
+  (arg1)->PutString((char const *)arg2,(char const *)arg3);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Preferences_PutInt(lua_State* L) {
+  int SWIG_arg = 0;
+  Preferences *arg1 = (Preferences *) 0 ;
+  char *arg2 = (char *) 0 ;
+  int arg3 ;
+  
+  SWIG_check_num_args("Preferences::PutInt",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Preferences::PutInt",1,"Preferences *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("Preferences::PutInt",2,"char const *");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("Preferences::PutInt",3,"int");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Preferences,0))){
+    SWIG_fail_ptr("Preferences_PutInt",1,SWIGTYPE_p_Preferences);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  arg3 = (int)lua_tonumber(L, 3);
+  (arg1)->PutInt((char const *)arg2,arg3);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Preferences_PutDouble(lua_State* L) {
+  int SWIG_arg = 0;
+  Preferences *arg1 = (Preferences *) 0 ;
+  char *arg2 = (char *) 0 ;
+  double arg3 ;
+  
+  SWIG_check_num_args("Preferences::PutDouble",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Preferences::PutDouble",1,"Preferences *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("Preferences::PutDouble",2,"char const *");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("Preferences::PutDouble",3,"double");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Preferences,0))){
+    SWIG_fail_ptr("Preferences_PutDouble",1,SWIGTYPE_p_Preferences);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  arg3 = (double)lua_tonumber(L, 3);
+  (arg1)->PutDouble((char const *)arg2,arg3);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Preferences_PutFloat(lua_State* L) {
+  int SWIG_arg = 0;
+  Preferences *arg1 = (Preferences *) 0 ;
+  char *arg2 = (char *) 0 ;
+  float arg3 ;
+  
+  SWIG_check_num_args("Preferences::PutFloat",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Preferences::PutFloat",1,"Preferences *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("Preferences::PutFloat",2,"char const *");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("Preferences::PutFloat",3,"float");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Preferences,0))){
+    SWIG_fail_ptr("Preferences_PutFloat",1,SWIGTYPE_p_Preferences);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  arg3 = (float)lua_tonumber(L, 3);
+  (arg1)->PutFloat((char const *)arg2,arg3);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Preferences_PutBoolean(lua_State* L) {
+  int SWIG_arg = 0;
+  Preferences *arg1 = (Preferences *) 0 ;
+  char *arg2 = (char *) 0 ;
+  bool arg3 ;
+  
+  SWIG_check_num_args("Preferences::PutBoolean",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Preferences::PutBoolean",1,"Preferences *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("Preferences::PutBoolean",2,"char const *");
+  if(!lua_isboolean(L,3)) SWIG_fail_arg("Preferences::PutBoolean",3,"bool");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Preferences,0))){
+    SWIG_fail_ptr("Preferences_PutBoolean",1,SWIGTYPE_p_Preferences);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  arg3 = (lua_toboolean(L, 3)!=0);
+  (arg1)->PutBoolean((char const *)arg2,arg3);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Preferences_PutLong(lua_State* L) {
+  int SWIG_arg = 0;
+  Preferences *arg1 = (Preferences *) 0 ;
+  char *arg2 = (char *) 0 ;
+  INT64 arg3 ;
+  
+  SWIG_check_num_args("Preferences::PutLong",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Preferences::PutLong",1,"Preferences *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("Preferences::PutLong",2,"char const *");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("Preferences::PutLong",3,"INT64");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Preferences,0))){
+    SWIG_fail_ptr("Preferences_PutLong",1,SWIGTYPE_p_Preferences);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  arg3 = (INT64)lua_tonumber(L, 3);
+  (arg1)->PutLong((char const *)arg2,arg3);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Preferences_Save(lua_State* L) {
+  int SWIG_arg = 0;
+  Preferences *arg1 = (Preferences *) 0 ;
+  
+  SWIG_check_num_args("Preferences::Save",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Preferences::Save",1,"Preferences *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Preferences,0))){
+    SWIG_fail_ptr("Preferences_Save",1,SWIGTYPE_p_Preferences);
+  }
+  
+  (arg1)->Save();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Preferences_ContainsKey(lua_State* L) {
+  int SWIG_arg = 0;
+  Preferences *arg1 = (Preferences *) 0 ;
+  char *arg2 = (char *) 0 ;
+  bool result;
+  
+  SWIG_check_num_args("Preferences::ContainsKey",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Preferences::ContainsKey",1,"Preferences *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("Preferences::ContainsKey",2,"char const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Preferences,0))){
+    SWIG_fail_ptr("Preferences_ContainsKey",1,SWIGTYPE_p_Preferences);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  result = (bool)(arg1)->ContainsKey((char const *)arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Preferences_Remove(lua_State* L) {
+  int SWIG_arg = 0;
+  Preferences *arg1 = (Preferences *) 0 ;
+  char *arg2 = (char *) 0 ;
+  
+  SWIG_check_num_args("Preferences::Remove",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Preferences::Remove",1,"Preferences *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("Preferences::Remove",2,"char const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Preferences,0))){
+    SWIG_fail_ptr("Preferences_Remove",1,SWIGTYPE_p_Preferences);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  (arg1)->Remove((char const *)arg2);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_Preferences(lua_State* L) {
+  int SWIG_arg = 0;
+  Preferences *result = 0 ;
+  
+  SWIG_check_num_args("Preferences::Preferences",0,0)
+  result = (Preferences *)new Preferences();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_Preferences,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static void swig_delete_Preferences(void *obj) {
+Preferences *arg1 = (Preferences *) obj;
+delete arg1;
+}
+static swig_lua_method swig_Preferences_methods[] = {
+    {"GetKeys", _wrap_Preferences_GetKeys}, 
+    {"GetString", _wrap_Preferences_GetString}, 
+    {"GetInt", _wrap_Preferences_GetInt}, 
+    {"GetDouble", _wrap_Preferences_GetDouble}, 
+    {"GetFloat", _wrap_Preferences_GetFloat}, 
+    {"GetBoolean", _wrap_Preferences_GetBoolean}, 
+    {"GetLong", _wrap_Preferences_GetLong}, 
+    {"PutString", _wrap_Preferences_PutString}, 
+    {"PutInt", _wrap_Preferences_PutInt}, 
+    {"PutDouble", _wrap_Preferences_PutDouble}, 
+    {"PutFloat", _wrap_Preferences_PutFloat}, 
+    {"PutBoolean", _wrap_Preferences_PutBoolean}, 
+    {"PutLong", _wrap_Preferences_PutLong}, 
+    {"Save", _wrap_Preferences_Save}, 
+    {"ContainsKey", _wrap_Preferences_ContainsKey}, 
+    {"Remove", _wrap_Preferences_Remove}, 
+    {0,0}
+};
+static swig_lua_attribute swig_Preferences_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_class *swig_Preferences_bases[] = {0,0};
+static const char *swig_Preferences_base_names[] = {"ErrorBase *",0};
+static swig_lua_class _wrap_class_Preferences = { "Preferences", &SWIGTYPE_p_Preferences,_wrap_new_Preferences, swig_delete_Preferences, swig_Preferences_methods, swig_Preferences_attributes, swig_Preferences_bases, swig_Preferences_base_names };
 
 static int _wrap_new_Relay(lua_State* L) {
   int SWIG_arg = 0;
@@ -18253,19 +21633,141 @@ fail:
 }
 
 
+static int _wrap_Relay_Get(lua_State* L) {
+  int SWIG_arg = 0;
+  Relay *arg1 = (Relay *) 0 ;
+  Relay::Value result;
+  
+  SWIG_check_num_args("Relay::Get",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Relay::Get",1,"Relay *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Relay,0))){
+    SWIG_fail_ptr("Relay_Get",1,SWIGTYPE_p_Relay);
+  }
+  
+  result = (Relay::Value)(arg1)->Get();
+  lua_pushnumber(L, (lua_Number)(int)(result)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Relay_UpdateTable(lua_State* L) {
+  int SWIG_arg = 0;
+  Relay *arg1 = (Relay *) 0 ;
+  
+  SWIG_check_num_args("Relay::UpdateTable",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Relay::UpdateTable",1,"Relay *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Relay,0))){
+    SWIG_fail_ptr("Relay_UpdateTable",1,SWIGTYPE_p_Relay);
+  }
+  
+  (arg1)->UpdateTable();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Relay_StartLiveWindowMode(lua_State* L) {
+  int SWIG_arg = 0;
+  Relay *arg1 = (Relay *) 0 ;
+  
+  SWIG_check_num_args("Relay::StartLiveWindowMode",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Relay::StartLiveWindowMode",1,"Relay *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Relay,0))){
+    SWIG_fail_ptr("Relay_StartLiveWindowMode",1,SWIGTYPE_p_Relay);
+  }
+  
+  (arg1)->StartLiveWindowMode();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Relay_StopLiveWindowMode(lua_State* L) {
+  int SWIG_arg = 0;
+  Relay *arg1 = (Relay *) 0 ;
+  
+  SWIG_check_num_args("Relay::StopLiveWindowMode",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Relay::StopLiveWindowMode",1,"Relay *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Relay,0))){
+    SWIG_fail_ptr("Relay_StopLiveWindowMode",1,SWIGTYPE_p_Relay);
+  }
+  
+  (arg1)->StopLiveWindowMode();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Relay_GetSmartDashboardType(lua_State* L) {
+  int SWIG_arg = 0;
+  Relay *arg1 = (Relay *) 0 ;
+  std::string result;
+  
+  SWIG_check_num_args("Relay::GetSmartDashboardType",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Relay::GetSmartDashboardType",1,"Relay *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Relay,0))){
+    SWIG_fail_ptr("Relay_GetSmartDashboardType",1,SWIGTYPE_p_Relay);
+  }
+  
+  result = (arg1)->GetSmartDashboardType();
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
 static void swig_delete_Relay(void *obj) {
 Relay *arg1 = (Relay *) obj;
 delete arg1;
 }
 static swig_lua_method swig_Relay_methods[] = {
     {"Set", _wrap_Relay_Set}, 
+    {"Get", _wrap_Relay_Get}, 
+    {"UpdateTable", _wrap_Relay_UpdateTable}, 
+    {"StartLiveWindowMode", _wrap_Relay_StartLiveWindowMode}, 
+    {"StopLiveWindowMode", _wrap_Relay_StopLiveWindowMode}, 
+    {"GetSmartDashboardType", _wrap_Relay_GetSmartDashboardType}, 
     {0,0}
 };
 static swig_lua_attribute swig_Relay_attributes[] = {
     {0,0,0}
 };
-static swig_lua_class *swig_Relay_bases[] = {0,0};
-static const char *swig_Relay_base_names[] = {"SensorBase *",0};
+static swig_lua_class *swig_Relay_bases[] = {0,0,0};
+static const char *swig_Relay_base_names[] = {"SensorBase *","LiveWindowSendable *",0};
 static swig_lua_class _wrap_class_Relay = { "Relay", &SWIGTYPE_p_Relay,_wrap_new_Relay, swig_delete_Relay, swig_Relay_methods, swig_Relay_attributes, swig_Relay_bases, swig_Relay_base_names };
 
 static int _wrap_new_RobotDrive__SWIG_0(lua_State* L) {
@@ -20558,6 +24060,99 @@ fail:
 }
 
 
+static int _wrap_Servo_UpdateTable(lua_State* L) {
+  int SWIG_arg = 0;
+  Servo *arg1 = (Servo *) 0 ;
+  
+  SWIG_check_num_args("Servo::UpdateTable",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Servo::UpdateTable",1,"Servo *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Servo,0))){
+    SWIG_fail_ptr("Servo_UpdateTable",1,SWIGTYPE_p_Servo);
+  }
+  
+  (arg1)->UpdateTable();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Servo_StartLiveWindowMode(lua_State* L) {
+  int SWIG_arg = 0;
+  Servo *arg1 = (Servo *) 0 ;
+  
+  SWIG_check_num_args("Servo::StartLiveWindowMode",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Servo::StartLiveWindowMode",1,"Servo *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Servo,0))){
+    SWIG_fail_ptr("Servo_StartLiveWindowMode",1,SWIGTYPE_p_Servo);
+  }
+  
+  (arg1)->StartLiveWindowMode();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Servo_StopLiveWindowMode(lua_State* L) {
+  int SWIG_arg = 0;
+  Servo *arg1 = (Servo *) 0 ;
+  
+  SWIG_check_num_args("Servo::StopLiveWindowMode",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Servo::StopLiveWindowMode",1,"Servo *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Servo,0))){
+    SWIG_fail_ptr("Servo_StopLiveWindowMode",1,SWIGTYPE_p_Servo);
+  }
+  
+  (arg1)->StopLiveWindowMode();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Servo_GetSmartDashboardType(lua_State* L) {
+  int SWIG_arg = 0;
+  Servo *arg1 = (Servo *) 0 ;
+  std::string result;
+  
+  SWIG_check_num_args("Servo::GetSmartDashboardType",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Servo::GetSmartDashboardType",1,"Servo *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Servo,0))){
+    SWIG_fail_ptr("Servo_GetSmartDashboardType",1,SWIGTYPE_p_Servo);
+  }
+  
+  result = (arg1)->GetSmartDashboardType();
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
 static void swig_delete_Servo(void *obj) {
 Servo *arg1 = (Servo *) obj;
 delete arg1;
@@ -20568,6 +24163,10 @@ static swig_lua_method swig_Servo_methods[] = {
     {"Get", _wrap_Servo_Get}, 
     {"SetAngle", _wrap_Servo_SetAngle}, 
     {"GetAngle", _wrap_Servo_GetAngle}, 
+    {"UpdateTable", _wrap_Servo_UpdateTable}, 
+    {"StartLiveWindowMode", _wrap_Servo_StartLiveWindowMode}, 
+    {"StopLiveWindowMode", _wrap_Servo_StopLiveWindowMode}, 
+    {"GetSmartDashboardType", _wrap_Servo_GetSmartDashboardType}, 
     {0,0}
 };
 static swig_lua_attribute swig_Servo_attributes[] = {
@@ -20987,6 +24586,99 @@ fail:
 }
 
 
+static int _wrap_Solenoid_UpdateTable(lua_State* L) {
+  int SWIG_arg = 0;
+  Solenoid *arg1 = (Solenoid *) 0 ;
+  
+  SWIG_check_num_args("Solenoid::UpdateTable",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Solenoid::UpdateTable",1,"Solenoid *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Solenoid,0))){
+    SWIG_fail_ptr("Solenoid_UpdateTable",1,SWIGTYPE_p_Solenoid);
+  }
+  
+  (arg1)->UpdateTable();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Solenoid_StartLiveWindowMode(lua_State* L) {
+  int SWIG_arg = 0;
+  Solenoid *arg1 = (Solenoid *) 0 ;
+  
+  SWIG_check_num_args("Solenoid::StartLiveWindowMode",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Solenoid::StartLiveWindowMode",1,"Solenoid *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Solenoid,0))){
+    SWIG_fail_ptr("Solenoid_StartLiveWindowMode",1,SWIGTYPE_p_Solenoid);
+  }
+  
+  (arg1)->StartLiveWindowMode();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Solenoid_StopLiveWindowMode(lua_State* L) {
+  int SWIG_arg = 0;
+  Solenoid *arg1 = (Solenoid *) 0 ;
+  
+  SWIG_check_num_args("Solenoid::StopLiveWindowMode",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Solenoid::StopLiveWindowMode",1,"Solenoid *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Solenoid,0))){
+    SWIG_fail_ptr("Solenoid_StopLiveWindowMode",1,SWIGTYPE_p_Solenoid);
+  }
+  
+  (arg1)->StopLiveWindowMode();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Solenoid_GetSmartDashboardType(lua_State* L) {
+  int SWIG_arg = 0;
+  Solenoid *arg1 = (Solenoid *) 0 ;
+  std::string result;
+  
+  SWIG_check_num_args("Solenoid::GetSmartDashboardType",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Solenoid::GetSmartDashboardType",1,"Solenoid *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Solenoid,0))){
+    SWIG_fail_ptr("Solenoid_GetSmartDashboardType",1,SWIGTYPE_p_Solenoid);
+  }
+  
+  result = (arg1)->GetSmartDashboardType();
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
 static void swig_delete_Solenoid(void *obj) {
 Solenoid *arg1 = (Solenoid *) obj;
 delete arg1;
@@ -20994,6 +24686,10 @@ delete arg1;
 static swig_lua_method swig_Solenoid_methods[] = {
     {"Set", _wrap_Solenoid_Set}, 
     {"Get", _wrap_Solenoid_Get}, 
+    {"UpdateTable", _wrap_Solenoid_UpdateTable}, 
+    {"StartLiveWindowMode", _wrap_Solenoid_StartLiveWindowMode}, 
+    {"StopLiveWindowMode", _wrap_Solenoid_StopLiveWindowMode}, 
+    {"GetSmartDashboardType", _wrap_Solenoid_GetSmartDashboardType}, 
     {0,0}
 };
 static swig_lua_attribute swig_Solenoid_attributes[] = {
@@ -21002,91 +24698,6 @@ static swig_lua_attribute swig_Solenoid_attributes[] = {
 static swig_lua_class *swig_Solenoid_bases[] = {0,0};
 static const char *swig_Solenoid_base_names[] = {"SolenoidBase *",0};
 static swig_lua_class _wrap_class_Solenoid = { "Solenoid", &SWIGTYPE_p_Solenoid,_wrap_new_Solenoid, swig_delete_Solenoid, swig_Solenoid_methods, swig_Solenoid_attributes, swig_Solenoid_bases, swig_Solenoid_base_names };
-
-static int _wrap_new_Talon__SWIG_0(lua_State* L) {
-  int SWIG_arg = 0;
-  UINT32 arg1 ;
-  Talon *result = 0 ;
-  
-  SWIG_check_num_args("Talon::Talon",1,1)
-  if(!lua_isnumber(L,1)) SWIG_fail_arg("Talon::Talon",1,"UINT32");
-  SWIG_contract_assert((lua_tonumber(L,1)>=0),"number must not be negative")
-  arg1 = (UINT32)lua_tonumber(L, 1);
-  result = (Talon *)new Talon(arg1);
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_Talon,1); SWIG_arg++; 
-  return SWIG_arg;
-  
-  if(0) SWIG_fail;
-  
-fail:
-  lua_error(L);
-  return SWIG_arg;
-}
-
-
-static int _wrap_new_Talon__SWIG_1(lua_State* L) {
-  int SWIG_arg = 0;
-  UINT8 arg1 ;
-  UINT32 arg2 ;
-  Talon *result = 0 ;
-  
-  SWIG_check_num_args("Talon::Talon",2,2)
-  if(!lua_isnumber(L,1)) SWIG_fail_arg("Talon::Talon",1,"UINT8");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("Talon::Talon",2,"UINT32");
-  SWIG_contract_assert((lua_tonumber(L,1)>=0),"number must not be negative")
-  arg1 = (UINT8)lua_tonumber(L, 1);
-  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative")
-  arg2 = (UINT32)lua_tonumber(L, 2);
-  result = (Talon *)new Talon(arg1,arg2);
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_Talon,1); SWIG_arg++; 
-  return SWIG_arg;
-  
-  if(0) SWIG_fail;
-  
-fail:
-  lua_error(L);
-  return SWIG_arg;
-}
-
-
-static int _wrap_new_Talon(lua_State* L) {
-  int argc;
-  int argv[3]={
-    1,2,3
-  };
-  
-  argc = lua_gettop(L);
-  if (argc == 1) {
-    int _v;
-    {
-      _v = lua_isnumber(L,argv[0]);
-    }
-    if (_v) {
-      return _wrap_new_Talon__SWIG_0(L);
-    }
-  }
-  if (argc == 2) {
-    int _v;
-    {
-      _v = lua_isnumber(L,argv[0]);
-    }
-    if (_v) {
-      {
-        _v = lua_isnumber(L,argv[1]);
-      }
-      if (_v) {
-        return _wrap_new_Talon__SWIG_1(L);
-      }
-    }
-  }
-  
-  lua_pushstring(L,"Wrong arguments for overloaded function 'new_Talon'\n"
-    "  Possible C/C++ prototypes are:\n"
-    "    Talon::Talon(UINT32)\n"
-    "    Talon::Talon(UINT8,UINT32)\n");
-  lua_error(L);return 0;
-}
-
 
 static int _wrap_Talon_Set__SWIG_0(lua_State* L) {
   int SWIG_arg = 0;
@@ -21292,7 +24903,7 @@ static swig_lua_attribute swig_Talon_attributes[] = {
 };
 static swig_lua_class *swig_Talon_bases[] = {0,0,0};
 static const char *swig_Talon_base_names[] = {"SafePWM *","SpeedController *",0};
-static swig_lua_class _wrap_class_Talon = { "Talon", &SWIGTYPE_p_Talon,_wrap_new_Talon, swig_delete_Talon, swig_Talon_methods, swig_Talon_attributes, swig_Talon_bases, swig_Talon_base_names };
+static swig_lua_class _wrap_class_Talon = { "Talon", &SWIGTYPE_p_Talon,0, swig_delete_Talon, swig_Talon_methods, swig_Talon_attributes, swig_Talon_bases, swig_Talon_base_names };
 
 static int _wrap_new_Timer(lua_State* L) {
   int SWIG_arg = 0;
@@ -22087,6 +25698,99 @@ fail:
 }
 
 
+static int _wrap_Ultrasonic_UpdateTable(lua_State* L) {
+  int SWIG_arg = 0;
+  Ultrasonic *arg1 = (Ultrasonic *) 0 ;
+  
+  SWIG_check_num_args("Ultrasonic::UpdateTable",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Ultrasonic::UpdateTable",1,"Ultrasonic *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Ultrasonic,0))){
+    SWIG_fail_ptr("Ultrasonic_UpdateTable",1,SWIGTYPE_p_Ultrasonic);
+  }
+  
+  (arg1)->UpdateTable();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Ultrasonic_StartLiveWindowMode(lua_State* L) {
+  int SWIG_arg = 0;
+  Ultrasonic *arg1 = (Ultrasonic *) 0 ;
+  
+  SWIG_check_num_args("Ultrasonic::StartLiveWindowMode",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Ultrasonic::StartLiveWindowMode",1,"Ultrasonic *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Ultrasonic,0))){
+    SWIG_fail_ptr("Ultrasonic_StartLiveWindowMode",1,SWIGTYPE_p_Ultrasonic);
+  }
+  
+  (arg1)->StartLiveWindowMode();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Ultrasonic_StopLiveWindowMode(lua_State* L) {
+  int SWIG_arg = 0;
+  Ultrasonic *arg1 = (Ultrasonic *) 0 ;
+  
+  SWIG_check_num_args("Ultrasonic::StopLiveWindowMode",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Ultrasonic::StopLiveWindowMode",1,"Ultrasonic *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Ultrasonic,0))){
+    SWIG_fail_ptr("Ultrasonic_StopLiveWindowMode",1,SWIGTYPE_p_Ultrasonic);
+  }
+  
+  (arg1)->StopLiveWindowMode();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Ultrasonic_GetSmartDashboardType(lua_State* L) {
+  int SWIG_arg = 0;
+  Ultrasonic *arg1 = (Ultrasonic *) 0 ;
+  std::string result;
+  
+  SWIG_check_num_args("Ultrasonic::GetSmartDashboardType",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Ultrasonic::GetSmartDashboardType",1,"Ultrasonic *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Ultrasonic,0))){
+    SWIG_fail_ptr("Ultrasonic_GetSmartDashboardType",1,SWIGTYPE_p_Ultrasonic);
+  }
+  
+  result = (arg1)->GetSmartDashboardType();
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
 static void swig_delete_Ultrasonic(void *obj) {
 Ultrasonic *arg1 = (Ultrasonic *) obj;
 delete arg1;
@@ -22101,99 +25805,18 @@ static swig_lua_method swig_Ultrasonic_methods[] = {
     {"PIDGet", _wrap_Ultrasonic_PIDGet}, 
     {"SetDistanceUnits", _wrap_Ultrasonic_SetDistanceUnits}, 
     {"GetDistanceUnits", _wrap_Ultrasonic_GetDistanceUnits}, 
+    {"UpdateTable", _wrap_Ultrasonic_UpdateTable}, 
+    {"StartLiveWindowMode", _wrap_Ultrasonic_StartLiveWindowMode}, 
+    {"StopLiveWindowMode", _wrap_Ultrasonic_StopLiveWindowMode}, 
+    {"GetSmartDashboardType", _wrap_Ultrasonic_GetSmartDashboardType}, 
     {0,0}
 };
 static swig_lua_attribute swig_Ultrasonic_attributes[] = {
     {0,0,0}
 };
-static swig_lua_class *swig_Ultrasonic_bases[] = {0,0,0};
-static const char *swig_Ultrasonic_base_names[] = {"SensorBase *","PIDSource *",0};
+static swig_lua_class *swig_Ultrasonic_bases[] = {0,0,0,0};
+static const char *swig_Ultrasonic_base_names[] = {"SensorBase *","PIDSource *","LiveWindowSendable *",0};
 static swig_lua_class _wrap_class_Ultrasonic = { "Ultrasonic", &SWIGTYPE_p_Ultrasonic,_wrap_new_Ultrasonic, swig_delete_Ultrasonic, swig_Ultrasonic_methods, swig_Ultrasonic_attributes, swig_Ultrasonic_bases, swig_Ultrasonic_base_names };
-
-static int _wrap_new_Victor__SWIG_0(lua_State* L) {
-  int SWIG_arg = 0;
-  UINT32 arg1 ;
-  Victor *result = 0 ;
-  
-  SWIG_check_num_args("Victor::Victor",1,1)
-  if(!lua_isnumber(L,1)) SWIG_fail_arg("Victor::Victor",1,"UINT32");
-  SWIG_contract_assert((lua_tonumber(L,1)>=0),"number must not be negative")
-  arg1 = (UINT32)lua_tonumber(L, 1);
-  result = (Victor *)new Victor(arg1);
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_Victor,1); SWIG_arg++; 
-  return SWIG_arg;
-  
-  if(0) SWIG_fail;
-  
-fail:
-  lua_error(L);
-  return SWIG_arg;
-}
-
-
-static int _wrap_new_Victor__SWIG_1(lua_State* L) {
-  int SWIG_arg = 0;
-  UINT32 arg1 ;
-  UINT32 arg2 ;
-  Victor *result = 0 ;
-  
-  SWIG_check_num_args("Victor::Victor",2,2)
-  if(!lua_isnumber(L,1)) SWIG_fail_arg("Victor::Victor",1,"UINT32");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("Victor::Victor",2,"UINT32");
-  SWIG_contract_assert((lua_tonumber(L,1)>=0),"number must not be negative")
-  arg1 = (UINT32)lua_tonumber(L, 1);
-  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative")
-  arg2 = (UINT32)lua_tonumber(L, 2);
-  result = (Victor *)new Victor(arg1,arg2);
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_Victor,1); SWIG_arg++; 
-  return SWIG_arg;
-  
-  if(0) SWIG_fail;
-  
-fail:
-  lua_error(L);
-  return SWIG_arg;
-}
-
-
-static int _wrap_new_Victor(lua_State* L) {
-  int argc;
-  int argv[3]={
-    1,2,3
-  };
-  
-  argc = lua_gettop(L);
-  if (argc == 1) {
-    int _v;
-    {
-      _v = lua_isnumber(L,argv[0]);
-    }
-    if (_v) {
-      return _wrap_new_Victor__SWIG_0(L);
-    }
-  }
-  if (argc == 2) {
-    int _v;
-    {
-      _v = lua_isnumber(L,argv[0]);
-    }
-    if (_v) {
-      {
-        _v = lua_isnumber(L,argv[1]);
-      }
-      if (_v) {
-        return _wrap_new_Victor__SWIG_1(L);
-      }
-    }
-  }
-  
-  lua_pushstring(L,"Wrong arguments for overloaded function 'new_Victor'\n"
-    "  Possible C/C++ prototypes are:\n"
-    "    Victor::Victor(UINT32)\n"
-    "    Victor::Victor(UINT32,UINT32)\n");
-  lua_error(L);return 0;
-}
-
 
 static int _wrap_Victor_Set(lua_State* L) {
   int SWIG_arg = 0;
@@ -22245,6 +25868,29 @@ fail:
 }
 
 
+static int _wrap_Victor_Disable(lua_State* L) {
+  int SWIG_arg = 0;
+  Victor *arg1 = (Victor *) 0 ;
+  
+  SWIG_check_num_args("Victor::Disable",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Victor::Disable",1,"Victor *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Victor,0))){
+    SWIG_fail_ptr("Victor_Disable",1,SWIGTYPE_p_Victor);
+  }
+  
+  (arg1)->Disable();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
 static int _wrap_Victor_PIDWrite(lua_State* L) {
   int SWIG_arg = 0;
   Victor *arg1 = (Victor *) 0 ;
@@ -22278,15 +25924,16 @@ delete arg1;
 static swig_lua_method swig_Victor_methods[] = {
     {"Set", _wrap_Victor_Set}, 
     {"Get", _wrap_Victor_Get}, 
+    {"Disable", _wrap_Victor_Disable}, 
     {"PIDWrite", _wrap_Victor_PIDWrite}, 
     {0,0}
 };
 static swig_lua_attribute swig_Victor_attributes[] = {
     {0,0,0}
 };
-static swig_lua_class *swig_Victor_bases[] = {0,0,0,0};
-static const char *swig_Victor_base_names[] = {"SafePWM *","SpeedController *","PIDOutput *",0};
-static swig_lua_class _wrap_class_Victor = { "Victor", &SWIGTYPE_p_Victor,_wrap_new_Victor, swig_delete_Victor, swig_Victor_methods, swig_Victor_attributes, swig_Victor_bases, swig_Victor_base_names };
+static swig_lua_class *swig_Victor_bases[] = {0,0,0};
+static const char *swig_Victor_base_names[] = {"SafePWM *","SpeedController *",0};
+static swig_lua_class _wrap_class_Victor = { "Victor", &SWIGTYPE_p_Victor,0, swig_delete_Victor, swig_Victor_methods, swig_Victor_attributes, swig_Victor_bases, swig_Victor_base_names };
 
 static int _wrap_new_Watchdog(lua_State* L) {
   int SWIG_arg = 0;
@@ -22724,6 +26371,7 @@ static const struct luaL_Reg swig_commands[] = {
     { "NetworkTable_SetTeam", _wrap_NetworkTable_SetTeam},
     { "NetworkTable_SetIPAddress", _wrap_NetworkTable_SetIPAddress},
     { "NetworkTable_GetTable", _wrap_NetworkTable_GetTable},
+    { "Preferences_GetInstance", _wrap_Preferences_GetInstance},
     { "Servo_GetMaxAngle", _wrap_Servo_GetMaxAngle},
     { "Servo_GetMinAngle", _wrap_Servo_GetMinAngle},
     { "SmartDashboard_init", _wrap_SmartDashboard_init},
@@ -22844,12 +26492,17 @@ static swig_lua_const_info swig_constants[] = {
     {SWIG_LUA_CONSTTAB_INT("DriverStationLCD_kUser_Line4", DriverStationLCD::kUser_Line4)},
     {SWIG_LUA_CONSTTAB_INT("DriverStationLCD_kUser_Line5", DriverStationLCD::kUser_Line5)},
     {SWIG_LUA_CONSTTAB_INT("DriverStationLCD_kUser_Line6", DriverStationLCD::kUser_Line6)},
+    {SWIG_LUA_CONSTTAB_INT("Encoder_kDistance", Encoder::kDistance)},
+    {SWIG_LUA_CONSTTAB_INT("Encoder_kRate", Encoder::kRate)},
     {SWIG_LUA_CONSTTAB_FLOAT("GearTooth_kGearToothThreshold", GearTooth::kGearToothThreshold)},
     {SWIG_LUA_CONSTTAB_INT("Gyro_kOversampleBits", Gyro::kOversampleBits)},
     {SWIG_LUA_CONSTTAB_INT("Gyro_kAverageBits", Gyro::kAverageBits)},
     {SWIG_LUA_CONSTTAB_FLOAT("Gyro_kSamplesPerSecond", Gyro::kSamplesPerSecond)},
     {SWIG_LUA_CONSTTAB_FLOAT("Gyro_kCalibrationSampleTime", Gyro::kCalibrationSampleTime)},
     {SWIG_LUA_CONSTTAB_FLOAT("Gyro_kDefaultVoltsPerDegreePerSecond", Gyro::kDefaultVoltsPerDegreePerSecond)},
+    {SWIG_LUA_CONSTTAB_INT("HiTechnicColorSensor_kActive", HiTechnicColorSensor::kActive)},
+    {SWIG_LUA_CONSTTAB_INT("HiTechnicColorSensor_kPassive", HiTechnicColorSensor::kPassive)},
+    {SWIG_LUA_CONSTTAB_INT("HiTechnicColorSensor_kRaw", HiTechnicColorSensor::kRaw)},
     {SWIG_LUA_CONSTTAB_INT("Joystick_kDefaultXAxis", Joystick::kDefaultXAxis)},
     {SWIG_LUA_CONSTTAB_INT("Joystick_kDefaultYAxis", Joystick::kDefaultYAxis)},
     {SWIG_LUA_CONSTTAB_INT("Joystick_kDefaultZAxis", Joystick::kDefaultZAxis)},
@@ -22983,11 +26636,11 @@ static void *_p_CompressorTo_p_ErrorBase(void *x, int *SWIGUNUSEDPARM(newmemory)
 static void *_p_PWMTo_p_ErrorBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((ErrorBase *) (SensorBase *) ((PWM *) x));
 }
-static void *_p_SolenoidTo_p_ErrorBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((ErrorBase *) (SensorBase *)(SolenoidBase *) ((Solenoid *) x));
-}
 static void *_p_DoubleSolenoidTo_p_ErrorBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((ErrorBase *) (SensorBase *)(SolenoidBase *) ((DoubleSolenoid *) x));
+}
+static void *_p_SolenoidTo_p_ErrorBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((ErrorBase *) (SensorBase *)(SolenoidBase *) ((Solenoid *) x));
 }
 static void *_p_DriverStationEnhancedIOTo_p_ErrorBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((ErrorBase *)  ((DriverStationEnhancedIO *) x));
@@ -22997,6 +26650,12 @@ static void *_p_GyroTo_p_ErrorBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
 }
 static void *_p_ADXL345_I2CTo_p_ErrorBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((ErrorBase *) (SensorBase *) ((ADXL345_I2C *) x));
+}
+static void *_p_HiTechnicColorSensorTo_p_ErrorBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((ErrorBase *) (SensorBase *) ((HiTechnicColorSensor *) x));
+}
+static void *_p_PreferencesTo_p_ErrorBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((ErrorBase *)  ((Preferences *) x));
 }
 static void *_p_SensorBaseTo_p_ErrorBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((ErrorBase *)  ((SensorBase *) x));
@@ -23008,16 +26667,16 @@ static void *_p_VictorTo_p_ErrorBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((ErrorBase *) (SensorBase *)(PWM *)(SafePWM *) ((Victor *) x));
 }
 static void *_p_DigitalOutputTo_p_ErrorBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((ErrorBase *) (SensorBase *) ((DigitalOutput *) x));
+    return (void *)((ErrorBase *) (SensorBase *)(InterruptableSensorBase *)(DigitalSource *) ((DigitalOutput *) x));
 }
 static void *_p_AnalogTriggerOutputTo_p_ErrorBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((ErrorBase *) (SensorBase *)(InterruptableSensorBase *)(DigitalSource *) ((AnalogTriggerOutput *) x));
 }
-static void *_p_SmartDashboardTo_p_ErrorBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((ErrorBase *) (SensorBase *) ((SmartDashboard *) x));
-}
 static void *_p_DashboardTo_p_ErrorBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((ErrorBase *) (DashboardBase *) ((Dashboard *) x));
+}
+static void *_p_SmartDashboardTo_p_ErrorBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((ErrorBase *) (SensorBase *) ((SmartDashboard *) x));
 }
 static void *_p_CounterTo_p_ErrorBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((ErrorBase *) (SensorBase *) ((Counter *) x));
@@ -23066,6 +26725,9 @@ static void *_p_DigitalSourceTo_p_InterruptableSensorBase(void *x, int *SWIGUNUS
 }
 static void *_p_AnalogTriggerOutputTo_p_InterruptableSensorBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((InterruptableSensorBase *) (DigitalSource *) ((AnalogTriggerOutput *) x));
+}
+static void *_p_DigitalOutputTo_p_InterruptableSensorBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((InterruptableSensorBase *) (DigitalSource *) ((DigitalOutput *) x));
 }
 static void *_p_DigitalInputTo_p_InterruptableSensorBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((InterruptableSensorBase *) (DigitalSource *) ((DigitalInput *) x));
@@ -23121,6 +26783,9 @@ static void *_p_GyroTo_p_SensorBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
 static void *_p_ADXL345_I2CTo_p_SensorBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((SensorBase *)  ((ADXL345_I2C *) x));
 }
+static void *_p_HiTechnicColorSensorTo_p_SensorBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((SensorBase *)  ((HiTechnicColorSensor *) x));
+}
 static void *_p_VictorTo_p_SensorBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((SensorBase *) (PWM *)(SafePWM *) ((Victor *) x));
 }
@@ -23128,7 +26793,7 @@ static void *_p_InterruptableSensorBaseTo_p_SensorBase(void *x, int *SWIGUNUSEDP
     return (void *)((SensorBase *)  ((InterruptableSensorBase *) x));
 }
 static void *_p_DigitalOutputTo_p_SensorBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((SensorBase *)  ((DigitalOutput *) x));
+    return (void *)((SensorBase *) (InterruptableSensorBase *)(DigitalSource *) ((DigitalOutput *) x));
 }
 static void *_p_AnalogTriggerOutputTo_p_SensorBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((SensorBase *) (InterruptableSensorBase *)(DigitalSource *) ((AnalogTriggerOutput *) x));
@@ -23172,11 +26837,17 @@ static void *_p_JaguarTo_p_SensorBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
 static void *_p_DigitalInputTo_p_SensorBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((SensorBase *) (InterruptableSensorBase *)(DigitalSource *) ((DigitalInput *) x));
 }
+static void *_p_SpeedControllerTo_p_PIDOutput(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((PIDOutput *)  ((SpeedController *) x));
+}
 static void *_p_JaguarTo_p_PIDOutput(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((PIDOutput *)  ((Jaguar *) x));
+    return (void *)((PIDOutput *) (SpeedController *) ((Jaguar *) x));
 }
 static void *_p_VictorTo_p_PIDOutput(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((PIDOutput *)  ((Victor *) x));
+    return (void *)((PIDOutput *) (SpeedController *) ((Victor *) x));
+}
+static void *_p_TalonTo_p_PIDOutput(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((PIDOutput *) (SpeedController *) ((Talon *) x));
 }
 static void *_p_JaguarTo_p_SafePWM(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((SafePWM *)  ((Jaguar *) x));
@@ -23193,11 +26864,17 @@ static void *_p_TalonTo_p_SafePWM(void *x, int *SWIGUNUSEDPARM(newmemory)) {
 static void *_p_AnalogTriggerOutputTo_p_DigitalSource(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((DigitalSource *)  ((AnalogTriggerOutput *) x));
 }
+static void *_p_DigitalOutputTo_p_DigitalSource(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((DigitalSource *)  ((DigitalOutput *) x));
+}
 static void *_p_DigitalInputTo_p_DigitalSource(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((DigitalSource *)  ((DigitalInput *) x));
 }
 static void *_p_AnalogChannelTo_p_PIDSource(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((PIDSource *)  ((AnalogChannel *) x));
+}
+static void *_p_EncoderTo_p_PIDSource(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((PIDSource *)  ((Encoder *) x));
 }
 static void *_p_AccelerometerTo_p_PIDSource(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((PIDSource *)  ((Accelerometer *) x));
@@ -23217,6 +26894,123 @@ static void *_p_EncoderTo_p_CounterBase(void *x, int *SWIGUNUSEDPARM(newmemory))
 static void *_p_GearToothTo_p_CounterBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((CounterBase *) (Counter *) ((GearTooth *) x));
 }
+static void *_p_ServoTo_p_LiveWindowSendable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((LiveWindowSendable *) (PWM *)(SafePWM *) ((Servo *) x));
+}
+static void *_p_PWMTo_p_LiveWindowSendable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((LiveWindowSendable *)  ((PWM *) x));
+}
+static void *_p_GyroTo_p_LiveWindowSendable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((LiveWindowSendable *)  ((Gyro *) x));
+}
+static void *_p_CounterTo_p_LiveWindowSendable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((LiveWindowSendable *)  ((Counter *) x));
+}
+static void *_p_TalonTo_p_LiveWindowSendable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((LiveWindowSendable *) (PWM *)(SafePWM *) ((Talon *) x));
+}
+static void *_p_UltrasonicTo_p_LiveWindowSendable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((LiveWindowSendable *)  ((Ultrasonic *) x));
+}
+static void *_p_DoubleSolenoidTo_p_LiveWindowSendable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((LiveWindowSendable *)  ((DoubleSolenoid *) x));
+}
+static void *_p_GearToothTo_p_LiveWindowSendable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((LiveWindowSendable *) (Counter *) ((GearTooth *) x));
+}
+static void *_p_CompressorTo_p_LiveWindowSendable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((LiveWindowSendable *)  ((Compressor *) x));
+}
+static void *_p_SafePWMTo_p_LiveWindowSendable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((LiveWindowSendable *) (PWM *) ((SafePWM *) x));
+}
+static void *_p_AccelerometerTo_p_LiveWindowSendable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((LiveWindowSendable *)  ((Accelerometer *) x));
+}
+static void *_p_DigitalOutputTo_p_LiveWindowSendable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((LiveWindowSendable *)  ((DigitalOutput *) x));
+}
+static void *_p_DigitalInputTo_p_LiveWindowSendable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((LiveWindowSendable *)  ((DigitalInput *) x));
+}
+static void *_p_PIDControllerTo_p_LiveWindowSendable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((LiveWindowSendable *)  ((PIDController *) x));
+}
+static void *_p_RelayTo_p_LiveWindowSendable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((LiveWindowSendable *)  ((Relay *) x));
+}
+static void *_p_VictorTo_p_LiveWindowSendable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((LiveWindowSendable *) (PWM *)(SafePWM *) ((Victor *) x));
+}
+static void *_p_JaguarTo_p_LiveWindowSendable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((LiveWindowSendable *) (PWM *)(SafePWM *) ((Jaguar *) x));
+}
+static void *_p_AnalogChannelTo_p_LiveWindowSendable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((LiveWindowSendable *)  ((AnalogChannel *) x));
+}
+static void *_p_EncoderTo_p_LiveWindowSendable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((LiveWindowSendable *)  ((Encoder *) x));
+}
+static void *_p_ServoTo_p_Sendable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Sendable *) (LiveWindowSendable *)(PWM *)(SafePWM *) ((Servo *) x));
+}
+static void *_p_PWMTo_p_Sendable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Sendable *) (LiveWindowSendable *) ((PWM *) x));
+}
+static void *_p_GyroTo_p_Sendable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Sendable *) (LiveWindowSendable *) ((Gyro *) x));
+}
+static void *_p_CounterTo_p_Sendable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Sendable *) (LiveWindowSendable *) ((Counter *) x));
+}
+static void *_p_TalonTo_p_Sendable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Sendable *) (LiveWindowSendable *)(PWM *)(SafePWM *) ((Talon *) x));
+}
+static void *_p_UltrasonicTo_p_Sendable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Sendable *) (LiveWindowSendable *) ((Ultrasonic *) x));
+}
+static void *_p_DoubleSolenoidTo_p_Sendable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Sendable *) (LiveWindowSendable *) ((DoubleSolenoid *) x));
+}
+static void *_p_LiveWindowSendableTo_p_Sendable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Sendable *)  ((LiveWindowSendable *) x));
+}
+static void *_p_GearToothTo_p_Sendable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Sendable *) (LiveWindowSendable *)(Counter *) ((GearTooth *) x));
+}
+static void *_p_CompressorTo_p_Sendable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Sendable *) (LiveWindowSendable *) ((Compressor *) x));
+}
+static void *_p_SafePWMTo_p_Sendable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Sendable *) (LiveWindowSendable *)(PWM *) ((SafePWM *) x));
+}
+static void *_p_AccelerometerTo_p_Sendable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Sendable *) (LiveWindowSendable *) ((Accelerometer *) x));
+}
+static void *_p_DigitalOutputTo_p_Sendable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Sendable *) (LiveWindowSendable *) ((DigitalOutput *) x));
+}
+static void *_p_DigitalInputTo_p_Sendable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Sendable *) (LiveWindowSendable *) ((DigitalInput *) x));
+}
+static void *_p_PIDControllerTo_p_Sendable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Sendable *) (LiveWindowSendable *) ((PIDController *) x));
+}
+static void *_p_RelayTo_p_Sendable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Sendable *) (LiveWindowSendable *) ((Relay *) x));
+}
+static void *_p_VictorTo_p_Sendable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Sendable *) (LiveWindowSendable *)(PWM *)(SafePWM *) ((Victor *) x));
+}
+static void *_p_JaguarTo_p_Sendable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Sendable *) (LiveWindowSendable *)(PWM *)(SafePWM *) ((Jaguar *) x));
+}
+static void *_p_AnalogChannelTo_p_Sendable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Sendable *) (LiveWindowSendable *) ((AnalogChannel *) x));
+}
+static void *_p_EncoderTo_p_Sendable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Sendable *) (LiveWindowSendable *) ((Encoder *) x));
+}
 static void *_p_JaguarTo_p_SpeedController(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((SpeedController *)  ((Jaguar *) x));
 }
@@ -23225,6 +27019,9 @@ static void *_p_VictorTo_p_SpeedController(void *x, int *SWIGUNUSEDPARM(newmemor
 }
 static void *_p_TalonTo_p_SpeedController(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((SpeedController *)  ((Talon *) x));
+}
+static void *_p_PIDControllerTo_p_Controller(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Controller *)  ((PIDController *) x));
 }
 static void *_p_JoystickTo_p_GenericHID(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((GenericHID *)  ((Joystick *) x));
@@ -23243,6 +27040,7 @@ static swig_type_info _swigt__p_ButtonType = {"_p_ButtonType", "ButtonType *", 0
 static swig_type_info _swigt__p_Code = {"_p_Code", "Code *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_ComplexData = {"_p_ComplexData", "ComplexData *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Compressor = {"_p_Compressor", "Compressor *", 0, 0, (void*)&_wrap_class_Compressor, 0};
+static swig_type_info _swigt__p_Controller = {"_p_Controller", "Controller *", 0, 0, (void*)&_wrap_class_Controller, 0};
 static swig_type_info _swigt__p_Counter = {"_p_Counter", "Counter *", 0, 0, (void*)&_wrap_class_Counter, 0};
 static swig_type_info _swigt__p_CounterBase = {"_p_CounterBase", "CounterBase *", 0, 0, (void*)&_wrap_class_CounterBase, 0};
 static swig_type_info _swigt__p_Dashboard = {"_p_Dashboard", "Dashboard *", 0, 0, (void*)&_wrap_class_Dashboard, 0};
@@ -23266,6 +27064,7 @@ static swig_type_info _swigt__p_FlowControl = {"_p_FlowControl", "FlowControl *"
 static swig_type_info _swigt__p_GearTooth = {"_p_GearTooth", "GearTooth *", 0, 0, (void*)&_wrap_class_GearTooth, 0};
 static swig_type_info _swigt__p_GenericHID = {"_p_GenericHID", "GenericHID *", 0, 0, (void*)&_wrap_class_GenericHID, 0};
 static swig_type_info _swigt__p_Gyro = {"_p_Gyro", "Gyro *", 0, 0, (void*)&_wrap_class_Gyro, 0};
+static swig_type_info _swigt__p_HiTechnicColorSensor = {"_p_HiTechnicColorSensor", "HiTechnicColorSensor *", 0, 0, (void*)&_wrap_class_HiTechnicColorSensor, 0};
 static swig_type_info _swigt__p_HiTechnicCompass = {"_p_HiTechnicCompass", "HiTechnicCompass *", 0, 0, (void*)&_wrap_class_HiTechnicCompass, 0};
 static swig_type_info _swigt__p_I2C = {"_p_I2C", "I2C *", 0, 0, (void*)&_wrap_class_I2C, 0};
 static swig_type_info _swigt__p_IRemoteConnectionListener = {"_p_IRemoteConnectionListener", "IRemoteConnectionListener *", 0, 0, (void*)0, 0};
@@ -23275,6 +27074,7 @@ static swig_type_info _swigt__p_Jaguar = {"_p_Jaguar", "Jaguar *", 0, 0, (void*)
 static swig_type_info _swigt__p_Joystick = {"_p_Joystick", "Joystick *", 0, 0, (void*)&_wrap_class_Joystick, 0};
 static swig_type_info _swigt__p_JoystickHand = {"_p_JoystickHand", "JoystickHand *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_LiveWindow = {"_p_LiveWindow", "LiveWindow *", 0, 0, (void*)&_wrap_class_LiveWindow, 0};
+static swig_type_info _swigt__p_LiveWindowSendable = {"_p_LiveWindowSendable", "LiveWindowSendable *", 0, 0, (void*)&_wrap_class_LiveWindowSendable, 0};
 static swig_type_info _swigt__p_Mode = {"_p_Mode", "Mode *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Module = {"_p_Module", "Module *", 0, 0, (void*)&_wrap_class_Module, 0};
 static swig_type_info _swigt__p_MotorSafety = {"_p_MotorSafety", "MotorSafety *", 0, 0, (void*)&_wrap_class_MotorSafety, 0};
@@ -23286,13 +27086,17 @@ static swig_type_info _swigt__p_NetworkTableProvider = {"_p_NetworkTableProvider
 static swig_type_info _swigt__p_PIDController = {"_p_PIDController", "PIDController *", 0, 0, (void*)&_wrap_class_PIDController, 0};
 static swig_type_info _swigt__p_PIDOutput = {"_p_PIDOutput", "PIDOutput *", 0, 0, (void*)&_wrap_class_PIDOutput, 0};
 static swig_type_info _swigt__p_PIDSource = {"_p_PIDSource", "PIDSource *", 0, 0, (void*)&_wrap_class_PIDSource, 0};
+static swig_type_info _swigt__p_PIDSourceParameter = {"_p_PIDSourceParameter", "PIDSourceParameter *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_PWM = {"_p_PWM", "PWM *", 0, 0, (void*)&_wrap_class_PWM, 0};
 static swig_type_info _swigt__p_Parity = {"_p_Parity", "Parity *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_PeriodMultiplier = {"_p_PeriodMultiplier", "PeriodMultiplier *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_Preferences = {"_p_Preferences", "Preferences *", 0, 0, (void*)&_wrap_class_Preferences, 0};
+static swig_type_info _swigt__p_RGB = {"_p_RGB", "RGB *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Relay = {"_p_Relay", "Relay *", 0, 0, (void*)&_wrap_class_Relay, 0};
 static swig_type_info _swigt__p_RobotDrive = {"_p_RobotDrive", "RobotDrive *", 0, 0, (void*)&_wrap_class_RobotDrive, 0};
 static swig_type_info _swigt__p_SEM_ID = {"_p_SEM_ID", "SEM_ID *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_SafePWM = {"_p_SafePWM", "SafePWM *", 0, 0, (void*)&_wrap_class_SafePWM, 0};
+static swig_type_info _swigt__p_Sendable = {"_p_Sendable", "Sendable *", 0, 0, (void*)&_wrap_class_Sendable, 0};
 static swig_type_info _swigt__p_SensorBase = {"_p_SensorBase", "SensorBase *", 0, 0, (void*)&_wrap_class_SensorBase, 0};
 static swig_type_info _swigt__p_SerialPort = {"_p_SerialPort", "SerialPort *", 0, 0, (void*)&_wrap_class_SerialPort, 0};
 static swig_type_info _swigt__p_Servo = {"_p_Servo", "Servo *", 0, 0, (void*)&_wrap_class_Servo, 0};
@@ -23317,6 +27121,7 @@ static swig_type_info _swigt__p_short = {"_p_short", "short *|INT16 *", 0, 0, (v
 static swig_type_info _swigt__p_signed_char = {"_p_signed_char", "signed char *|INT8 *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__string = {"_p_std__string", "std::string *", 0, 0, (void*)&_wrap_class_std_string, 0};
 static swig_type_info _swigt__p_std__vectorT_char_const_p_t = {"_p_std__vectorT_char_const_p_t", "std::vector< char const * > *", 0, 0, (void*)&_wrap_class_std_vector_Sl_char_SS_const_Sm__Sg_, 0};
+static swig_type_info _swigt__p_std__vectorT_std__string_t = {"_p_std__vectorT_std__string_t", "std::vector< std::string > *", 0, 0, (void*)&_wrap_class_std_vector_Sl_std_string_Sg_, 0};
 static swig_type_info _swigt__p_tRioStatusCode = {"_p_tRioStatusCode", "Error::Code *|tRioStatusCode *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_unsigned_char = {"_p_unsigned_char", "unsigned char *|UINT8 *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_unsigned_int = {"_p_unsigned_int", "UINT32 *|unsigned int *", 0, 0, (void*)0, 0};
@@ -23335,6 +27140,7 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_Code,
   &_swigt__p_ComplexData,
   &_swigt__p_Compressor,
+  &_swigt__p_Controller,
   &_swigt__p_Counter,
   &_swigt__p_CounterBase,
   &_swigt__p_Dashboard,
@@ -23358,6 +27164,7 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_GearTooth,
   &_swigt__p_GenericHID,
   &_swigt__p_Gyro,
+  &_swigt__p_HiTechnicColorSensor,
   &_swigt__p_HiTechnicCompass,
   &_swigt__p_I2C,
   &_swigt__p_IRemoteConnectionListener,
@@ -23367,6 +27174,7 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_Joystick,
   &_swigt__p_JoystickHand,
   &_swigt__p_LiveWindow,
+  &_swigt__p_LiveWindowSendable,
   &_swigt__p_Mode,
   &_swigt__p_Module,
   &_swigt__p_MotorSafety,
@@ -23378,13 +27186,17 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_PIDController,
   &_swigt__p_PIDOutput,
   &_swigt__p_PIDSource,
+  &_swigt__p_PIDSourceParameter,
   &_swigt__p_PWM,
   &_swigt__p_Parity,
   &_swigt__p_PeriodMultiplier,
+  &_swigt__p_Preferences,
+  &_swigt__p_RGB,
   &_swigt__p_Relay,
   &_swigt__p_RobotDrive,
   &_swigt__p_SEM_ID,
   &_swigt__p_SafePWM,
+  &_swigt__p_Sendable,
   &_swigt__p_SensorBase,
   &_swigt__p_SerialPort,
   &_swigt__p_Servo,
@@ -23409,6 +27221,7 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_signed_char,
   &_swigt__p_std__string,
   &_swigt__p_std__vectorT_char_const_p_t,
+  &_swigt__p_std__vectorT_std__string_t,
   &_swigt__p_tRioStatusCode,
   &_swigt__p_unsigned_char,
   &_swigt__p_unsigned_int,
@@ -23427,6 +27240,7 @@ static swig_cast_info _swigc__p_ButtonType[] = {  {&_swigt__p_ButtonType, 0, 0, 
 static swig_cast_info _swigc__p_Code[] = {  {&_swigt__p_Code, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ComplexData[] = {  {&_swigt__p_ComplexData, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Compressor[] = {  {&_swigt__p_Compressor, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_Controller[] = {  {&_swigt__p_Controller, 0, 0, 0},  {&_swigt__p_PIDController, _p_PIDControllerTo_p_Controller, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Counter[] = {  {&_swigt__p_Counter, 0, 0, 0},  {&_swigt__p_GearTooth, _p_GearToothTo_p_Counter, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_CounterBase[] = {  {&_swigt__p_CounterBase, 0, 0, 0},  {&_swigt__p_Counter, _p_CounterTo_p_CounterBase, 0, 0},  {&_swigt__p_Encoder, _p_EncoderTo_p_CounterBase, 0, 0},  {&_swigt__p_GearTooth, _p_GearToothTo_p_CounterBase, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Dashboard[] = {  {&_swigt__p_Dashboard, 0, 0, 0},{0, 0, 0, 0}};
@@ -23434,7 +27248,7 @@ static swig_cast_info _swigc__p_DashboardBase[] = {  {&_swigt__p_Dashboard, _p_D
 static swig_cast_info _swigc__p_DigitalInput[] = {  {&_swigt__p_DigitalInput, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_DigitalModule[] = {  {&_swigt__p_DigitalModule, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_DigitalOutput[] = {  {&_swigt__p_DigitalOutput, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_DigitalSource[] = {  {&_swigt__p_DigitalSource, 0, 0, 0},  {&_swigt__p_AnalogTriggerOutput, _p_AnalogTriggerOutputTo_p_DigitalSource, 0, 0},  {&_swigt__p_DigitalInput, _p_DigitalInputTo_p_DigitalSource, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_DigitalSource[] = {  {&_swigt__p_DigitalSource, 0, 0, 0},  {&_swigt__p_AnalogTriggerOutput, _p_AnalogTriggerOutputTo_p_DigitalSource, 0, 0},  {&_swigt__p_DigitalOutput, _p_DigitalOutputTo_p_DigitalSource, 0, 0},  {&_swigt__p_DigitalInput, _p_DigitalInputTo_p_DigitalSource, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Direction[] = {  {&_swigt__p_Direction, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_DistanceUnit[] = {  {&_swigt__p_DistanceUnit, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_DoubleSolenoid[] = {  {&_swigt__p_DoubleSolenoid, 0, 0, 0},{0, 0, 0, 0}};
@@ -23445,20 +27259,22 @@ static swig_cast_info _swigc__p_Encoder[] = {  {&_swigt__p_Encoder, 0, 0, 0},{0,
 static swig_cast_info _swigc__p_EncodingType[] = {  {&_swigt__p_EncodingType, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_EntryValue[] = {  {&_swigt__p_EntryValue, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Error[] = {  {&_swigt__p_Error, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_ErrorBase[] = {  {&_swigt__p_HiTechnicCompass, _p_HiTechnicCompassTo_p_ErrorBase, 0, 0},  {&_swigt__p_I2C, 0, 0, 0},  {&_swigt__p_PWM, _p_PWMTo_p_ErrorBase, 0, 0},  {&_swigt__p_Watchdog, _p_WatchdogTo_p_ErrorBase, 0, 0},  {&_swigt__p_Accelerometer, _p_AccelerometerTo_p_ErrorBase, 0, 0},  {&_swigt__p_Ultrasonic, _p_UltrasonicTo_p_ErrorBase, 0, 0},  {&_swigt__p_Jaguar, _p_JaguarTo_p_ErrorBase, 0, 0},  {&_swigt__p_DriverStation, _p_DriverStationTo_p_ErrorBase, 0, 0},  {&_swigt__p_DigitalSource, _p_DigitalSourceTo_p_ErrorBase, 0, 0},  {&_swigt__p_DigitalModule, _p_DigitalModuleTo_p_ErrorBase, 0, 0},  {&_swigt__p_Compressor, _p_CompressorTo_p_ErrorBase, 0, 0},  {&_swigt__p_Solenoid, _p_SolenoidTo_p_ErrorBase, 0, 0},  {&_swigt__p_DoubleSolenoid, _p_DoubleSolenoidTo_p_ErrorBase, 0, 0},  {&_swigt__p_DriverStationEnhancedIO, _p_DriverStationEnhancedIOTo_p_ErrorBase, 0, 0},  {&_swigt__p_ADXL345_I2C, _p_ADXL345_I2CTo_p_ErrorBase, 0, 0},  {&_swigt__p_SensorBase, _p_SensorBaseTo_p_ErrorBase, 0, 0},  {&_swigt__p_InterruptableSensorBase, _p_InterruptableSensorBaseTo_p_ErrorBase, 0, 0},  {&_swigt__p_DigitalOutput, _p_DigitalOutputTo_p_ErrorBase, 0, 0},  {&_swigt__p_AnalogTriggerOutput, _p_AnalogTriggerOutputTo_p_ErrorBase, 0, 0},  {&_swigt__p_SmartDashboard, _p_SmartDashboardTo_p_ErrorBase, 0, 0},  {&_swigt__p_Dashboard, _p_DashboardTo_p_ErrorBase, 0, 0},  {&_swigt__p_Servo, _p_ServoTo_p_ErrorBase, 0, 0},  {&_swigt__p_Counter, _p_CounterTo_p_ErrorBase, 0, 0},  {&_swigt__p_SafePWM, _p_SafePWMTo_p_ErrorBase, 0, 0},  {&_swigt__p_DriverStationLCD, _p_DriverStationLCDTo_p_ErrorBase, 0, 0},  {&_swigt__p_Module, _p_ModuleTo_p_ErrorBase, 0, 0},  {&_swigt__p_AnalogModule, _p_AnalogModuleTo_p_ErrorBase, 0, 0},  {&_swigt__p_DashboardBase, _p_DashboardBaseTo_p_ErrorBase, 0, 0},  {&_swigt__p_AnalogTrigger, _p_AnalogTriggerTo_p_ErrorBase, 0, 0},  {&_swigt__p_GearTooth, _p_GearToothTo_p_ErrorBase, 0, 0},  {&_swigt__p_AnalogChannel, _p_AnalogChannelTo_p_ErrorBase, 0, 0},  {&_swigt__p_Relay, _p_RelayTo_p_ErrorBase, 0, 0},  {&_swigt__p_SolenoidBase, _p_SolenoidBaseTo_p_ErrorBase, 0, 0},  {&_swigt__p_NetworkTable, _p_NetworkTableTo_p_ErrorBase, 0, 0},  {&_swigt__p_Victor, _p_VictorTo_p_ErrorBase, 0, 0},  {&_swigt__p_ErrorBase, 0, 0, 0},  {&_swigt__p_Encoder, _p_EncoderTo_p_ErrorBase, 0, 0},  {&_swigt__p_Gyro, _p_GyroTo_p_ErrorBase, 0, 0},  {&_swigt__p_Talon, _p_TalonTo_p_ErrorBase, 0, 0},  {&_swigt__p_DigitalInput, _p_DigitalInputTo_p_ErrorBase, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_ErrorBase[] = {  {&_swigt__p_HiTechnicCompass, _p_HiTechnicCompassTo_p_ErrorBase, 0, 0},  {&_swigt__p_I2C, 0, 0, 0},  {&_swigt__p_PWM, _p_PWMTo_p_ErrorBase, 0, 0},  {&_swigt__p_Watchdog, _p_WatchdogTo_p_ErrorBase, 0, 0},  {&_swigt__p_Accelerometer, _p_AccelerometerTo_p_ErrorBase, 0, 0},  {&_swigt__p_Ultrasonic, _p_UltrasonicTo_p_ErrorBase, 0, 0},  {&_swigt__p_Jaguar, _p_JaguarTo_p_ErrorBase, 0, 0},  {&_swigt__p_DriverStation, _p_DriverStationTo_p_ErrorBase, 0, 0},  {&_swigt__p_DigitalSource, _p_DigitalSourceTo_p_ErrorBase, 0, 0},  {&_swigt__p_DigitalModule, _p_DigitalModuleTo_p_ErrorBase, 0, 0},  {&_swigt__p_Compressor, _p_CompressorTo_p_ErrorBase, 0, 0},  {&_swigt__p_DoubleSolenoid, _p_DoubleSolenoidTo_p_ErrorBase, 0, 0},  {&_swigt__p_Solenoid, _p_SolenoidTo_p_ErrorBase, 0, 0},  {&_swigt__p_DriverStationEnhancedIO, _p_DriverStationEnhancedIOTo_p_ErrorBase, 0, 0},  {&_swigt__p_ADXL345_I2C, _p_ADXL345_I2CTo_p_ErrorBase, 0, 0},  {&_swigt__p_HiTechnicColorSensor, _p_HiTechnicColorSensorTo_p_ErrorBase, 0, 0},  {&_swigt__p_Preferences, _p_PreferencesTo_p_ErrorBase, 0, 0},  {&_swigt__p_SensorBase, _p_SensorBaseTo_p_ErrorBase, 0, 0},  {&_swigt__p_InterruptableSensorBase, _p_InterruptableSensorBaseTo_p_ErrorBase, 0, 0},  {&_swigt__p_DigitalOutput, _p_DigitalOutputTo_p_ErrorBase, 0, 0},  {&_swigt__p_AnalogTriggerOutput, _p_AnalogTriggerOutputTo_p_ErrorBase, 0, 0},  {&_swigt__p_SmartDashboard, _p_SmartDashboardTo_p_ErrorBase, 0, 0},  {&_swigt__p_Dashboard, _p_DashboardTo_p_ErrorBase, 0, 0},  {&_swigt__p_Servo, _p_ServoTo_p_ErrorBase, 0, 0},  {&_swigt__p_Counter, _p_CounterTo_p_ErrorBase, 0, 0},  {&_swigt__p_SafePWM, _p_SafePWMTo_p_ErrorBase, 0, 0},  {&_swigt__p_DriverStationLCD, _p_DriverStationLCDTo_p_ErrorBase, 0, 0},  {&_swigt__p_Module, _p_ModuleTo_p_ErrorBase, 0, 0},  {&_swigt__p_AnalogModule, _p_AnalogModuleTo_p_ErrorBase, 0, 0},  {&_swigt__p_DashboardBase, _p_DashboardBaseTo_p_ErrorBase, 0, 0},  {&_swigt__p_AnalogTrigger, _p_AnalogTriggerTo_p_ErrorBase, 0, 0},  {&_swigt__p_GearTooth, _p_GearToothTo_p_ErrorBase, 0, 0},  {&_swigt__p_AnalogChannel, _p_AnalogChannelTo_p_ErrorBase, 0, 0},  {&_swigt__p_Relay, _p_RelayTo_p_ErrorBase, 0, 0},  {&_swigt__p_SolenoidBase, _p_SolenoidBaseTo_p_ErrorBase, 0, 0},  {&_swigt__p_NetworkTable, _p_NetworkTableTo_p_ErrorBase, 0, 0},  {&_swigt__p_Victor, _p_VictorTo_p_ErrorBase, 0, 0},  {&_swigt__p_ErrorBase, 0, 0, 0},  {&_swigt__p_Encoder, _p_EncoderTo_p_ErrorBase, 0, 0},  {&_swigt__p_Gyro, _p_GyroTo_p_ErrorBase, 0, 0},  {&_swigt__p_Talon, _p_TalonTo_p_ErrorBase, 0, 0},  {&_swigt__p_DigitalInput, _p_DigitalInputTo_p_ErrorBase, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_FlowControl[] = {  {&_swigt__p_FlowControl, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_GearTooth[] = {  {&_swigt__p_GearTooth, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_GenericHID[] = {  {&_swigt__p_GenericHID, 0, 0, 0},  {&_swigt__p_Joystick, _p_JoystickTo_p_GenericHID, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Gyro[] = {  {&_swigt__p_Gyro, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_HiTechnicColorSensor[] = {  {&_swigt__p_HiTechnicColorSensor, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_HiTechnicCompass[] = {  {&_swigt__p_HiTechnicCompass, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_I2C[] = {  {&_swigt__p_I2C, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_IRemoteConnectionListener[] = {  {&_swigt__p_IRemoteConnectionListener, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ITableListener[] = {  {&_swigt__p_ITableListener, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_InterruptableSensorBase[] = {  {&_swigt__p_DigitalSource, _p_DigitalSourceTo_p_InterruptableSensorBase, 0, 0},  {&_swigt__p_AnalogTriggerOutput, _p_AnalogTriggerOutputTo_p_InterruptableSensorBase, 0, 0},  {&_swigt__p_DigitalInput, _p_DigitalInputTo_p_InterruptableSensorBase, 0, 0},  {&_swigt__p_InterruptableSensorBase, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_InterruptableSensorBase[] = {  {&_swigt__p_DigitalSource, _p_DigitalSourceTo_p_InterruptableSensorBase, 0, 0},  {&_swigt__p_AnalogTriggerOutput, _p_AnalogTriggerOutputTo_p_InterruptableSensorBase, 0, 0},  {&_swigt__p_DigitalOutput, _p_DigitalOutputTo_p_InterruptableSensorBase, 0, 0},  {&_swigt__p_DigitalInput, _p_DigitalInputTo_p_InterruptableSensorBase, 0, 0},  {&_swigt__p_InterruptableSensorBase, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Jaguar[] = {  {&_swigt__p_Jaguar, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Joystick[] = {  {&_swigt__p_Joystick, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_JoystickHand[] = {  {&_swigt__p_JoystickHand, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_LiveWindow[] = {  {&_swigt__p_LiveWindow, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_LiveWindowSendable[] = {  {&_swigt__p_Ultrasonic, _p_UltrasonicTo_p_LiveWindowSendable, 0, 0},  {&_swigt__p_Counter, _p_CounterTo_p_LiveWindowSendable, 0, 0},  {&_swigt__p_DoubleSolenoid, _p_DoubleSolenoidTo_p_LiveWindowSendable, 0, 0},  {&_swigt__p_Relay, _p_RelayTo_p_LiveWindowSendable, 0, 0},  {&_swigt__p_LiveWindowSendable, 0, 0, 0},  {&_swigt__p_Gyro, _p_GyroTo_p_LiveWindowSendable, 0, 0},  {&_swigt__p_PWM, _p_PWMTo_p_LiveWindowSendable, 0, 0},  {&_swigt__p_GearTooth, _p_GearToothTo_p_LiveWindowSendable, 0, 0},  {&_swigt__p_Victor, _p_VictorTo_p_LiveWindowSendable, 0, 0},  {&_swigt__p_Compressor, _p_CompressorTo_p_LiveWindowSendable, 0, 0},  {&_swigt__p_Jaguar, _p_JaguarTo_p_LiveWindowSendable, 0, 0},  {&_swigt__p_Servo, _p_ServoTo_p_LiveWindowSendable, 0, 0},  {&_swigt__p_SafePWM, _p_SafePWMTo_p_LiveWindowSendable, 0, 0},  {&_swigt__p_Accelerometer, _p_AccelerometerTo_p_LiveWindowSendable, 0, 0},  {&_swigt__p_DigitalOutput, _p_DigitalOutputTo_p_LiveWindowSendable, 0, 0},  {&_swigt__p_DigitalInput, _p_DigitalInputTo_p_LiveWindowSendable, 0, 0},  {&_swigt__p_PIDController, _p_PIDControllerTo_p_LiveWindowSendable, 0, 0},  {&_swigt__p_AnalogChannel, _p_AnalogChannelTo_p_LiveWindowSendable, 0, 0},  {&_swigt__p_Talon, _p_TalonTo_p_LiveWindowSendable, 0, 0},  {&_swigt__p_Encoder, _p_EncoderTo_p_LiveWindowSendable, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Mode[] = {  {&_swigt__p_Mode, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Module[] = {  {&_swigt__p_DigitalModule, _p_DigitalModuleTo_p_Module, 0, 0},  {&_swigt__p_Module, 0, 0, 0},  {&_swigt__p_AnalogModule, _p_AnalogModuleTo_p_Module, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_MotorSafety[] = {  {&_swigt__p_Jaguar, _p_JaguarTo_p_MotorSafety, 0, 0},  {&_swigt__p_Victor, _p_VictorTo_p_MotorSafety, 0, 0},  {&_swigt__p_SafePWM, _p_SafePWMTo_p_MotorSafety, 0, 0},  {&_swigt__p_Servo, _p_ServoTo_p_MotorSafety, 0, 0},  {&_swigt__p_Talon, _p_TalonTo_p_MotorSafety, 0, 0},  {&_swigt__p_RobotDrive, _p_RobotDriveTo_p_MotorSafety, 0, 0},  {&_swigt__p_MotorSafety, 0, 0, 0},{0, 0, 0, 0}};
@@ -23468,16 +27284,20 @@ static swig_cast_info _swigc__p_NetworkTable[] = {  {&_swigt__p_NetworkTable, 0,
 static swig_cast_info _swigc__p_NetworkTableEntryType[] = {  {&_swigt__p_NetworkTableEntryType, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_NetworkTableProvider[] = {  {&_swigt__p_NetworkTableProvider, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_PIDController[] = {  {&_swigt__p_PIDController, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_PIDOutput[] = {  {&_swigt__p_PIDOutput, 0, 0, 0},  {&_swigt__p_Jaguar, _p_JaguarTo_p_PIDOutput, 0, 0},  {&_swigt__p_Victor, _p_VictorTo_p_PIDOutput, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_PIDSource[] = {  {&_swigt__p_AnalogChannel, _p_AnalogChannelTo_p_PIDSource, 0, 0},  {&_swigt__p_PIDSource, 0, 0, 0},  {&_swigt__p_Accelerometer, _p_AccelerometerTo_p_PIDSource, 0, 0},  {&_swigt__p_Ultrasonic, _p_UltrasonicTo_p_PIDSource, 0, 0},  {&_swigt__p_Gyro, _p_GyroTo_p_PIDSource, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_PIDOutput[] = {  {&_swigt__p_SpeedController, _p_SpeedControllerTo_p_PIDOutput, 0, 0},  {&_swigt__p_PIDOutput, 0, 0, 0},  {&_swigt__p_Jaguar, _p_JaguarTo_p_PIDOutput, 0, 0},  {&_swigt__p_Victor, _p_VictorTo_p_PIDOutput, 0, 0},  {&_swigt__p_Talon, _p_TalonTo_p_PIDOutput, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_PIDSource[] = {  {&_swigt__p_AnalogChannel, _p_AnalogChannelTo_p_PIDSource, 0, 0},  {&_swigt__p_Encoder, _p_EncoderTo_p_PIDSource, 0, 0},  {&_swigt__p_PIDSource, 0, 0, 0},  {&_swigt__p_Accelerometer, _p_AccelerometerTo_p_PIDSource, 0, 0},  {&_swigt__p_Ultrasonic, _p_UltrasonicTo_p_PIDSource, 0, 0},  {&_swigt__p_Gyro, _p_GyroTo_p_PIDSource, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_PIDSourceParameter[] = {  {&_swigt__p_PIDSourceParameter, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_PWM[] = {  {&_swigt__p_PWM, 0, 0, 0},  {&_swigt__p_Jaguar, _p_JaguarTo_p_PWM, 0, 0},  {&_swigt__p_Victor, _p_VictorTo_p_PWM, 0, 0},  {&_swigt__p_SafePWM, _p_SafePWMTo_p_PWM, 0, 0},  {&_swigt__p_Servo, _p_ServoTo_p_PWM, 0, 0},  {&_swigt__p_Talon, _p_TalonTo_p_PWM, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Parity[] = {  {&_swigt__p_Parity, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_PeriodMultiplier[] = {  {&_swigt__p_PeriodMultiplier, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_Preferences[] = {  {&_swigt__p_Preferences, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_RGB[] = {  {&_swigt__p_RGB, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Relay[] = {  {&_swigt__p_Relay, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_RobotDrive[] = {  {&_swigt__p_RobotDrive, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_SEM_ID[] = {  {&_swigt__p_SEM_ID, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_SafePWM[] = {  {&_swigt__p_Jaguar, _p_JaguarTo_p_SafePWM, 0, 0},  {&_swigt__p_Victor, _p_VictorTo_p_SafePWM, 0, 0},  {&_swigt__p_SafePWM, 0, 0, 0},  {&_swigt__p_Servo, _p_ServoTo_p_SafePWM, 0, 0},  {&_swigt__p_Talon, _p_TalonTo_p_SafePWM, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_SensorBase[] = {  {&_swigt__p_HiTechnicCompass, _p_HiTechnicCompassTo_p_SensorBase, 0, 0},  {&_swigt__p_I2C, _p_I2CTo_p_SensorBase, 0, 0},  {&_swigt__p_PWM, _p_PWMTo_p_SensorBase, 0, 0},  {&_swigt__p_Watchdog, _p_WatchdogTo_p_SensorBase, 0, 0},  {&_swigt__p_Accelerometer, _p_AccelerometerTo_p_SensorBase, 0, 0},  {&_swigt__p_Ultrasonic, _p_UltrasonicTo_p_SensorBase, 0, 0},  {&_swigt__p_Jaguar, _p_JaguarTo_p_SensorBase, 0, 0},  {&_swigt__p_DriverStation, _p_DriverStationTo_p_SensorBase, 0, 0},  {&_swigt__p_DigitalSource, _p_DigitalSourceTo_p_SensorBase, 0, 0},  {&_swigt__p_DigitalModule, _p_DigitalModuleTo_p_SensorBase, 0, 0},  {&_swigt__p_Compressor, _p_CompressorTo_p_SensorBase, 0, 0},  {&_swigt__p_Solenoid, _p_SolenoidTo_p_SensorBase, 0, 0},  {&_swigt__p_DoubleSolenoid, _p_DoubleSolenoidTo_p_SensorBase, 0, 0},  {&_swigt__p_ADXL345_I2C, _p_ADXL345_I2CTo_p_SensorBase, 0, 0},  {&_swigt__p_InterruptableSensorBase, _p_InterruptableSensorBaseTo_p_SensorBase, 0, 0},  {&_swigt__p_SensorBase, 0, 0, 0},  {&_swigt__p_DigitalOutput, _p_DigitalOutputTo_p_SensorBase, 0, 0},  {&_swigt__p_AnalogTriggerOutput, _p_AnalogTriggerOutputTo_p_SensorBase, 0, 0},  {&_swigt__p_SmartDashboard, _p_SmartDashboardTo_p_SensorBase, 0, 0},  {&_swigt__p_Servo, _p_ServoTo_p_SensorBase, 0, 0},  {&_swigt__p_Counter, _p_CounterTo_p_SensorBase, 0, 0},  {&_swigt__p_SafePWM, _p_SafePWMTo_p_SensorBase, 0, 0},  {&_swigt__p_DriverStationLCD, _p_DriverStationLCDTo_p_SensorBase, 0, 0},  {&_swigt__p_Module, _p_ModuleTo_p_SensorBase, 0, 0},  {&_swigt__p_AnalogModule, _p_AnalogModuleTo_p_SensorBase, 0, 0},  {&_swigt__p_AnalogTrigger, _p_AnalogTriggerTo_p_SensorBase, 0, 0},  {&_swigt__p_GearTooth, _p_GearToothTo_p_SensorBase, 0, 0},  {&_swigt__p_AnalogChannel, _p_AnalogChannelTo_p_SensorBase, 0, 0},  {&_swigt__p_Relay, _p_RelayTo_p_SensorBase, 0, 0},  {&_swigt__p_SolenoidBase, _p_SolenoidBaseTo_p_SensorBase, 0, 0},  {&_swigt__p_Victor, _p_VictorTo_p_SensorBase, 0, 0},  {&_swigt__p_Encoder, _p_EncoderTo_p_SensorBase, 0, 0},  {&_swigt__p_Gyro, _p_GyroTo_p_SensorBase, 0, 0},  {&_swigt__p_Talon, _p_TalonTo_p_SensorBase, 0, 0},  {&_swigt__p_DigitalInput, _p_DigitalInputTo_p_SensorBase, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_Sendable[] = {  {&_swigt__p_Ultrasonic, _p_UltrasonicTo_p_Sendable, 0, 0},  {&_swigt__p_Counter, _p_CounterTo_p_Sendable, 0, 0},  {&_swigt__p_DoubleSolenoid, _p_DoubleSolenoidTo_p_Sendable, 0, 0},  {&_swigt__p_Relay, _p_RelayTo_p_Sendable, 0, 0},  {&_swigt__p_LiveWindowSendable, _p_LiveWindowSendableTo_p_Sendable, 0, 0},  {&_swigt__p_Sendable, 0, 0, 0},  {&_swigt__p_Gyro, _p_GyroTo_p_Sendable, 0, 0},  {&_swigt__p_PWM, _p_PWMTo_p_Sendable, 0, 0},  {&_swigt__p_GearTooth, _p_GearToothTo_p_Sendable, 0, 0},  {&_swigt__p_Victor, _p_VictorTo_p_Sendable, 0, 0},  {&_swigt__p_Compressor, _p_CompressorTo_p_Sendable, 0, 0},  {&_swigt__p_Jaguar, _p_JaguarTo_p_Sendable, 0, 0},  {&_swigt__p_Servo, _p_ServoTo_p_Sendable, 0, 0},  {&_swigt__p_SafePWM, _p_SafePWMTo_p_Sendable, 0, 0},  {&_swigt__p_Accelerometer, _p_AccelerometerTo_p_Sendable, 0, 0},  {&_swigt__p_DigitalOutput, _p_DigitalOutputTo_p_Sendable, 0, 0},  {&_swigt__p_DigitalInput, _p_DigitalInputTo_p_Sendable, 0, 0},  {&_swigt__p_PIDController, _p_PIDControllerTo_p_Sendable, 0, 0},  {&_swigt__p_AnalogChannel, _p_AnalogChannelTo_p_Sendable, 0, 0},  {&_swigt__p_Talon, _p_TalonTo_p_Sendable, 0, 0},  {&_swigt__p_Encoder, _p_EncoderTo_p_Sendable, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_SensorBase[] = {  {&_swigt__p_HiTechnicCompass, _p_HiTechnicCompassTo_p_SensorBase, 0, 0},  {&_swigt__p_I2C, _p_I2CTo_p_SensorBase, 0, 0},  {&_swigt__p_PWM, _p_PWMTo_p_SensorBase, 0, 0},  {&_swigt__p_Watchdog, _p_WatchdogTo_p_SensorBase, 0, 0},  {&_swigt__p_Accelerometer, _p_AccelerometerTo_p_SensorBase, 0, 0},  {&_swigt__p_Ultrasonic, _p_UltrasonicTo_p_SensorBase, 0, 0},  {&_swigt__p_Jaguar, _p_JaguarTo_p_SensorBase, 0, 0},  {&_swigt__p_DriverStation, _p_DriverStationTo_p_SensorBase, 0, 0},  {&_swigt__p_DigitalSource, _p_DigitalSourceTo_p_SensorBase, 0, 0},  {&_swigt__p_DigitalModule, _p_DigitalModuleTo_p_SensorBase, 0, 0},  {&_swigt__p_Compressor, _p_CompressorTo_p_SensorBase, 0, 0},  {&_swigt__p_Solenoid, _p_SolenoidTo_p_SensorBase, 0, 0},  {&_swigt__p_DoubleSolenoid, _p_DoubleSolenoidTo_p_SensorBase, 0, 0},  {&_swigt__p_ADXL345_I2C, _p_ADXL345_I2CTo_p_SensorBase, 0, 0},  {&_swigt__p_HiTechnicColorSensor, _p_HiTechnicColorSensorTo_p_SensorBase, 0, 0},  {&_swigt__p_InterruptableSensorBase, _p_InterruptableSensorBaseTo_p_SensorBase, 0, 0},  {&_swigt__p_SensorBase, 0, 0, 0},  {&_swigt__p_DigitalOutput, _p_DigitalOutputTo_p_SensorBase, 0, 0},  {&_swigt__p_AnalogTriggerOutput, _p_AnalogTriggerOutputTo_p_SensorBase, 0, 0},  {&_swigt__p_SmartDashboard, _p_SmartDashboardTo_p_SensorBase, 0, 0},  {&_swigt__p_Servo, _p_ServoTo_p_SensorBase, 0, 0},  {&_swigt__p_Counter, _p_CounterTo_p_SensorBase, 0, 0},  {&_swigt__p_SafePWM, _p_SafePWMTo_p_SensorBase, 0, 0},  {&_swigt__p_DriverStationLCD, _p_DriverStationLCDTo_p_SensorBase, 0, 0},  {&_swigt__p_Module, _p_ModuleTo_p_SensorBase, 0, 0},  {&_swigt__p_AnalogModule, _p_AnalogModuleTo_p_SensorBase, 0, 0},  {&_swigt__p_AnalogTrigger, _p_AnalogTriggerTo_p_SensorBase, 0, 0},  {&_swigt__p_GearTooth, _p_GearToothTo_p_SensorBase, 0, 0},  {&_swigt__p_AnalogChannel, _p_AnalogChannelTo_p_SensorBase, 0, 0},  {&_swigt__p_Relay, _p_RelayTo_p_SensorBase, 0, 0},  {&_swigt__p_SolenoidBase, _p_SolenoidBaseTo_p_SensorBase, 0, 0},  {&_swigt__p_Victor, _p_VictorTo_p_SensorBase, 0, 0},  {&_swigt__p_Encoder, _p_EncoderTo_p_SensorBase, 0, 0},  {&_swigt__p_Gyro, _p_GyroTo_p_SensorBase, 0, 0},  {&_swigt__p_Talon, _p_TalonTo_p_SensorBase, 0, 0},  {&_swigt__p_DigitalInput, _p_DigitalInputTo_p_SensorBase, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_SerialPort[] = {  {&_swigt__p_SerialPort, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Servo[] = {  {&_swigt__p_Servo, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_SmartDashboard[] = {  {&_swigt__p_SmartDashboard, 0, 0, 0},{0, 0, 0, 0}};
@@ -23501,6 +27321,7 @@ static swig_cast_info _swigc__p_short[] = {  {&_swigt__p_short, 0, 0, 0},{0, 0, 
 static swig_cast_info _swigc__p_signed_char[] = {  {&_swigt__p_signed_char, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__string[] = {  {&_swigt__p_std__string, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_char_const_p_t[] = {  {&_swigt__p_std__vectorT_char_const_p_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_std__vectorT_std__string_t[] = {  {&_swigt__p_std__vectorT_std__string_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_tRioStatusCode[] = {  {&_swigt__p_tRioStatusCode, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_unsigned_char[] = {  {&_swigt__p_unsigned_char, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_unsigned_int[] = {  {&_swigt__p_unsigned_int, 0, 0, 0},{0, 0, 0, 0}};
@@ -23519,6 +27340,7 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_Code,
   _swigc__p_ComplexData,
   _swigc__p_Compressor,
+  _swigc__p_Controller,
   _swigc__p_Counter,
   _swigc__p_CounterBase,
   _swigc__p_Dashboard,
@@ -23542,6 +27364,7 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_GearTooth,
   _swigc__p_GenericHID,
   _swigc__p_Gyro,
+  _swigc__p_HiTechnicColorSensor,
   _swigc__p_HiTechnicCompass,
   _swigc__p_I2C,
   _swigc__p_IRemoteConnectionListener,
@@ -23551,6 +27374,7 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_Joystick,
   _swigc__p_JoystickHand,
   _swigc__p_LiveWindow,
+  _swigc__p_LiveWindowSendable,
   _swigc__p_Mode,
   _swigc__p_Module,
   _swigc__p_MotorSafety,
@@ -23562,13 +27386,17 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_PIDController,
   _swigc__p_PIDOutput,
   _swigc__p_PIDSource,
+  _swigc__p_PIDSourceParameter,
   _swigc__p_PWM,
   _swigc__p_Parity,
   _swigc__p_PeriodMultiplier,
+  _swigc__p_Preferences,
+  _swigc__p_RGB,
   _swigc__p_Relay,
   _swigc__p_RobotDrive,
   _swigc__p_SEM_ID,
   _swigc__p_SafePWM,
+  _swigc__p_Sendable,
   _swigc__p_SensorBase,
   _swigc__p_SerialPort,
   _swigc__p_Servo,
@@ -23593,6 +27421,7 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_signed_char,
   _swigc__p_std__string,
   _swigc__p_std__vectorT_char_const_p_t,
+  _swigc__p_std__vectorT_std__string_t,
   _swigc__p_tRioStatusCode,
   _swigc__p_unsigned_char,
   _swigc__p_unsigned_int,
