@@ -937,7 +937,7 @@ public:
     UINT16 GetRawRed();
     UINT16 GetRawGreen();
     UINT16 GetRawBlue();
-    RGB GetRawRGB();
+    //RGB GetRawRGB();
     void SetMode(tColorMode mode);
 
 
@@ -1146,6 +1146,9 @@ public:
     void Remove(const char *key);
 
     //void ValueChanged(ITable* source, const std::string& key, EntryValue value, bool isNew);
+protected:
+	Preferences();
+	~Preferences();
 };
 
 class Relay : public SensorBase, public LiveWindowSendable

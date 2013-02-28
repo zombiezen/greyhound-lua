@@ -1723,44 +1723,43 @@ SWIG_Lua_dostring(lua_State *L, const char* str) {
 #define SWIGTYPE_p_Parity swig_types[59]
 #define SWIGTYPE_p_PeriodMultiplier swig_types[60]
 #define SWIGTYPE_p_Preferences swig_types[61]
-#define SWIGTYPE_p_RGB swig_types[62]
-#define SWIGTYPE_p_Relay swig_types[63]
-#define SWIGTYPE_p_RobotDrive swig_types[64]
-#define SWIGTYPE_p_SEM_ID swig_types[65]
-#define SWIGTYPE_p_SafePWM swig_types[66]
-#define SWIGTYPE_p_Sendable swig_types[67]
-#define SWIGTYPE_p_SensorBase swig_types[68]
-#define SWIGTYPE_p_SerialPort swig_types[69]
-#define SWIGTYPE_p_Servo swig_types[70]
-#define SWIGTYPE_p_SmartDashboard swig_types[71]
-#define SWIGTYPE_p_Solenoid swig_types[72]
-#define SWIGTYPE_p_SolenoidBase swig_types[73]
-#define SWIGTYPE_p_SpeedController swig_types[74]
-#define SWIGTYPE_p_StopBits swig_types[75]
-#define SWIGTYPE_p_Talon swig_types[76]
-#define SWIGTYPE_p_Timer swig_types[77]
-#define SWIGTYPE_p_Type swig_types[78]
-#define SWIGTYPE_p_Ultrasonic swig_types[79]
-#define SWIGTYPE_p_Value swig_types[80]
-#define SWIGTYPE_p_Victor swig_types[81]
-#define SWIGTYPE_p_Watchdog swig_types[82]
-#define SWIGTYPE_p_WriteBufferMode swig_types[83]
-#define SWIGTYPE_p_int swig_types[84]
-#define SWIGTYPE_p_long_long swig_types[85]
-#define SWIGTYPE_p_nLoadOut__tModuleType swig_types[86]
-#define SWIGTYPE_p_p_char swig_types[87]
-#define SWIGTYPE_p_short swig_types[88]
-#define SWIGTYPE_p_signed_char swig_types[89]
-#define SWIGTYPE_p_std__string swig_types[90]
-#define SWIGTYPE_p_std__vectorT_char_const_p_t swig_types[91]
-#define SWIGTYPE_p_std__vectorT_std__string_t swig_types[92]
-#define SWIGTYPE_p_tRioStatusCode swig_types[93]
-#define SWIGTYPE_p_unsigned_char swig_types[94]
-#define SWIGTYPE_p_unsigned_int swig_types[95]
-#define SWIGTYPE_p_unsigned_long_long swig_types[96]
-#define SWIGTYPE_p_unsigned_short swig_types[97]
-static swig_type_info *swig_types[99];
-static swig_module_info swig_module = {swig_types, 98, 0, 0, 0, 0};
+#define SWIGTYPE_p_Relay swig_types[62]
+#define SWIGTYPE_p_RobotDrive swig_types[63]
+#define SWIGTYPE_p_SEM_ID swig_types[64]
+#define SWIGTYPE_p_SafePWM swig_types[65]
+#define SWIGTYPE_p_Sendable swig_types[66]
+#define SWIGTYPE_p_SensorBase swig_types[67]
+#define SWIGTYPE_p_SerialPort swig_types[68]
+#define SWIGTYPE_p_Servo swig_types[69]
+#define SWIGTYPE_p_SmartDashboard swig_types[70]
+#define SWIGTYPE_p_Solenoid swig_types[71]
+#define SWIGTYPE_p_SolenoidBase swig_types[72]
+#define SWIGTYPE_p_SpeedController swig_types[73]
+#define SWIGTYPE_p_StopBits swig_types[74]
+#define SWIGTYPE_p_Talon swig_types[75]
+#define SWIGTYPE_p_Timer swig_types[76]
+#define SWIGTYPE_p_Type swig_types[77]
+#define SWIGTYPE_p_Ultrasonic swig_types[78]
+#define SWIGTYPE_p_Value swig_types[79]
+#define SWIGTYPE_p_Victor swig_types[80]
+#define SWIGTYPE_p_Watchdog swig_types[81]
+#define SWIGTYPE_p_WriteBufferMode swig_types[82]
+#define SWIGTYPE_p_int swig_types[83]
+#define SWIGTYPE_p_long_long swig_types[84]
+#define SWIGTYPE_p_nLoadOut__tModuleType swig_types[85]
+#define SWIGTYPE_p_p_char swig_types[86]
+#define SWIGTYPE_p_short swig_types[87]
+#define SWIGTYPE_p_signed_char swig_types[88]
+#define SWIGTYPE_p_std__string swig_types[89]
+#define SWIGTYPE_p_std__vectorT_char_const_p_t swig_types[90]
+#define SWIGTYPE_p_std__vectorT_std__string_t swig_types[91]
+#define SWIGTYPE_p_tRioStatusCode swig_types[92]
+#define SWIGTYPE_p_unsigned_char swig_types[93]
+#define SWIGTYPE_p_unsigned_int swig_types[94]
+#define SWIGTYPE_p_unsigned_long_long swig_types[95]
+#define SWIGTYPE_p_unsigned_short swig_types[96]
+static swig_type_info *swig_types[98];
+static swig_module_info swig_module = {swig_types, 97, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -16760,33 +16759,6 @@ fail:
 }
 
 
-static int _wrap_HiTechnicColorSensor_GetRawRGB(lua_State* L) {
-  int SWIG_arg = 0;
-  HiTechnicColorSensor *arg1 = (HiTechnicColorSensor *) 0 ;
-  RGB result;
-  
-  SWIG_check_num_args("HiTechnicColorSensor::GetRawRGB",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("HiTechnicColorSensor::GetRawRGB",1,"HiTechnicColorSensor *");
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_HiTechnicColorSensor,0))){
-    SWIG_fail_ptr("HiTechnicColorSensor_GetRawRGB",1,SWIGTYPE_p_HiTechnicColorSensor);
-  }
-  
-  result = (arg1)->GetRawRGB();
-  {
-    RGB * resultptr = new RGB((const RGB &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_RGB,1); SWIG_arg++;
-  }
-  return SWIG_arg;
-  
-  if(0) SWIG_fail;
-  
-fail:
-  lua_error(L);
-  return SWIG_arg;
-}
-
-
 static int _wrap_HiTechnicColorSensor_SetMode(lua_State* L) {
   int SWIG_arg = 0;
   HiTechnicColorSensor *arg1 = (HiTechnicColorSensor *) 0 ;
@@ -16918,7 +16890,6 @@ static swig_lua_method swig_HiTechnicColorSensor_methods[] = {
     {"GetRawRed", _wrap_HiTechnicColorSensor_GetRawRed}, 
     {"GetRawGreen", _wrap_HiTechnicColorSensor_GetRawGreen}, 
     {"GetRawBlue", _wrap_HiTechnicColorSensor_GetRawBlue}, 
-    {"GetRawRGB", _wrap_HiTechnicColorSensor_GetRawRGB}, 
     {"SetMode", _wrap_HiTechnicColorSensor_SetMode}, 
     {"GetType", _wrap_HiTechnicColorSensor_GetType}, 
     {"UpdateTable", _wrap_HiTechnicColorSensor_UpdateTable}, 
@@ -21532,27 +21503,6 @@ fail:
 }
 
 
-static int _wrap_new_Preferences(lua_State* L) {
-  int SWIG_arg = 0;
-  Preferences *result = 0 ;
-  
-  SWIG_check_num_args("Preferences::Preferences",0,0)
-  result = (Preferences *)new Preferences();
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_Preferences,1); SWIG_arg++; 
-  return SWIG_arg;
-  
-  if(0) SWIG_fail;
-  
-fail:
-  lua_error(L);
-  return SWIG_arg;
-}
-
-
-static void swig_delete_Preferences(void *obj) {
-Preferences *arg1 = (Preferences *) obj;
-delete arg1;
-}
 static swig_lua_method swig_Preferences_methods[] = {
     {"GetKeys", _wrap_Preferences_GetKeys}, 
     {"GetString", _wrap_Preferences_GetString}, 
@@ -21577,7 +21527,7 @@ static swig_lua_attribute swig_Preferences_attributes[] = {
 };
 static swig_lua_class *swig_Preferences_bases[] = {0,0};
 static const char *swig_Preferences_base_names[] = {"ErrorBase *",0};
-static swig_lua_class _wrap_class_Preferences = { "Preferences", &SWIGTYPE_p_Preferences,_wrap_new_Preferences, swig_delete_Preferences, swig_Preferences_methods, swig_Preferences_attributes, swig_Preferences_bases, swig_Preferences_base_names };
+static swig_lua_class _wrap_class_Preferences = { "Preferences", &SWIGTYPE_p_Preferences,0,0, swig_Preferences_methods, swig_Preferences_attributes, swig_Preferences_bases, swig_Preferences_base_names };
 
 static int _wrap_new_Relay(lua_State* L) {
   int SWIG_arg = 0;
@@ -27091,7 +27041,6 @@ static swig_type_info _swigt__p_PWM = {"_p_PWM", "PWM *", 0, 0, (void*)&_wrap_cl
 static swig_type_info _swigt__p_Parity = {"_p_Parity", "Parity *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_PeriodMultiplier = {"_p_PeriodMultiplier", "PeriodMultiplier *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Preferences = {"_p_Preferences", "Preferences *", 0, 0, (void*)&_wrap_class_Preferences, 0};
-static swig_type_info _swigt__p_RGB = {"_p_RGB", "RGB *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Relay = {"_p_Relay", "Relay *", 0, 0, (void*)&_wrap_class_Relay, 0};
 static swig_type_info _swigt__p_RobotDrive = {"_p_RobotDrive", "RobotDrive *", 0, 0, (void*)&_wrap_class_RobotDrive, 0};
 static swig_type_info _swigt__p_SEM_ID = {"_p_SEM_ID", "SEM_ID *", 0, 0, (void*)0, 0};
@@ -27191,7 +27140,6 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_Parity,
   &_swigt__p_PeriodMultiplier,
   &_swigt__p_Preferences,
-  &_swigt__p_RGB,
   &_swigt__p_Relay,
   &_swigt__p_RobotDrive,
   &_swigt__p_SEM_ID,
@@ -27291,7 +27239,6 @@ static swig_cast_info _swigc__p_PWM[] = {  {&_swigt__p_PWM, 0, 0, 0},  {&_swigt_
 static swig_cast_info _swigc__p_Parity[] = {  {&_swigt__p_Parity, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_PeriodMultiplier[] = {  {&_swigt__p_PeriodMultiplier, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Preferences[] = {  {&_swigt__p_Preferences, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_RGB[] = {  {&_swigt__p_RGB, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Relay[] = {  {&_swigt__p_Relay, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_RobotDrive[] = {  {&_swigt__p_RobotDrive, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_SEM_ID[] = {  {&_swigt__p_SEM_ID, 0, 0, 0},{0, 0, 0, 0}};
@@ -27391,7 +27338,6 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_Parity,
   _swigc__p_PeriodMultiplier,
   _swigc__p_Preferences,
-  _swigc__p_RGB,
   _swigc__p_Relay,
   _swigc__p_RobotDrive,
   _swigc__p_SEM_ID,
