@@ -918,38 +918,6 @@ public:
     //ITable * GetTable();
 };
 
-class HiTechnicColorSensor : public SensorBase
-{
-public:
-    enum tColorMode {kActive = 0, kPassive = 1, kRaw = 3};
-    //typedef struct{
-    //    UINT16 red;
-    //    UINT16 blue;
-    //    UINT16 green;
-    //}RGB;
-    explicit HiTechnicColorSensor(UINT8 moduleNumber);
-    virtual ~HiTechnicColorSensor();
-    UINT8 GetColor();
-    UINT8 GetRed();
-    UINT8 GetGreen();
-    UINT8 GetBlue();
-    //RGB GetRGB();
-    UINT16 GetRawRed();
-    UINT16 GetRawGreen();
-    UINT16 GetRawBlue();
-    //RGB GetRawRGB();
-    void SetMode(tColorMode mode);
-
-
-    //LiveWindowSendable interface
-    virtual std::string GetType();
-    virtual void UpdateTable();
-    virtual void StartLiveWindowMode();
-    virtual void StopLiveWindowMode(); 
-    //virtual void InitTable(ITable *subtable);
-    //virtual ITable* GetTable();
-};
-
 class HiTechnicCompass : public SensorBase
 {
 public:

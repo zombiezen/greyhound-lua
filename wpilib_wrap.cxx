@@ -1696,70 +1696,69 @@ SWIG_Lua_dostring(lua_State *L, const char* str) {
 #define SWIGTYPE_p_GearTooth swig_types[32]
 #define SWIGTYPE_p_GenericHID swig_types[33]
 #define SWIGTYPE_p_Gyro swig_types[34]
-#define SWIGTYPE_p_HiTechnicColorSensor swig_types[35]
-#define SWIGTYPE_p_HiTechnicCompass swig_types[36]
-#define SWIGTYPE_p_I2C swig_types[37]
-#define SWIGTYPE_p_IRemoteConnectionListener swig_types[38]
-#define SWIGTYPE_p_ITableListener swig_types[39]
-#define SWIGTYPE_p_InterruptableSensorBase swig_types[40]
-#define SWIGTYPE_p_Jaguar swig_types[41]
-#define SWIGTYPE_p_Joystick swig_types[42]
-#define SWIGTYPE_p_JoystickHand swig_types[43]
-#define SWIGTYPE_p_LiveWindow swig_types[44]
-#define SWIGTYPE_p_LiveWindowSendable swig_types[45]
-#define SWIGTYPE_p_Mode swig_types[46]
-#define SWIGTYPE_p_Module swig_types[47]
-#define SWIGTYPE_p_MotorSafety swig_types[48]
-#define SWIGTYPE_p_MotorSafetyHelper swig_types[49]
-#define SWIGTYPE_p_MotorType swig_types[50]
-#define SWIGTYPE_p_NetworkTable swig_types[51]
-#define SWIGTYPE_p_NetworkTableEntryType swig_types[52]
-#define SWIGTYPE_p_NetworkTableProvider swig_types[53]
-#define SWIGTYPE_p_PIDController swig_types[54]
-#define SWIGTYPE_p_PIDOutput swig_types[55]
-#define SWIGTYPE_p_PIDSource swig_types[56]
-#define SWIGTYPE_p_PIDSourceParameter swig_types[57]
-#define SWIGTYPE_p_PWM swig_types[58]
-#define SWIGTYPE_p_Parity swig_types[59]
-#define SWIGTYPE_p_PeriodMultiplier swig_types[60]
-#define SWIGTYPE_p_Preferences swig_types[61]
-#define SWIGTYPE_p_Relay swig_types[62]
-#define SWIGTYPE_p_RobotDrive swig_types[63]
-#define SWIGTYPE_p_SEM_ID swig_types[64]
-#define SWIGTYPE_p_SafePWM swig_types[65]
-#define SWIGTYPE_p_Sendable swig_types[66]
-#define SWIGTYPE_p_SensorBase swig_types[67]
-#define SWIGTYPE_p_SerialPort swig_types[68]
-#define SWIGTYPE_p_Servo swig_types[69]
-#define SWIGTYPE_p_SmartDashboard swig_types[70]
-#define SWIGTYPE_p_Solenoid swig_types[71]
-#define SWIGTYPE_p_SolenoidBase swig_types[72]
-#define SWIGTYPE_p_SpeedController swig_types[73]
-#define SWIGTYPE_p_StopBits swig_types[74]
-#define SWIGTYPE_p_Talon swig_types[75]
-#define SWIGTYPE_p_Timer swig_types[76]
-#define SWIGTYPE_p_Type swig_types[77]
-#define SWIGTYPE_p_Ultrasonic swig_types[78]
-#define SWIGTYPE_p_Value swig_types[79]
-#define SWIGTYPE_p_Victor swig_types[80]
-#define SWIGTYPE_p_Watchdog swig_types[81]
-#define SWIGTYPE_p_WriteBufferMode swig_types[82]
-#define SWIGTYPE_p_int swig_types[83]
-#define SWIGTYPE_p_long_long swig_types[84]
-#define SWIGTYPE_p_nLoadOut__tModuleType swig_types[85]
-#define SWIGTYPE_p_p_char swig_types[86]
-#define SWIGTYPE_p_short swig_types[87]
-#define SWIGTYPE_p_signed_char swig_types[88]
-#define SWIGTYPE_p_std__string swig_types[89]
-#define SWIGTYPE_p_std__vectorT_char_const_p_t swig_types[90]
-#define SWIGTYPE_p_std__vectorT_std__string_t swig_types[91]
-#define SWIGTYPE_p_tRioStatusCode swig_types[92]
-#define SWIGTYPE_p_unsigned_char swig_types[93]
-#define SWIGTYPE_p_unsigned_int swig_types[94]
-#define SWIGTYPE_p_unsigned_long_long swig_types[95]
-#define SWIGTYPE_p_unsigned_short swig_types[96]
-static swig_type_info *swig_types[98];
-static swig_module_info swig_module = {swig_types, 97, 0, 0, 0, 0};
+#define SWIGTYPE_p_HiTechnicCompass swig_types[35]
+#define SWIGTYPE_p_I2C swig_types[36]
+#define SWIGTYPE_p_IRemoteConnectionListener swig_types[37]
+#define SWIGTYPE_p_ITableListener swig_types[38]
+#define SWIGTYPE_p_InterruptableSensorBase swig_types[39]
+#define SWIGTYPE_p_Jaguar swig_types[40]
+#define SWIGTYPE_p_Joystick swig_types[41]
+#define SWIGTYPE_p_JoystickHand swig_types[42]
+#define SWIGTYPE_p_LiveWindow swig_types[43]
+#define SWIGTYPE_p_LiveWindowSendable swig_types[44]
+#define SWIGTYPE_p_Mode swig_types[45]
+#define SWIGTYPE_p_Module swig_types[46]
+#define SWIGTYPE_p_MotorSafety swig_types[47]
+#define SWIGTYPE_p_MotorSafetyHelper swig_types[48]
+#define SWIGTYPE_p_MotorType swig_types[49]
+#define SWIGTYPE_p_NetworkTable swig_types[50]
+#define SWIGTYPE_p_NetworkTableEntryType swig_types[51]
+#define SWIGTYPE_p_NetworkTableProvider swig_types[52]
+#define SWIGTYPE_p_PIDController swig_types[53]
+#define SWIGTYPE_p_PIDOutput swig_types[54]
+#define SWIGTYPE_p_PIDSource swig_types[55]
+#define SWIGTYPE_p_PIDSourceParameter swig_types[56]
+#define SWIGTYPE_p_PWM swig_types[57]
+#define SWIGTYPE_p_Parity swig_types[58]
+#define SWIGTYPE_p_PeriodMultiplier swig_types[59]
+#define SWIGTYPE_p_Preferences swig_types[60]
+#define SWIGTYPE_p_Relay swig_types[61]
+#define SWIGTYPE_p_RobotDrive swig_types[62]
+#define SWIGTYPE_p_SEM_ID swig_types[63]
+#define SWIGTYPE_p_SafePWM swig_types[64]
+#define SWIGTYPE_p_Sendable swig_types[65]
+#define SWIGTYPE_p_SensorBase swig_types[66]
+#define SWIGTYPE_p_SerialPort swig_types[67]
+#define SWIGTYPE_p_Servo swig_types[68]
+#define SWIGTYPE_p_SmartDashboard swig_types[69]
+#define SWIGTYPE_p_Solenoid swig_types[70]
+#define SWIGTYPE_p_SolenoidBase swig_types[71]
+#define SWIGTYPE_p_SpeedController swig_types[72]
+#define SWIGTYPE_p_StopBits swig_types[73]
+#define SWIGTYPE_p_Talon swig_types[74]
+#define SWIGTYPE_p_Timer swig_types[75]
+#define SWIGTYPE_p_Type swig_types[76]
+#define SWIGTYPE_p_Ultrasonic swig_types[77]
+#define SWIGTYPE_p_Value swig_types[78]
+#define SWIGTYPE_p_Victor swig_types[79]
+#define SWIGTYPE_p_Watchdog swig_types[80]
+#define SWIGTYPE_p_WriteBufferMode swig_types[81]
+#define SWIGTYPE_p_int swig_types[82]
+#define SWIGTYPE_p_long_long swig_types[83]
+#define SWIGTYPE_p_nLoadOut__tModuleType swig_types[84]
+#define SWIGTYPE_p_p_char swig_types[85]
+#define SWIGTYPE_p_short swig_types[86]
+#define SWIGTYPE_p_signed_char swig_types[87]
+#define SWIGTYPE_p_std__string swig_types[88]
+#define SWIGTYPE_p_std__vectorT_char_const_p_t swig_types[89]
+#define SWIGTYPE_p_std__vectorT_std__string_t swig_types[90]
+#define SWIGTYPE_p_tRioStatusCode swig_types[91]
+#define SWIGTYPE_p_unsigned_char swig_types[92]
+#define SWIGTYPE_p_unsigned_int swig_types[93]
+#define SWIGTYPE_p_unsigned_long_long swig_types[94]
+#define SWIGTYPE_p_unsigned_short swig_types[95]
+static swig_type_info *swig_types[97];
+static swig_module_info swig_module = {swig_types, 96, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -16570,340 +16569,6 @@ static swig_lua_class *swig_Gyro_bases[] = {0,0,0,0};
 static const char *swig_Gyro_base_names[] = {"SensorBase *","PIDSource *","LiveWindowSendable *",0};
 static swig_lua_class _wrap_class_Gyro = { "Gyro", &SWIGTYPE_p_Gyro,_wrap_new_Gyro, swig_delete_Gyro, swig_Gyro_methods, swig_Gyro_attributes, swig_Gyro_bases, swig_Gyro_base_names };
 
-static int _wrap_new_HiTechnicColorSensor(lua_State* L) {
-  int SWIG_arg = 0;
-  UINT8 arg1 ;
-  HiTechnicColorSensor *result = 0 ;
-  
-  SWIG_check_num_args("HiTechnicColorSensor::HiTechnicColorSensor",1,1)
-  if(!lua_isnumber(L,1)) SWIG_fail_arg("HiTechnicColorSensor::HiTechnicColorSensor",1,"UINT8");
-  SWIG_contract_assert((lua_tonumber(L,1)>=0),"number must not be negative")
-  arg1 = (UINT8)lua_tonumber(L, 1);
-  result = (HiTechnicColorSensor *)new HiTechnicColorSensor(arg1);
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_HiTechnicColorSensor,1); SWIG_arg++; 
-  return SWIG_arg;
-  
-  if(0) SWIG_fail;
-  
-fail:
-  lua_error(L);
-  return SWIG_arg;
-}
-
-
-static int _wrap_HiTechnicColorSensor_GetColor(lua_State* L) {
-  int SWIG_arg = 0;
-  HiTechnicColorSensor *arg1 = (HiTechnicColorSensor *) 0 ;
-  UINT8 result;
-  
-  SWIG_check_num_args("HiTechnicColorSensor::GetColor",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("HiTechnicColorSensor::GetColor",1,"HiTechnicColorSensor *");
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_HiTechnicColorSensor,0))){
-    SWIG_fail_ptr("HiTechnicColorSensor_GetColor",1,SWIGTYPE_p_HiTechnicColorSensor);
-  }
-  
-  result = (UINT8)(arg1)->GetColor();
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
-  return SWIG_arg;
-  
-  if(0) SWIG_fail;
-  
-fail:
-  lua_error(L);
-  return SWIG_arg;
-}
-
-
-static int _wrap_HiTechnicColorSensor_GetRed(lua_State* L) {
-  int SWIG_arg = 0;
-  HiTechnicColorSensor *arg1 = (HiTechnicColorSensor *) 0 ;
-  UINT8 result;
-  
-  SWIG_check_num_args("HiTechnicColorSensor::GetRed",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("HiTechnicColorSensor::GetRed",1,"HiTechnicColorSensor *");
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_HiTechnicColorSensor,0))){
-    SWIG_fail_ptr("HiTechnicColorSensor_GetRed",1,SWIGTYPE_p_HiTechnicColorSensor);
-  }
-  
-  result = (UINT8)(arg1)->GetRed();
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
-  return SWIG_arg;
-  
-  if(0) SWIG_fail;
-  
-fail:
-  lua_error(L);
-  return SWIG_arg;
-}
-
-
-static int _wrap_HiTechnicColorSensor_GetGreen(lua_State* L) {
-  int SWIG_arg = 0;
-  HiTechnicColorSensor *arg1 = (HiTechnicColorSensor *) 0 ;
-  UINT8 result;
-  
-  SWIG_check_num_args("HiTechnicColorSensor::GetGreen",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("HiTechnicColorSensor::GetGreen",1,"HiTechnicColorSensor *");
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_HiTechnicColorSensor,0))){
-    SWIG_fail_ptr("HiTechnicColorSensor_GetGreen",1,SWIGTYPE_p_HiTechnicColorSensor);
-  }
-  
-  result = (UINT8)(arg1)->GetGreen();
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
-  return SWIG_arg;
-  
-  if(0) SWIG_fail;
-  
-fail:
-  lua_error(L);
-  return SWIG_arg;
-}
-
-
-static int _wrap_HiTechnicColorSensor_GetBlue(lua_State* L) {
-  int SWIG_arg = 0;
-  HiTechnicColorSensor *arg1 = (HiTechnicColorSensor *) 0 ;
-  UINT8 result;
-  
-  SWIG_check_num_args("HiTechnicColorSensor::GetBlue",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("HiTechnicColorSensor::GetBlue",1,"HiTechnicColorSensor *");
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_HiTechnicColorSensor,0))){
-    SWIG_fail_ptr("HiTechnicColorSensor_GetBlue",1,SWIGTYPE_p_HiTechnicColorSensor);
-  }
-  
-  result = (UINT8)(arg1)->GetBlue();
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
-  return SWIG_arg;
-  
-  if(0) SWIG_fail;
-  
-fail:
-  lua_error(L);
-  return SWIG_arg;
-}
-
-
-static int _wrap_HiTechnicColorSensor_GetRawRed(lua_State* L) {
-  int SWIG_arg = 0;
-  HiTechnicColorSensor *arg1 = (HiTechnicColorSensor *) 0 ;
-  UINT16 result;
-  
-  SWIG_check_num_args("HiTechnicColorSensor::GetRawRed",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("HiTechnicColorSensor::GetRawRed",1,"HiTechnicColorSensor *");
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_HiTechnicColorSensor,0))){
-    SWIG_fail_ptr("HiTechnicColorSensor_GetRawRed",1,SWIGTYPE_p_HiTechnicColorSensor);
-  }
-  
-  result = (UINT16)(arg1)->GetRawRed();
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
-  return SWIG_arg;
-  
-  if(0) SWIG_fail;
-  
-fail:
-  lua_error(L);
-  return SWIG_arg;
-}
-
-
-static int _wrap_HiTechnicColorSensor_GetRawGreen(lua_State* L) {
-  int SWIG_arg = 0;
-  HiTechnicColorSensor *arg1 = (HiTechnicColorSensor *) 0 ;
-  UINT16 result;
-  
-  SWIG_check_num_args("HiTechnicColorSensor::GetRawGreen",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("HiTechnicColorSensor::GetRawGreen",1,"HiTechnicColorSensor *");
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_HiTechnicColorSensor,0))){
-    SWIG_fail_ptr("HiTechnicColorSensor_GetRawGreen",1,SWIGTYPE_p_HiTechnicColorSensor);
-  }
-  
-  result = (UINT16)(arg1)->GetRawGreen();
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
-  return SWIG_arg;
-  
-  if(0) SWIG_fail;
-  
-fail:
-  lua_error(L);
-  return SWIG_arg;
-}
-
-
-static int _wrap_HiTechnicColorSensor_GetRawBlue(lua_State* L) {
-  int SWIG_arg = 0;
-  HiTechnicColorSensor *arg1 = (HiTechnicColorSensor *) 0 ;
-  UINT16 result;
-  
-  SWIG_check_num_args("HiTechnicColorSensor::GetRawBlue",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("HiTechnicColorSensor::GetRawBlue",1,"HiTechnicColorSensor *");
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_HiTechnicColorSensor,0))){
-    SWIG_fail_ptr("HiTechnicColorSensor_GetRawBlue",1,SWIGTYPE_p_HiTechnicColorSensor);
-  }
-  
-  result = (UINT16)(arg1)->GetRawBlue();
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
-  return SWIG_arg;
-  
-  if(0) SWIG_fail;
-  
-fail:
-  lua_error(L);
-  return SWIG_arg;
-}
-
-
-static int _wrap_HiTechnicColorSensor_SetMode(lua_State* L) {
-  int SWIG_arg = 0;
-  HiTechnicColorSensor *arg1 = (HiTechnicColorSensor *) 0 ;
-  HiTechnicColorSensor::tColorMode arg2 ;
-  
-  SWIG_check_num_args("HiTechnicColorSensor::SetMode",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("HiTechnicColorSensor::SetMode",1,"HiTechnicColorSensor *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("HiTechnicColorSensor::SetMode",2,"HiTechnicColorSensor::tColorMode");
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_HiTechnicColorSensor,0))){
-    SWIG_fail_ptr("HiTechnicColorSensor_SetMode",1,SWIGTYPE_p_HiTechnicColorSensor);
-  }
-  
-  arg2 = (HiTechnicColorSensor::tColorMode)(int)lua_tonumber(L, 2);
-  (arg1)->SetMode(arg2);
-  
-  return SWIG_arg;
-  
-  if(0) SWIG_fail;
-  
-fail:
-  lua_error(L);
-  return SWIG_arg;
-}
-
-
-static int _wrap_HiTechnicColorSensor_GetType(lua_State* L) {
-  int SWIG_arg = 0;
-  HiTechnicColorSensor *arg1 = (HiTechnicColorSensor *) 0 ;
-  std::string result;
-  
-  SWIG_check_num_args("HiTechnicColorSensor::GetType",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("HiTechnicColorSensor::GetType",1,"HiTechnicColorSensor *");
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_HiTechnicColorSensor,0))){
-    SWIG_fail_ptr("HiTechnicColorSensor_GetType",1,SWIGTYPE_p_HiTechnicColorSensor);
-  }
-  
-  result = (arg1)->GetType();
-  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++;
-  return SWIG_arg;
-  
-  if(0) SWIG_fail;
-  
-fail:
-  lua_error(L);
-  return SWIG_arg;
-}
-
-
-static int _wrap_HiTechnicColorSensor_UpdateTable(lua_State* L) {
-  int SWIG_arg = 0;
-  HiTechnicColorSensor *arg1 = (HiTechnicColorSensor *) 0 ;
-  
-  SWIG_check_num_args("HiTechnicColorSensor::UpdateTable",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("HiTechnicColorSensor::UpdateTable",1,"HiTechnicColorSensor *");
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_HiTechnicColorSensor,0))){
-    SWIG_fail_ptr("HiTechnicColorSensor_UpdateTable",1,SWIGTYPE_p_HiTechnicColorSensor);
-  }
-  
-  (arg1)->UpdateTable();
-  
-  return SWIG_arg;
-  
-  if(0) SWIG_fail;
-  
-fail:
-  lua_error(L);
-  return SWIG_arg;
-}
-
-
-static int _wrap_HiTechnicColorSensor_StartLiveWindowMode(lua_State* L) {
-  int SWIG_arg = 0;
-  HiTechnicColorSensor *arg1 = (HiTechnicColorSensor *) 0 ;
-  
-  SWIG_check_num_args("HiTechnicColorSensor::StartLiveWindowMode",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("HiTechnicColorSensor::StartLiveWindowMode",1,"HiTechnicColorSensor *");
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_HiTechnicColorSensor,0))){
-    SWIG_fail_ptr("HiTechnicColorSensor_StartLiveWindowMode",1,SWIGTYPE_p_HiTechnicColorSensor);
-  }
-  
-  (arg1)->StartLiveWindowMode();
-  
-  return SWIG_arg;
-  
-  if(0) SWIG_fail;
-  
-fail:
-  lua_error(L);
-  return SWIG_arg;
-}
-
-
-static int _wrap_HiTechnicColorSensor_StopLiveWindowMode(lua_State* L) {
-  int SWIG_arg = 0;
-  HiTechnicColorSensor *arg1 = (HiTechnicColorSensor *) 0 ;
-  
-  SWIG_check_num_args("HiTechnicColorSensor::StopLiveWindowMode",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("HiTechnicColorSensor::StopLiveWindowMode",1,"HiTechnicColorSensor *");
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_HiTechnicColorSensor,0))){
-    SWIG_fail_ptr("HiTechnicColorSensor_StopLiveWindowMode",1,SWIGTYPE_p_HiTechnicColorSensor);
-  }
-  
-  (arg1)->StopLiveWindowMode();
-  
-  return SWIG_arg;
-  
-  if(0) SWIG_fail;
-  
-fail:
-  lua_error(L);
-  return SWIG_arg;
-}
-
-
-static void swig_delete_HiTechnicColorSensor(void *obj) {
-HiTechnicColorSensor *arg1 = (HiTechnicColorSensor *) obj;
-delete arg1;
-}
-static swig_lua_method swig_HiTechnicColorSensor_methods[] = {
-    {"GetColor", _wrap_HiTechnicColorSensor_GetColor}, 
-    {"GetRed", _wrap_HiTechnicColorSensor_GetRed}, 
-    {"GetGreen", _wrap_HiTechnicColorSensor_GetGreen}, 
-    {"GetBlue", _wrap_HiTechnicColorSensor_GetBlue}, 
-    {"GetRawRed", _wrap_HiTechnicColorSensor_GetRawRed}, 
-    {"GetRawGreen", _wrap_HiTechnicColorSensor_GetRawGreen}, 
-    {"GetRawBlue", _wrap_HiTechnicColorSensor_GetRawBlue}, 
-    {"SetMode", _wrap_HiTechnicColorSensor_SetMode}, 
-    {"GetType", _wrap_HiTechnicColorSensor_GetType}, 
-    {"UpdateTable", _wrap_HiTechnicColorSensor_UpdateTable}, 
-    {"StartLiveWindowMode", _wrap_HiTechnicColorSensor_StartLiveWindowMode}, 
-    {"StopLiveWindowMode", _wrap_HiTechnicColorSensor_StopLiveWindowMode}, 
-    {0,0}
-};
-static swig_lua_attribute swig_HiTechnicColorSensor_attributes[] = {
-    {0,0,0}
-};
-static swig_lua_class *swig_HiTechnicColorSensor_bases[] = {0,0};
-static const char *swig_HiTechnicColorSensor_base_names[] = {"SensorBase *",0};
-static swig_lua_class _wrap_class_HiTechnicColorSensor = { "HiTechnicColorSensor", &SWIGTYPE_p_HiTechnicColorSensor,_wrap_new_HiTechnicColorSensor, swig_delete_HiTechnicColorSensor, swig_HiTechnicColorSensor_methods, swig_HiTechnicColorSensor_attributes, swig_HiTechnicColorSensor_bases, swig_HiTechnicColorSensor_base_names };
-
 static int _wrap_new_HiTechnicCompass(lua_State* L) {
   int SWIG_arg = 0;
   UINT32 arg1 ;
@@ -26450,9 +26115,6 @@ static swig_lua_const_info swig_constants[] = {
     {SWIG_LUA_CONSTTAB_FLOAT("Gyro_kSamplesPerSecond", Gyro::kSamplesPerSecond)},
     {SWIG_LUA_CONSTTAB_FLOAT("Gyro_kCalibrationSampleTime", Gyro::kCalibrationSampleTime)},
     {SWIG_LUA_CONSTTAB_FLOAT("Gyro_kDefaultVoltsPerDegreePerSecond", Gyro::kDefaultVoltsPerDegreePerSecond)},
-    {SWIG_LUA_CONSTTAB_INT("HiTechnicColorSensor_kActive", HiTechnicColorSensor::kActive)},
-    {SWIG_LUA_CONSTTAB_INT("HiTechnicColorSensor_kPassive", HiTechnicColorSensor::kPassive)},
-    {SWIG_LUA_CONSTTAB_INT("HiTechnicColorSensor_kRaw", HiTechnicColorSensor::kRaw)},
     {SWIG_LUA_CONSTTAB_INT("Joystick_kDefaultXAxis", Joystick::kDefaultXAxis)},
     {SWIG_LUA_CONSTTAB_INT("Joystick_kDefaultYAxis", Joystick::kDefaultYAxis)},
     {SWIG_LUA_CONSTTAB_INT("Joystick_kDefaultZAxis", Joystick::kDefaultZAxis)},
@@ -26601,9 +26263,6 @@ static void *_p_GyroTo_p_ErrorBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
 static void *_p_ADXL345_I2CTo_p_ErrorBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((ErrorBase *) (SensorBase *) ((ADXL345_I2C *) x));
 }
-static void *_p_HiTechnicColorSensorTo_p_ErrorBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((ErrorBase *) (SensorBase *) ((HiTechnicColorSensor *) x));
-}
 static void *_p_PreferencesTo_p_ErrorBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((ErrorBase *)  ((Preferences *) x));
 }
@@ -26622,11 +26281,11 @@ static void *_p_DigitalOutputTo_p_ErrorBase(void *x, int *SWIGUNUSEDPARM(newmemo
 static void *_p_AnalogTriggerOutputTo_p_ErrorBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((ErrorBase *) (SensorBase *)(InterruptableSensorBase *)(DigitalSource *) ((AnalogTriggerOutput *) x));
 }
-static void *_p_DashboardTo_p_ErrorBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((ErrorBase *) (DashboardBase *) ((Dashboard *) x));
-}
 static void *_p_SmartDashboardTo_p_ErrorBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((ErrorBase *) (SensorBase *) ((SmartDashboard *) x));
+}
+static void *_p_DashboardTo_p_ErrorBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((ErrorBase *) (DashboardBase *) ((Dashboard *) x));
 }
 static void *_p_CounterTo_p_ErrorBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((ErrorBase *) (SensorBase *) ((Counter *) x));
@@ -26732,9 +26391,6 @@ static void *_p_GyroTo_p_SensorBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
 }
 static void *_p_ADXL345_I2CTo_p_SensorBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((SensorBase *)  ((ADXL345_I2C *) x));
-}
-static void *_p_HiTechnicColorSensorTo_p_SensorBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((SensorBase *)  ((HiTechnicColorSensor *) x));
 }
 static void *_p_VictorTo_p_SensorBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((SensorBase *) (PWM *)(SafePWM *) ((Victor *) x));
@@ -27014,7 +26670,6 @@ static swig_type_info _swigt__p_FlowControl = {"_p_FlowControl", "FlowControl *"
 static swig_type_info _swigt__p_GearTooth = {"_p_GearTooth", "GearTooth *", 0, 0, (void*)&_wrap_class_GearTooth, 0};
 static swig_type_info _swigt__p_GenericHID = {"_p_GenericHID", "GenericHID *", 0, 0, (void*)&_wrap_class_GenericHID, 0};
 static swig_type_info _swigt__p_Gyro = {"_p_Gyro", "Gyro *", 0, 0, (void*)&_wrap_class_Gyro, 0};
-static swig_type_info _swigt__p_HiTechnicColorSensor = {"_p_HiTechnicColorSensor", "HiTechnicColorSensor *", 0, 0, (void*)&_wrap_class_HiTechnicColorSensor, 0};
 static swig_type_info _swigt__p_HiTechnicCompass = {"_p_HiTechnicCompass", "HiTechnicCompass *", 0, 0, (void*)&_wrap_class_HiTechnicCompass, 0};
 static swig_type_info _swigt__p_I2C = {"_p_I2C", "I2C *", 0, 0, (void*)&_wrap_class_I2C, 0};
 static swig_type_info _swigt__p_IRemoteConnectionListener = {"_p_IRemoteConnectionListener", "IRemoteConnectionListener *", 0, 0, (void*)0, 0};
@@ -27113,7 +26768,6 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_GearTooth,
   &_swigt__p_GenericHID,
   &_swigt__p_Gyro,
-  &_swigt__p_HiTechnicColorSensor,
   &_swigt__p_HiTechnicCompass,
   &_swigt__p_I2C,
   &_swigt__p_IRemoteConnectionListener,
@@ -27207,12 +26861,11 @@ static swig_cast_info _swigc__p_Encoder[] = {  {&_swigt__p_Encoder, 0, 0, 0},{0,
 static swig_cast_info _swigc__p_EncodingType[] = {  {&_swigt__p_EncodingType, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_EntryValue[] = {  {&_swigt__p_EntryValue, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Error[] = {  {&_swigt__p_Error, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_ErrorBase[] = {  {&_swigt__p_HiTechnicCompass, _p_HiTechnicCompassTo_p_ErrorBase, 0, 0},  {&_swigt__p_I2C, 0, 0, 0},  {&_swigt__p_PWM, _p_PWMTo_p_ErrorBase, 0, 0},  {&_swigt__p_Watchdog, _p_WatchdogTo_p_ErrorBase, 0, 0},  {&_swigt__p_Accelerometer, _p_AccelerometerTo_p_ErrorBase, 0, 0},  {&_swigt__p_Ultrasonic, _p_UltrasonicTo_p_ErrorBase, 0, 0},  {&_swigt__p_Jaguar, _p_JaguarTo_p_ErrorBase, 0, 0},  {&_swigt__p_DriverStation, _p_DriverStationTo_p_ErrorBase, 0, 0},  {&_swigt__p_DigitalSource, _p_DigitalSourceTo_p_ErrorBase, 0, 0},  {&_swigt__p_DigitalModule, _p_DigitalModuleTo_p_ErrorBase, 0, 0},  {&_swigt__p_Compressor, _p_CompressorTo_p_ErrorBase, 0, 0},  {&_swigt__p_DoubleSolenoid, _p_DoubleSolenoidTo_p_ErrorBase, 0, 0},  {&_swigt__p_Solenoid, _p_SolenoidTo_p_ErrorBase, 0, 0},  {&_swigt__p_DriverStationEnhancedIO, _p_DriverStationEnhancedIOTo_p_ErrorBase, 0, 0},  {&_swigt__p_ADXL345_I2C, _p_ADXL345_I2CTo_p_ErrorBase, 0, 0},  {&_swigt__p_HiTechnicColorSensor, _p_HiTechnicColorSensorTo_p_ErrorBase, 0, 0},  {&_swigt__p_Preferences, _p_PreferencesTo_p_ErrorBase, 0, 0},  {&_swigt__p_SensorBase, _p_SensorBaseTo_p_ErrorBase, 0, 0},  {&_swigt__p_InterruptableSensorBase, _p_InterruptableSensorBaseTo_p_ErrorBase, 0, 0},  {&_swigt__p_DigitalOutput, _p_DigitalOutputTo_p_ErrorBase, 0, 0},  {&_swigt__p_AnalogTriggerOutput, _p_AnalogTriggerOutputTo_p_ErrorBase, 0, 0},  {&_swigt__p_SmartDashboard, _p_SmartDashboardTo_p_ErrorBase, 0, 0},  {&_swigt__p_Dashboard, _p_DashboardTo_p_ErrorBase, 0, 0},  {&_swigt__p_Servo, _p_ServoTo_p_ErrorBase, 0, 0},  {&_swigt__p_Counter, _p_CounterTo_p_ErrorBase, 0, 0},  {&_swigt__p_SafePWM, _p_SafePWMTo_p_ErrorBase, 0, 0},  {&_swigt__p_DriverStationLCD, _p_DriverStationLCDTo_p_ErrorBase, 0, 0},  {&_swigt__p_Module, _p_ModuleTo_p_ErrorBase, 0, 0},  {&_swigt__p_AnalogModule, _p_AnalogModuleTo_p_ErrorBase, 0, 0},  {&_swigt__p_DashboardBase, _p_DashboardBaseTo_p_ErrorBase, 0, 0},  {&_swigt__p_AnalogTrigger, _p_AnalogTriggerTo_p_ErrorBase, 0, 0},  {&_swigt__p_GearTooth, _p_GearToothTo_p_ErrorBase, 0, 0},  {&_swigt__p_AnalogChannel, _p_AnalogChannelTo_p_ErrorBase, 0, 0},  {&_swigt__p_Relay, _p_RelayTo_p_ErrorBase, 0, 0},  {&_swigt__p_SolenoidBase, _p_SolenoidBaseTo_p_ErrorBase, 0, 0},  {&_swigt__p_NetworkTable, _p_NetworkTableTo_p_ErrorBase, 0, 0},  {&_swigt__p_Victor, _p_VictorTo_p_ErrorBase, 0, 0},  {&_swigt__p_ErrorBase, 0, 0, 0},  {&_swigt__p_Encoder, _p_EncoderTo_p_ErrorBase, 0, 0},  {&_swigt__p_Gyro, _p_GyroTo_p_ErrorBase, 0, 0},  {&_swigt__p_Talon, _p_TalonTo_p_ErrorBase, 0, 0},  {&_swigt__p_DigitalInput, _p_DigitalInputTo_p_ErrorBase, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_ErrorBase[] = {  {&_swigt__p_HiTechnicCompass, _p_HiTechnicCompassTo_p_ErrorBase, 0, 0},  {&_swigt__p_I2C, 0, 0, 0},  {&_swigt__p_PWM, _p_PWMTo_p_ErrorBase, 0, 0},  {&_swigt__p_Watchdog, _p_WatchdogTo_p_ErrorBase, 0, 0},  {&_swigt__p_Accelerometer, _p_AccelerometerTo_p_ErrorBase, 0, 0},  {&_swigt__p_Ultrasonic, _p_UltrasonicTo_p_ErrorBase, 0, 0},  {&_swigt__p_Jaguar, _p_JaguarTo_p_ErrorBase, 0, 0},  {&_swigt__p_DriverStation, _p_DriverStationTo_p_ErrorBase, 0, 0},  {&_swigt__p_DigitalSource, _p_DigitalSourceTo_p_ErrorBase, 0, 0},  {&_swigt__p_DigitalModule, _p_DigitalModuleTo_p_ErrorBase, 0, 0},  {&_swigt__p_Compressor, _p_CompressorTo_p_ErrorBase, 0, 0},  {&_swigt__p_DoubleSolenoid, _p_DoubleSolenoidTo_p_ErrorBase, 0, 0},  {&_swigt__p_Solenoid, _p_SolenoidTo_p_ErrorBase, 0, 0},  {&_swigt__p_DriverStationEnhancedIO, _p_DriverStationEnhancedIOTo_p_ErrorBase, 0, 0},  {&_swigt__p_ADXL345_I2C, _p_ADXL345_I2CTo_p_ErrorBase, 0, 0},  {&_swigt__p_Preferences, _p_PreferencesTo_p_ErrorBase, 0, 0},  {&_swigt__p_SensorBase, _p_SensorBaseTo_p_ErrorBase, 0, 0},  {&_swigt__p_InterruptableSensorBase, _p_InterruptableSensorBaseTo_p_ErrorBase, 0, 0},  {&_swigt__p_DigitalOutput, _p_DigitalOutputTo_p_ErrorBase, 0, 0},  {&_swigt__p_AnalogTriggerOutput, _p_AnalogTriggerOutputTo_p_ErrorBase, 0, 0},  {&_swigt__p_SmartDashboard, _p_SmartDashboardTo_p_ErrorBase, 0, 0},  {&_swigt__p_Dashboard, _p_DashboardTo_p_ErrorBase, 0, 0},  {&_swigt__p_Servo, _p_ServoTo_p_ErrorBase, 0, 0},  {&_swigt__p_Counter, _p_CounterTo_p_ErrorBase, 0, 0},  {&_swigt__p_SafePWM, _p_SafePWMTo_p_ErrorBase, 0, 0},  {&_swigt__p_DriverStationLCD, _p_DriverStationLCDTo_p_ErrorBase, 0, 0},  {&_swigt__p_Module, _p_ModuleTo_p_ErrorBase, 0, 0},  {&_swigt__p_AnalogModule, _p_AnalogModuleTo_p_ErrorBase, 0, 0},  {&_swigt__p_DashboardBase, _p_DashboardBaseTo_p_ErrorBase, 0, 0},  {&_swigt__p_AnalogTrigger, _p_AnalogTriggerTo_p_ErrorBase, 0, 0},  {&_swigt__p_GearTooth, _p_GearToothTo_p_ErrorBase, 0, 0},  {&_swigt__p_AnalogChannel, _p_AnalogChannelTo_p_ErrorBase, 0, 0},  {&_swigt__p_Relay, _p_RelayTo_p_ErrorBase, 0, 0},  {&_swigt__p_SolenoidBase, _p_SolenoidBaseTo_p_ErrorBase, 0, 0},  {&_swigt__p_NetworkTable, _p_NetworkTableTo_p_ErrorBase, 0, 0},  {&_swigt__p_Victor, _p_VictorTo_p_ErrorBase, 0, 0},  {&_swigt__p_ErrorBase, 0, 0, 0},  {&_swigt__p_Encoder, _p_EncoderTo_p_ErrorBase, 0, 0},  {&_swigt__p_Gyro, _p_GyroTo_p_ErrorBase, 0, 0},  {&_swigt__p_Talon, _p_TalonTo_p_ErrorBase, 0, 0},  {&_swigt__p_DigitalInput, _p_DigitalInputTo_p_ErrorBase, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_FlowControl[] = {  {&_swigt__p_FlowControl, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_GearTooth[] = {  {&_swigt__p_GearTooth, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_GenericHID[] = {  {&_swigt__p_GenericHID, 0, 0, 0},  {&_swigt__p_Joystick, _p_JoystickTo_p_GenericHID, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Gyro[] = {  {&_swigt__p_Gyro, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_HiTechnicColorSensor[] = {  {&_swigt__p_HiTechnicColorSensor, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_HiTechnicCompass[] = {  {&_swigt__p_HiTechnicCompass, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_I2C[] = {  {&_swigt__p_I2C, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_IRemoteConnectionListener[] = {  {&_swigt__p_IRemoteConnectionListener, 0, 0, 0},{0, 0, 0, 0}};
@@ -27244,7 +26897,7 @@ static swig_cast_info _swigc__p_RobotDrive[] = {  {&_swigt__p_RobotDrive, 0, 0, 
 static swig_cast_info _swigc__p_SEM_ID[] = {  {&_swigt__p_SEM_ID, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_SafePWM[] = {  {&_swigt__p_Jaguar, _p_JaguarTo_p_SafePWM, 0, 0},  {&_swigt__p_Victor, _p_VictorTo_p_SafePWM, 0, 0},  {&_swigt__p_SafePWM, 0, 0, 0},  {&_swigt__p_Servo, _p_ServoTo_p_SafePWM, 0, 0},  {&_swigt__p_Talon, _p_TalonTo_p_SafePWM, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Sendable[] = {  {&_swigt__p_Ultrasonic, _p_UltrasonicTo_p_Sendable, 0, 0},  {&_swigt__p_Counter, _p_CounterTo_p_Sendable, 0, 0},  {&_swigt__p_DoubleSolenoid, _p_DoubleSolenoidTo_p_Sendable, 0, 0},  {&_swigt__p_Relay, _p_RelayTo_p_Sendable, 0, 0},  {&_swigt__p_LiveWindowSendable, _p_LiveWindowSendableTo_p_Sendable, 0, 0},  {&_swigt__p_Sendable, 0, 0, 0},  {&_swigt__p_Gyro, _p_GyroTo_p_Sendable, 0, 0},  {&_swigt__p_PWM, _p_PWMTo_p_Sendable, 0, 0},  {&_swigt__p_GearTooth, _p_GearToothTo_p_Sendable, 0, 0},  {&_swigt__p_Victor, _p_VictorTo_p_Sendable, 0, 0},  {&_swigt__p_Compressor, _p_CompressorTo_p_Sendable, 0, 0},  {&_swigt__p_Jaguar, _p_JaguarTo_p_Sendable, 0, 0},  {&_swigt__p_Servo, _p_ServoTo_p_Sendable, 0, 0},  {&_swigt__p_SafePWM, _p_SafePWMTo_p_Sendable, 0, 0},  {&_swigt__p_Accelerometer, _p_AccelerometerTo_p_Sendable, 0, 0},  {&_swigt__p_DigitalOutput, _p_DigitalOutputTo_p_Sendable, 0, 0},  {&_swigt__p_DigitalInput, _p_DigitalInputTo_p_Sendable, 0, 0},  {&_swigt__p_PIDController, _p_PIDControllerTo_p_Sendable, 0, 0},  {&_swigt__p_AnalogChannel, _p_AnalogChannelTo_p_Sendable, 0, 0},  {&_swigt__p_Talon, _p_TalonTo_p_Sendable, 0, 0},  {&_swigt__p_Encoder, _p_EncoderTo_p_Sendable, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_SensorBase[] = {  {&_swigt__p_HiTechnicCompass, _p_HiTechnicCompassTo_p_SensorBase, 0, 0},  {&_swigt__p_I2C, _p_I2CTo_p_SensorBase, 0, 0},  {&_swigt__p_PWM, _p_PWMTo_p_SensorBase, 0, 0},  {&_swigt__p_Watchdog, _p_WatchdogTo_p_SensorBase, 0, 0},  {&_swigt__p_Accelerometer, _p_AccelerometerTo_p_SensorBase, 0, 0},  {&_swigt__p_Ultrasonic, _p_UltrasonicTo_p_SensorBase, 0, 0},  {&_swigt__p_Jaguar, _p_JaguarTo_p_SensorBase, 0, 0},  {&_swigt__p_DriverStation, _p_DriverStationTo_p_SensorBase, 0, 0},  {&_swigt__p_DigitalSource, _p_DigitalSourceTo_p_SensorBase, 0, 0},  {&_swigt__p_DigitalModule, _p_DigitalModuleTo_p_SensorBase, 0, 0},  {&_swigt__p_Compressor, _p_CompressorTo_p_SensorBase, 0, 0},  {&_swigt__p_Solenoid, _p_SolenoidTo_p_SensorBase, 0, 0},  {&_swigt__p_DoubleSolenoid, _p_DoubleSolenoidTo_p_SensorBase, 0, 0},  {&_swigt__p_ADXL345_I2C, _p_ADXL345_I2CTo_p_SensorBase, 0, 0},  {&_swigt__p_HiTechnicColorSensor, _p_HiTechnicColorSensorTo_p_SensorBase, 0, 0},  {&_swigt__p_InterruptableSensorBase, _p_InterruptableSensorBaseTo_p_SensorBase, 0, 0},  {&_swigt__p_SensorBase, 0, 0, 0},  {&_swigt__p_DigitalOutput, _p_DigitalOutputTo_p_SensorBase, 0, 0},  {&_swigt__p_AnalogTriggerOutput, _p_AnalogTriggerOutputTo_p_SensorBase, 0, 0},  {&_swigt__p_SmartDashboard, _p_SmartDashboardTo_p_SensorBase, 0, 0},  {&_swigt__p_Servo, _p_ServoTo_p_SensorBase, 0, 0},  {&_swigt__p_Counter, _p_CounterTo_p_SensorBase, 0, 0},  {&_swigt__p_SafePWM, _p_SafePWMTo_p_SensorBase, 0, 0},  {&_swigt__p_DriverStationLCD, _p_DriverStationLCDTo_p_SensorBase, 0, 0},  {&_swigt__p_Module, _p_ModuleTo_p_SensorBase, 0, 0},  {&_swigt__p_AnalogModule, _p_AnalogModuleTo_p_SensorBase, 0, 0},  {&_swigt__p_AnalogTrigger, _p_AnalogTriggerTo_p_SensorBase, 0, 0},  {&_swigt__p_GearTooth, _p_GearToothTo_p_SensorBase, 0, 0},  {&_swigt__p_AnalogChannel, _p_AnalogChannelTo_p_SensorBase, 0, 0},  {&_swigt__p_Relay, _p_RelayTo_p_SensorBase, 0, 0},  {&_swigt__p_SolenoidBase, _p_SolenoidBaseTo_p_SensorBase, 0, 0},  {&_swigt__p_Victor, _p_VictorTo_p_SensorBase, 0, 0},  {&_swigt__p_Encoder, _p_EncoderTo_p_SensorBase, 0, 0},  {&_swigt__p_Gyro, _p_GyroTo_p_SensorBase, 0, 0},  {&_swigt__p_Talon, _p_TalonTo_p_SensorBase, 0, 0},  {&_swigt__p_DigitalInput, _p_DigitalInputTo_p_SensorBase, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_SensorBase[] = {  {&_swigt__p_HiTechnicCompass, _p_HiTechnicCompassTo_p_SensorBase, 0, 0},  {&_swigt__p_I2C, _p_I2CTo_p_SensorBase, 0, 0},  {&_swigt__p_PWM, _p_PWMTo_p_SensorBase, 0, 0},  {&_swigt__p_Watchdog, _p_WatchdogTo_p_SensorBase, 0, 0},  {&_swigt__p_Accelerometer, _p_AccelerometerTo_p_SensorBase, 0, 0},  {&_swigt__p_Ultrasonic, _p_UltrasonicTo_p_SensorBase, 0, 0},  {&_swigt__p_Jaguar, _p_JaguarTo_p_SensorBase, 0, 0},  {&_swigt__p_DriverStation, _p_DriverStationTo_p_SensorBase, 0, 0},  {&_swigt__p_DigitalSource, _p_DigitalSourceTo_p_SensorBase, 0, 0},  {&_swigt__p_DigitalModule, _p_DigitalModuleTo_p_SensorBase, 0, 0},  {&_swigt__p_Compressor, _p_CompressorTo_p_SensorBase, 0, 0},  {&_swigt__p_Solenoid, _p_SolenoidTo_p_SensorBase, 0, 0},  {&_swigt__p_DoubleSolenoid, _p_DoubleSolenoidTo_p_SensorBase, 0, 0},  {&_swigt__p_ADXL345_I2C, _p_ADXL345_I2CTo_p_SensorBase, 0, 0},  {&_swigt__p_InterruptableSensorBase, _p_InterruptableSensorBaseTo_p_SensorBase, 0, 0},  {&_swigt__p_SensorBase, 0, 0, 0},  {&_swigt__p_DigitalOutput, _p_DigitalOutputTo_p_SensorBase, 0, 0},  {&_swigt__p_AnalogTriggerOutput, _p_AnalogTriggerOutputTo_p_SensorBase, 0, 0},  {&_swigt__p_SmartDashboard, _p_SmartDashboardTo_p_SensorBase, 0, 0},  {&_swigt__p_Servo, _p_ServoTo_p_SensorBase, 0, 0},  {&_swigt__p_Counter, _p_CounterTo_p_SensorBase, 0, 0},  {&_swigt__p_SafePWM, _p_SafePWMTo_p_SensorBase, 0, 0},  {&_swigt__p_DriverStationLCD, _p_DriverStationLCDTo_p_SensorBase, 0, 0},  {&_swigt__p_Module, _p_ModuleTo_p_SensorBase, 0, 0},  {&_swigt__p_AnalogModule, _p_AnalogModuleTo_p_SensorBase, 0, 0},  {&_swigt__p_AnalogTrigger, _p_AnalogTriggerTo_p_SensorBase, 0, 0},  {&_swigt__p_GearTooth, _p_GearToothTo_p_SensorBase, 0, 0},  {&_swigt__p_AnalogChannel, _p_AnalogChannelTo_p_SensorBase, 0, 0},  {&_swigt__p_Relay, _p_RelayTo_p_SensorBase, 0, 0},  {&_swigt__p_SolenoidBase, _p_SolenoidBaseTo_p_SensorBase, 0, 0},  {&_swigt__p_Victor, _p_VictorTo_p_SensorBase, 0, 0},  {&_swigt__p_Encoder, _p_EncoderTo_p_SensorBase, 0, 0},  {&_swigt__p_Gyro, _p_GyroTo_p_SensorBase, 0, 0},  {&_swigt__p_Talon, _p_TalonTo_p_SensorBase, 0, 0},  {&_swigt__p_DigitalInput, _p_DigitalInputTo_p_SensorBase, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_SerialPort[] = {  {&_swigt__p_SerialPort, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Servo[] = {  {&_swigt__p_Servo, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_SmartDashboard[] = {  {&_swigt__p_SmartDashboard, 0, 0, 0},{0, 0, 0, 0}};
@@ -27311,7 +26964,6 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_GearTooth,
   _swigc__p_GenericHID,
   _swigc__p_Gyro,
-  _swigc__p_HiTechnicColorSensor,
   _swigc__p_HiTechnicCompass,
   _swigc__p_I2C,
   _swigc__p_IRemoteConnectionListener,
